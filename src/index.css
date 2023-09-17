@@ -1,20 +1,126 @@
 :root
 {
 	--Sonder-yellow: #F9F3D0;
+	--Sonder-orange: #E1912F;
+	--Sonder-olive: #464834;
+}
+@font-face 
+{
+	font-family: Raglika;
+	src: url("./WebFonts/raglika-6yzwq.ttf") format('ttf'),
+		url("./WebFonts/raglika-6yzwq.woff") format('woff'),
+		url("./WebFonts/raglika-6yzwq.otf") format('otf');
 }
 
 html, body, #root
 {
 	height: 100%;
 	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 .HomePageContainer
 {
 	display: flex;
-	background-image: url('./imgs/homepagebg.jpg');
-	background-size: contain;
-	height: 100%;
+	background-image: url('./imgs/homepagebg169.jpg');
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.HomePage
+{
+	position: relative;
+	display: flex;
 	width: 100%;
+	height: 95%;
+	padding-bottom: 0px;
+	justify-content: space-between;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.IVectors
+{
+	height: 50%;
+	width: 30%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-left: 10%;
+}
+
+.IVector
+{
+	width: 10%;
+	background-color: var(--Sonder-orange);
+}
+
+.IVectorTilted
+{
+	width: 10%;
+	background-color: var(--Sonder-orange);
+	transform: rotate(-20deg);
+	margin-left: 10%;
+}
+
+.HomePageBookSession
+{
+	width: 25%;
+	margin-right: 8%;
+	height: 65%;
+	border-radius: 16.875rem;
+	overflow: hidden;
+	background: var(--Sonder-olive);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.HomePageBookSessionText
+{
+	color: var(--Sonder-yellow, #F9F3D0);
+	height: 45%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2%;
+}
+
+.HomePageBookSessionText h6
+{
+	height: 100%;
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Raglika;
+	font-size: 5.6875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 4.75rem; /* 101.333% */
+	margin: 0;
+	padding: 0;
+}
+
+.HomePageBookSessionButton
+{
+	height: 10%;
+	width: 60%;
+}
+
+.HomePageBookSessionButton button
+{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-family: Arial;
+	font-size: 1.2rem;
+	font-style: normal;
+	font-weight: 600;
+	color: var(--Sonder-yellow);
+	background: var(--Sonder-orange);
 }

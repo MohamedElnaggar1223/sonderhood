@@ -14,7 +14,7 @@ export default function Home()
                 </div>
                 <div className='HomePageBookSession'>
                     <div className='HomePageBookSessionText'>
-                        <h1>Your Safe Haven</h1>
+                        <h6>Your</h6> <h6>Safe</h6> <h6>Haven</h6>
                     </div>
                     <div className='HomePageBookSessionButton'>
                         <button>Book a Session</button>
