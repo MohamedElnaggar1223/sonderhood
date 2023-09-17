@@ -1,5 +1,7 @@
 import React from 'react'
 import HomeHeader from './HomeHeader'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() 
 {
@@ -17,7 +19,7 @@ export default function Home()
                         <h6>Your</h6> <h6>Safe</h6> <h6>Haven</h6>
                     </div>
                     <div className='HomePageBookSessionButton'>
-                        <button>Book a Session</button>
+                        <button>Book a Session <FontAwesomeIcon icon={faArrowRight} /></button>
                     </div>
                 </div>
             </div>

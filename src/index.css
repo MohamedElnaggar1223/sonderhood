@@ -7,9 +7,7 @@
 @font-face 
 {
 	font-family: Raglika;
-	src: url("./WebFonts/raglika-6yzwq.ttf") format('ttf'),
-		url("./WebFonts/raglika-6yzwq.woff") format('woff'),
-		url("./WebFonts/raglika-6yzwq.otf") format('otf');
+	src: url("./WebFonts/raglika-6yzwq.otf") format('otf');
 }
 
 html, body, #root
@@ -18,6 +16,8 @@ html, body, #root
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	overflow: auto;
+	box-sizing: border-box;
 }
 
 .HomePageContainer
@@ -37,7 +37,8 @@ html, body, #root
 	display: flex;
 	width: 100%;
 	height: 95%;
-	padding-bottom: 0px;
+	padding-bottom: 0;
+	margin: 0;
 	justify-content: space-between;
 	align-items: center;
 	flex-shrink: 0;
@@ -125,4 +126,96 @@ html, body, #root
 	background: var(--Sonder-orange);
 	border: 0px;
 	outline: none;
+	cursor: pointer;
+}
+
+.HomeHeaderContainer
+{
+	display: flex;
+	flex-direction: row;
+	height: 5%;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 1%;
+}
+
+.HomeHeaderContent
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 30%;
+}
+
+.HomeHeaderAnchor a
+{
+	color: var(--Sonder-yellow);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.4rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.125rem; /* 100% */
+	letter-spacing: 0.25rem;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-decoration-color: var(--Sonder-yellow);
+	text-decoration-thickness: 0.15rem;
+	text-underline-offset: 0.2rem;
+}
+
+.TherapyImportanceContainer
+{
+	height: 55%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	background: var(--Sonder-olive);
+	justify-content: space-between;
+}
+
+.TherapyImportanceTitle
+{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	text-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-left: 7%;
+	flex-direction: column;
+}
+
+.TherapyImportanceTitle div
+{
+	color: var(--Sonder-yellow, #F9F3D0);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 3.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 3.5rem; /* 121.739% */
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+	margin-bottom: 2%;
+}
+
+.TherapyImportanceDesc
+{
+	display: flex;
+	color: var(--Sonder-yellow, #F9F3D0);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.4375rem; /* 127.778% */
+	justify-content: center;
+	align-items: center;
+	margin-right: 10%;
+	width: 40%;
 }
