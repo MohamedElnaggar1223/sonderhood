@@ -16,8 +16,28 @@ export default function LookingForHelp()
                 />
                 <img src={search} alt='search'/>
             </div>
-            <div className='LookingForHelpItems'>
-
+            <div className='LookingForHelpItemsContainer'>
+                <div className='LookingForHelpItemsMostSearched'>
+                    Most Searched:
+                </div>
+                <div className='LookingForHelpItems'>
+                    <button>Depression & Anxiety</button>
+                    <button>Eating problems</button>
+                    <button>Anxiety</button>
+                    <button>Marriage problems</button>
+                    <button>Body dysmorphic disorder {'(BDD)'}</button>
+                    <button>Loneliness</button>
+                    <button>Depression & Anxiety</button>
+                    <button>Eating problems</button>
+                    <button>Anxiety</button>
+                    <button>Marriage problems</button>
+                    <button>Body dysmorphic disorder {'(BDD)'}</button>
+                    <button>Loneliness</button>
+                </div>
+                <div className='LookingForHelpItemsButtons'>
+                    <button>FIND A THERAPIST</button>
+                    <button>ABOUT US</button>
+                </div>
             </div>
         </div>
     )
