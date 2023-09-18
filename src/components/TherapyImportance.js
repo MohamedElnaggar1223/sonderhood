@@ -5,7 +5,7 @@ export default function TherapyImportance()
     return (
         <div className='TherapyImportanceContainer'>
             <div className='TherapyImportanceTitle'><div>WHY IS THERAPY</div><div> IMPORTANT?</div></div>
-            <div className='TherapyImportanceDesc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div className='TherapyImportanceDesc'>Lorem ipsum dolor sit amet consectetur. Pretium commodo mattis enim mattis in. Quam nisi neque eros habitant. Vitae at eu risus id amet blandit duis. Justo tincidunt tortor ipsum egestas dignissim malesuada lacus. Amet ac viverra ut nibh. Feugiat ornare elit donec urna. Porttitor netus pulvinar neque vivamus consectetur commodo egestas. Sollicitudin sit aenean vestibulum eget. Vitae convallis vitae amet et sagittis nunc mattis habitant nulla. Aliquet lectus egestas augue suspendisse. Nisl nisl fermentum tellus dignissim.</div>
         </div>
     )
 }

@@ -3,6 +3,7 @@
 	--Sonder-yellow: #F9F3D0;
 	--Sonder-orange: #E1912F;
 	--Sonder-olive: #464834;
+	--Sonder-white: #FFFDF4;
 }
 @font-face 
 {
@@ -80,6 +81,7 @@ html, body, #root
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	flex: 0 auto auto;
 }
 
 .HomePageBookSessionText
@@ -99,10 +101,10 @@ html, body, #root
 	text-align: center;
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: Raglika;
-	font-size: 5.6875rem;
+	font-size: 5vw;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 4.75rem; /* 101.333% */
+	line-height: 4vw; /* 101.333% */
 	margin: 0;
 	padding: 0;
 }
@@ -119,7 +121,7 @@ html, body, #root
 	height: 100%;
 	text-align: center;
 	font-family: Arial;
-	font-size: 1.3rem;
+	font-size: 1vw;
 	font-style: normal;
 	font-weight: normal;
 	color: var(--Sonder-yellow);
@@ -153,16 +155,16 @@ html, body, #root
 	text-align: center;
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: Arial;
-	font-size: 1.4rem;
+	font-size: 1vw;
 	font-style: normal;
 	font-weight: 600;
-	line-height: 1.125rem; /* 100% */
-	letter-spacing: 0.25rem;
+	line-height: 1vw; /* 100% */
+	letter-spacing: 0.25vw;
 	text-transform: uppercase;
 	text-decoration: underline;
 	text-decoration-color: var(--Sonder-yellow);
-	text-decoration-thickness: 0.15rem;
-	text-underline-offset: 0.2rem;
+	text-decoration-thickness: 0.15vw;
+	text-underline-offset: 0.2vw;
 }
 
 .TherapyImportanceContainer
@@ -192,10 +194,10 @@ html, body, #root
 	color: var(--Sonder-yellow, #F9F3D0);
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: Arial;
-	font-size: 3.875rem;
+	font-size: 3.875vw;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 3.5rem; /* 121.739% */
+	line-height: 3.5vw; /* 121.739% */
 	text-align: left;
 	display: flex;
 	flex-direction: column;
@@ -210,12 +212,132 @@ html, body, #root
 	color: var(--Sonder-yellow, #F9F3D0);
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: Arial;
-	font-size: 1.125rem;
+	font-size: 1.125vw;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 1.4375rem; /* 127.778% */
+	line-height: 1.4375vw; /* 127.778% */
 	justify-content: center;
 	align-items: center;
 	margin-right: 10%;
 	width: 40%;
+}
+
+.OurServicesContainer
+{
+	height: 65.5%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--Sonder-white);
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.OurServicesHeader
+{
+	display: flex;
+	height: 10%;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 2%;
+}
+
+.OurServicesHeader h1
+{
+	width: 92.4%;
+	color: var(--Sonder-olive, #464834);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Raglika;
+	font-size: 2.5vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 121.739%; /* 121.739% */
+	margin-left: 7.6%;
+}
+
+.OurServicesItems
+{
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	height: 70%;
+	width: 92.4%;
+	flex: 0 0 auto;
+	margin-left: 7.6%;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	height: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+.OurServicesItemContainer
+{
+	display: flex;
+	flex: 0 0 auto;
+	width: 20vw;
+	height: 100%;
+	flex-direction: column;
+	margin-right: 2%;
+	border-radius: 20vw 20vw 0 0;
+	background: var(--Sonder-olive);
+	justify-content: center;
+	align-items: center;
+}
+
+.OurServicesItemNumber
+{
+	height: 20%;
+	font-size: 3vw;
+	margin-top: 20%;
+	margin-bottom: 2.5%;
+	color: var(--Sonder-olive, #464834);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Raglika;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 66px; 
+}
+
+.OurServicesItemTitle
+{
+	height: 10%;
+	color: var(--Sonder-olive, #464834);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.5vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 135.714%;
+}
+
+.OurServicesItemBody
+{
+	height: 60%;
+	color: var(--Text, #90946B);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 0.95vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 166.667%;
+	padding: 2%;
 }
