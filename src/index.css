@@ -1417,6 +1417,153 @@ html, body, #root
 	padding-bottom: 5%;
 }
 
+.HomeFooter
+{
+	height: 35%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: var(--Sonder-olive);
+}
+
+.HomeFooterInfo
+{
+	width: 22%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin-left: 5%;
+}
+
+.HomeFooterInfoLogo svg
+{
+	height: 10vh;
+	width: 100%;
+	margin-bottom: 15%;
+}
+
+.HomeFooterInfoCopyRights
+{
+	color: #FFFDF4;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.1vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 166.667%;
+}
+
+.HomeFooterSubscribe
+{
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+}
+
+.HomeFooterSubscribe label
+{
+	margin-left: 20%;
+	margin-bottom: 3%;
+	color: var(--bg, #FFFDF4);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.2vw;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100% ;
+}
+
+.HomeFooterSubscribe input
+{
+	width: 50%;
+	height: 7.5vh;
+	text-indent: 5%;
+	margin-left: 20%;
+	border-radius: 3rem;
+	outline: none;
+	border: 0;
+	box-shadow: none;
+	box-sizing: border-box;
+	font-size: 0.9vw;
+}
+
+.HomeFooterSubscribe input::placeholder
+{
+	color: var(--neutral-colors-text-gray, #9795B5);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: 'DM Sans';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 112.5%;
+}
+
+.HomeFooterSubscribeButton
+{
+	position: absolute;
+	left: 55.5%;
+	top: 47%;
+	width: 6vw;
+	background: var(--Sonder-olive);
+	border-radius: 2rem;
+	height: 6vh;
+	color: var(--neutral-colors-white, #FFF);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: DM Sans;
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 100%;
+	border: 0;
+}
+
+.HomeFooterSubscribeButton:hover
+{
+	cursor: pointer;
+}
+
+.HomeFooterSocials
+{
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	height: 31.106%;
+}
+
+.HomeFooterSocialsFollowUs
+{
+	height: 35%;
+	margin-bottom: 1%;
+	color: var(--bg, #FFFDF4);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.3vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
+}
+
+.HomeFooterSocialsIcons
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.HomeFooterSocialsIcons svg 
+{
+	margin-right: 3%;
+	height: 4vh;
+	width: 2.5vw;
+	cursor: pointer;
+}
+
 @media (max-width: 480px)
 {
 	.WhySonderContainer

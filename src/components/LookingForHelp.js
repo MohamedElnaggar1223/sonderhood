@@ -5,7 +5,7 @@ import HelpButton from './HelpButton'
 export default function LookingForHelp() 
 {
     const buttons = ['Depression & Anxiety', 'Eating problems', 'Anxiety', 'Marriage problems', 'Body dysmorphic disorder (BDD)', 'Loneliness', 'Depression & Anxiety', 'Eating problems', 'Anxiety', 'Marriage problems', 'Body dysmorphic disorder (BDD)', 'Loneliness']
-    const buttonItems = buttons.map(button => <HelpButton button={button} />)
+    const buttonItems = buttons.map((button, index) => <HelpButton key={index} button={button} />)
     
     return (
         <div className='LookingForHelpContainer'>
