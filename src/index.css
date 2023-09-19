@@ -8,7 +8,8 @@
 @font-face 
 {
 	font-family: Raglika;
-	src: url("./WebFonts/raglika-6yzwq.otf") format('otf');
+	src: url("./WebFonts/raglika-6yzwq.otf") format('otf'),
+		url("./WebFonts/raglika-6yzwq.woff") format('woff');
 }
 
 @font-face
