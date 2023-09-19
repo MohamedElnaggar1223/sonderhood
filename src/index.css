@@ -574,6 +574,7 @@ html, body, #root
 .WhySonderHeader
 {
 	display: flex;
+	margin-top: 2%;
 	height: 10%;
 	width: 100%;
 	justify-content: flex-start;
