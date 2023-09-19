@@ -2,8 +2,6 @@ import React from 'react'
 import search from '../imgs/Search.png'
 import HelpButton from './HelpButton'
 
-const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
-
 export default function LookingForHelp() 
 {
     const buttons = ['Depression & Anxiety', 'Eating problems', 'Anxiety', 'Marriage problems', 'Body dysmorphic disorder (BDD)', 'Loneliness', 'Depression & Anxiety', 'Eating problems', 'Anxiety', 'Marriage problems', 'Body dysmorphic disorder (BDD)', 'Loneliness']
