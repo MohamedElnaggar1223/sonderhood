@@ -510,7 +510,9 @@ html, body, #root
 	font-size: 1.2vw;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 100%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
 	letter-spacing: 0.2vw;
 	background: var(--Sonder-olive);
 	border: 0;
@@ -522,6 +524,9 @@ html, body, #root
 
 .LookingForHelpItemsAboutButton
 {
+	align-items: center;
+	justify-content: center;
+	display: flex;
 	padding-top: 1.8%;
 	padding-bottom: 1.8%;
 	padding-right: 3.7%;
@@ -533,7 +538,7 @@ html, body, #root
 	font-size: 1.2vw;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 100%; /* 100% */
+	line-height: auto; /* 100% */
 	letter-spacing: 0.2vw;
 	background: transparent;
 	border: 1px solid #000;
