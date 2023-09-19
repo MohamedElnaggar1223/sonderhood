@@ -532,7 +532,7 @@ html, body, #root
 	align-items: center;
 	justify-content: center;
 	display: flex;
-	letter-spacing: 0.2vw;
+	letter-spacing: 0.25vw;
 	background: var(--Sonder-olive);
 	border: 0;
 	outline: none;
@@ -558,7 +558,7 @@ html, body, #root
 	font-style: normal;
 	font-weight: 700;
 	line-height: auto; /* 100% */
-	letter-spacing: 0.2vw;
+	letter-spacing: 0.25vw;
 	background: transparent;
 	border: 1px solid #000;
 	box-shadow: none;
@@ -712,7 +712,7 @@ html, body, #root
 	align-items: center;
 	justify-content: center;
 	display: flex;
-	letter-spacing: 0.2vw;
+	letter-spacing: 0.25vw;
 	background: var(--Sonder-olive);
 	border: 0;
 	outline: none;
@@ -740,7 +740,7 @@ html, body, #root
 	font-style: normal;
 	font-weight: 700;
 	line-height: auto; /* 100% */
-	letter-spacing: 0.2vw;
+	letter-spacing: 0.25vw;
 	background: transparent;
 	border: 1px solid #000;
 	box-shadow: none;
@@ -757,7 +757,7 @@ html, body, #root
 	align-items: center;
 	background: var(--Sonder-white);
 	padding-top: 3%;
-	padding-bottom: 3%;
+	padding-bottom: 8%;
 	flex: 0 0 1;
 }
 
@@ -822,7 +822,7 @@ html, body, #root
 	align-items: center;
 	justify-content: center;
 	display: flex;
-	letter-spacing: 0.2vw;
+	letter-spacing: 0.25vw;
 	background: var(--Sonder-olive);
 	border: 0;
 	outline: none;
@@ -849,7 +849,7 @@ html, body, #root
 	font-style: normal;
 	font-weight: 700;
 	line-height: auto; /* 100% */
-	letter-spacing: 0.2vw;
+	letter-spacing: 0.25vw;
 	background: transparent;
 	border: 1px solid #000;
 	box-shadow: none;
@@ -965,6 +965,174 @@ html, body, #root
 	width: 100%;
 	border: 1px solid #000;
 	border-radius: 0.65rem;
+}
+
+.OurBlogItemsButtons
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	height: 25%;
+	margin-top: 1%;
+}
+
+.OurBlogItemsButtons button
+{
+	height: 48%;
+	margin-right: 1%;
+	margin-left: 1%;
+	width: max-content;
+	text-wrap: nowrap;
+}
+.OurBlogItemBookButton
+{
+	color: var(--Sonder-yellow, #F9F3D0);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.2vw;
+	font-style: normal;
+	font-weight: 700;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	letter-spacing: 0.25vw;
+	background: var(--Sonder-olive);
+	border: 0;
+	outline: none;
+	box-shadow: none;
+	padding: 1.8%;
+	padding-right: 2.5%;
+	padding-left: 2.5%;
+	cursor: pointer;
+}
+
+.OurBlogItemContactButton
+{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	padding-top: 1.4%;
+	padding-bottom: 1.4%;
+	padding-right: 2.1%;
+	padding-left: 2.1%;
+	color: var(--Sonder-olive);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.2vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: auto; /* 100% */
+	letter-spacing: 0.25vw;
+	background: transparent;
+	border: 1px solid #000;
+	box-shadow: none;
+	cursor: pointer;
+}
+
+.OurBlogContainer
+{
+	height: 60%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--Sonder-white);
+	padding-top: 8%;
+	padding-bottom: 8%;
+}
+
+.OurBlogHeader
+{
+	display: flex;
+	height: 10%;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 0.5%;
+}
+
+.OurBlogHeader h1
+{
+	width: 92.4%;
+	color: var(--Sonder-olive);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Raglika;
+	font-size: 2.5vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 121.739%; /* 121.739% */
+	margin-left: 7.6%;
+}
+
+.OurBlogItems
+{
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	height: 70%;
+	width: 92.4%;
+	flex: 0 0 auto;
+	margin-left: 7.6%;
+	cursor: pointer;
+}
+
+.OurBlogItemContainer
+{
+	display: flex;
+	flex: 0 0 auto;
+	width: 20vw;
+	height: 100%;
+	flex-direction: column;
+	margin-right: 2.5%;
+	justify-content: center;
+	align-items: center;
+}
+
+.OurBlogItemImage
+{
+	width: 100%;
+	height: 60%;
+	overflow: hidden;
+}
+
+.OurBlogItemImage img
+{
+	width: 100%;
+	box-sizing:border-box;
+}
+
+.OurBlogItemTitle
+{
+	color: var(--Sonder-olive);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: OptimaB;
+	font-size: 1.5vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 64.286%;
+	height: 11%;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: 2%;
+}
+
+.OurBlogItemBody
+{
+	color: var(--Sonder-olive);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 0.95vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 166.667%;
+	height: 25%;
 }
 
 @media (max-width: 480px)
