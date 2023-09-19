@@ -4,6 +4,7 @@ import TherapyImportance from './components/TherapyImportance';
 import OurServices from './components/OurServices';
 import LookingForHelp from './components/LookingForHelp';
 import WhySonderHood from './components/WhySonderHood';
+import MeetTheTeam from './components/MeetTheTeam';
 
 function App() 
 {
@@ -14,6 +15,7 @@ function App()
             <OurServices />
             <LookingForHelp />
             <WhySonderHood />
+            <MeetTheTeam />
         </>
     )
 }
