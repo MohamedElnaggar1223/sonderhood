@@ -1120,7 +1120,6 @@ html, body, #root
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	padding-top: 2%;
 }
 
 .OurBlogItemBody
