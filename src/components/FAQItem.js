@@ -32,17 +32,14 @@ export default function FAQItem({ questions, index, question })
                     { shown ? closeIcon : openIcon }
                 </div>
             </div>
-            {/* <div className={shown ? 'FAQItemAnswerWrapper open' : 'FAQItemAnswerWrapper'}>
-                <div className={shown ? 'FAQItemAnswer open' : 'FAQItemAnswer'}>
+        </div>
+        <div className={shown ? 'FAQItemAnswerWrapper open' : 'FAQItemAnswerWrapper'}>
+            {shown && 
+                <div style={ questions.length === (index+1) ? {} : {borderBottom: '1px solid #000'} } className={'FAQItemAnswerTemp'}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes. 
                 </div>
-            </div> */}
+            }
         </div>
-        {shown && 
-            <div style={ questions.length === (index+1) ? {} : {borderBottom: '1px solid #000'} } className={'FAQItemAnswerTemp'}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes. 
-            </div>
-        }
         </>
     )
 }
