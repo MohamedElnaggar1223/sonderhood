@@ -1,10 +1,14 @@
 import React from 'react'
 import search from '../imgs/Search.png'
+import HelpButton from './HelpButton'
 
 const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
 
 export default function LookingForHelp() 
 {
+    const buttons = ['Depression & Anxiety', 'Eating problems', 'Anxiety', 'Marriage problems', 'Body dysmorphic disorder (BDD)', 'Loneliness', 'Depression & Anxiety', 'Eating problems', 'Anxiety', 'Marriage problems', 'Body dysmorphic disorder (BDD)', 'Loneliness']
+    const buttonItems = buttons.map(button => <HelpButton button={button} />)
+    
     return (
         <div className='LookingForHelpContainer'>
             <div className='LookingForHelpHeader'>
@@ -21,22 +25,11 @@ export default function LookingForHelp()
                     Most Searched:
                 </div>
                 <div className='LookingForHelpItems'>
-                    <button>Depression & Anxiety</button>
-                    <button>Eating problems</button>
-                    <button>Anxiety</button>
-                    <button>Marriage problems</button>
-                    <button>Body dysmorphic disorder {'(BDD)'}</button>
-                    <button>Loneliness</button>
-                    <button>Depression & Anxiety</button>
-                    <button>Eating problems</button>
-                    <button>Anxiety</button>
-                    <button>Marriage problems</button>
-                    <button>Body dysmorphic disorder {'(BDD)'}</button>
-                    <button>Loneliness</button>
+                    {buttonItems}
                 </div>
                 <div className='LookingForHelpItemsButtons'>
-                    <button>FIND A THERAPIST</button>
-                    <button>ABOUT US</button>
+                    <button className='LookingForHelpItemsFindButton'>FIND A THERAPIST</button>
+                    <button className='LookingForHelpItemsAboutButton'>ABOUT US</button>
                 </div>
             </div>
         </div>
