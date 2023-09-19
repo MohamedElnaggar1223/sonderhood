@@ -6,6 +6,8 @@ import LookingForHelp from './components/LookingForHelp';
 import WhySonderHood from './components/WhySonderHood';
 import MeetTheTeam from './components/MeetTheTeam';
 import OurBlog from './components/OurBlog';
+import ClientsSay from './components/ClientsSay';
+import FAQ from './components/FAQ';
 
 function App() 
 {
@@ -18,6 +20,8 @@ function App()
             <WhySonderHood />
             <MeetTheTeam />
             <OurBlog />
+            <ClientsSay />
+            <FAQ />
         </>
     )
 }

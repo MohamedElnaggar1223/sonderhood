@@ -8,8 +8,8 @@
 @font-face 
 {
 	font-family: Raglika;
-	src: url("./WebFonts/raglika-6yzwq.otf") format('otf'),
-		url("./WebFonts/raglika-6yzwq.woff") format('woff');
+	src: url("./WebFonts/raglika-6yzwq.woff") format('woff');
+	src: url("./WebFonts/raglika-6yzwq.otf") format('otf');
 }
 
 @font-face
@@ -980,7 +980,7 @@ html, body, #root
 
 .OurBlogItemsButtons button
 {
-	height: 48%;
+	height: 75%;
 	margin-right: 1%;
 	margin-left: 1%;
 	width: max-content;
@@ -1053,7 +1053,7 @@ html, body, #root
 	width: 100%;
 	justify-content: flex-start;
 	align-items: center;
-	margin-bottom: 0.5%;
+	margin-bottom: 1%;
 }
 
 .OurBlogHeader h1
@@ -1133,6 +1133,288 @@ html, body, #root
 	font-weight: 400;
 	line-height: 166.667%;
 	height: 25%;
+}
+
+.ClientsSayContainer
+{
+	height: 60%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--Sonder-white);
+	padding-top: 8%;
+	padding-bottom: 2%;
+}
+
+.ClientsSayHeader
+{
+	display: flex;
+	height: 10%;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 2%;
+}
+
+.ClientsSayHeader h1
+{
+	width: 92.4%;
+	color: var(--Sonder-olive);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Raglika;
+	font-size: 2.5vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 121.739%; /* 121.739% */
+	margin-left: 7.6%;
+}
+
+.ClientsSayItems
+{
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	height: 70%;
+	width: 92.4%;
+	flex: 0 0 auto;
+	margin-left: 7.6%;
+	cursor: pointer;
+	overflow-y: hidden;
+}
+
+.ClientsSayItem
+{
+	display: flex;
+	flex: 0 0 auto;
+	width: 20vw;
+	height: 85%;
+	flex-direction: column;
+	margin-right: 2.5%;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 1%;
+	padding: 1%;
+	border: 1px solid #000;
+	box-shadow: none;
+}
+
+.ClientsSayItemRating
+{
+	height: 10%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.ClientsSayItemRating svg
+{
+	margin-right: 2.5%;
+}
+
+.ClientsSayItemComments
+{
+	height: 70%;
+	margin-top: 6%;
+	margin-bottom: 6%;
+}
+
+.ClientsSayItemCommentsTitle
+{
+	color: var(--Sonder-olive, #464834);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.05vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%;
+}
+
+.ClientsSayItemCommentsBody
+{
+	color: var(--Text, #90946B);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 0.95vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+}
+
+.ClientsSayItemAuthor
+{
+	height: 20%;
+	margin-bottom: 4%;
+}
+
+.ClientsSayItemAuthorName
+{
+	color: var(--Sonder-olive, #464834);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 0.95vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%;
+	margin-bottom: 3.5%;
+}
+
+.ClientsSayItemAuthorTherapy
+{
+	color: var(--Text, #90946B);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 0.95vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+}
+
+.FAQContainer
+{
+	min-height: 80%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--Sonder-white);
+	padding-top: 4%;
+	padding-bottom: 2%;
+	flex: 0 0 auto;
+	overflow-y: auto;
+}
+
+.FAQHeader
+{
+	display: flex;
+	height: 10%;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 1%;
+}
+
+.FAQHeader h1
+{
+	width: 92.4%;
+	color: var(--Sonder-olive);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Raglika;
+	font-size: 2.5vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 121.739%; /* 121.739% */
+	margin-left: 7.6%;
+}
+
+.FAQItems
+{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 84.8%;
+	flex: auto 0 auto;
+	margin-left: 7.6%;
+	margin-right: 7.6%;
+	cursor: pointer;
+	overflow-y: auto;
+	flex: 0 0 auto;
+	justify-content: space-around;
+}
+
+.FAQItem
+{
+	display: flex;
+	flex-direction: row;
+	min-height: 20vh;
+	width: 95%;
+}
+
+.FAQItemHeading
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.FAQItemHeadingNumber
+{
+	color: #90946B;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Raglika;
+	font-size: 2.65vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 104.167%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.FAQItemHeadingQuestion
+{
+	color: var(--Sonder-olive, #464834);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.6vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 135.714%;
+	width: 75%;
+	text-align: start;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.FAQItemHeadingController
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.FAQItemAnswerWrapper
+{
+	display: grid;
+	grid-template-rows: 0vh;
+	overflow: hidden;
+	transition: grid-template-rows 0.2s;
+}
+
+.FAQItemAnswerWrapper.open
+{
+	grid-template-rows: 20vh;
+}
+
+.FAQItemAnswer
+{
+	min-height: 0;
+	transition: all 0.2s;
+}
+
+.FAQItemAnswer.open
+{
+	transition: all 0.2s;
+
+}
+
+.FAQItemAnswerTemp
+{
+	color: #90946B;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: 'DM Sans';
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 166.667%;
+	padding-left: 12%;
+	padding-right: 30%;
+	padding-bottom: 5%;
 }
 
 @media (max-width: 480px)
