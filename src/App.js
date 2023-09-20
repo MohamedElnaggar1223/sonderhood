@@ -1,30 +1,21 @@
 import React from 'react'
-import Home from './components/Home';
-import TherapyImportance from './components/TherapyImportance';
-import OurServices from './components/OurServices';
-import LookingForHelp from './components/LookingForHelp';
-import WhySonderHood from './components/WhySonderHood';
-import MeetTheTeam from './components/MeetTheTeam';
-import OurBlog from './components/OurBlog';
-import ClientsSay from './components/ClientsSay';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './components/HomePage/HomePage';
+import Layout from './components/HomePage/Layout';
+import About from './components/About/About';
 
 function App() 
 {
     return (
-        <>
-            <Home />
-            <TherapyImportance />
-            <OurServices />
-            <LookingForHelp />
-            <WhySonderHood />
-            <MeetTheTeam />
-            <OurBlog />
-            <ClientsSay />
-            <FAQ />
-            <Footer />
-        </>
+        <Routes>
+            <Route path='/' element={<Layout />}>
+                <Route index element={<HomePage />} />
+
+                <Route path='/About' element={<About />} />
+                <Route path='/about' element={<About />} />
+            </Route>
+
+        </Routes>
     )
 }
 

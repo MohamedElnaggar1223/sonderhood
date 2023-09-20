@@ -1,7 +1,7 @@
 import React from 'react'
-import therapist3 from '../imgs/therapist1.png'
-import therapist2 from '../imgs/therapist2.png'
-import therapist1 from '../imgs/therapist3.png'
+import therapist3 from '../../imgs/therapist1.png'
+import therapist2 from '../../imgs/therapist2.png'
+import therapist1 from '../../imgs/therapist3.png'
 
 export default function MeetTheTeam() 
 {

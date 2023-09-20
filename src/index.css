@@ -151,7 +151,7 @@ html, body, #root
 	height: 5%;
 	justify-content: space-around;
 	align-items: center;
-	margin-top: 1%;
+	margin-top: 1.5%;
 }
 
 .HomeHeaderContent
@@ -1570,6 +1570,119 @@ html, body, #root
 	height: 4vh;
 	width: 2.5vw;
 	cursor: pointer;
+}
+
+.PagesHeaderContainer
+{
+	display: flex;
+	flex-direction: row;
+	height: 5%;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 1.5%;
+}
+
+.PagesHeaderContent
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 30%;
+}
+
+.PagesHeaderAnchor a
+{
+	color: var(--Sonder-olive);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1vw; /* 100% */
+	letter-spacing: 0.25vw;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-decoration-color: var(--Sonder-olive);
+	text-decoration-thickness: 0.15vw;
+	text-underline-offset: 0.2vw;
+}
+
+.AboutPageContainer
+{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background: var(--Sonder-white);
+	flex: 0 0 auto;
+}
+
+.AboutPage
+{
+	max-height: 92.8%;
+	height: 78%;
+	width: 86%;
+	margin-left: 7%;
+	margin-right: 7%;
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 auto;
+	margin-top: 7.2%;
+
+}
+
+.AboutPageOurStory
+{
+	height: 20%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.AboutPageOurStoryTitle
+{
+	color: var(--Sonder-olive, #464834);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Raglika;
+	font-size: 3.2vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 103.704%;
+	text-transform: uppercase;
+	margin-bottom: 1%;
+	display: flex;
+}
+
+.AboutPageOurStoryDesc
+{
+	display: flex;
+	flex-direction: row;
+	height: 98%;
+	margin-bottom: 2%;
+	color: var(--Text, #90946B);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 155.556%;
+}
+
+.AboutPageVideo
+{
+	height: 80%;
+	display: flex;
+	flex: 0 0 auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.AboutPageVideo iframe
+{
+	height: 85%;
+	width: 65%;
+	margin: 0;
 }
 
 @media (max-width: 480px)

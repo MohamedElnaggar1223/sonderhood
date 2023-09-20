@@ -1,5 +1,5 @@
 import React from 'react'
-import search from '../imgs/Search.png'
+import search from '../../imgs/Search.png'
 import HelpButton from './HelpButton'
 
 export default function LookingForHelp() 

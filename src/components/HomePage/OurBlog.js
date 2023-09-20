@@ -1,7 +1,7 @@
 import React from 'react'
-import container1 from '../imgs/Container1.png'
-import container2 from '../imgs/Container2.png'
-import container3 from '../imgs/Container3.png'
+import container1 from '../../imgs/Container1.png'
+import container2 from '../../imgs/Container2.png'
+import container3 from '../../imgs/Container3.png'
 
 export default function OurBlog() 
 {
