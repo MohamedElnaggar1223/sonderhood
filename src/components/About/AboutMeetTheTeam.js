@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import Therapist from '../HomePage/Therapist'
 import { therapists } from '../therapists'
+import { useNavigate } from 'react-router-dom'
 
 export default function AboutMeetTheTeam() 
 {
     const [selectedService, setSelectedService] = useState('All Services')
 
+    const navigate = useNavigate()
+    
     const filteredTherapists = therapists.filter(therapist => selectedService !== 'All Services' ? therapist.services.includes(selectedService) : therapist)
     const therapistsDisplay = filteredTherapists.map(therapist => <Therapist therapist={therapist} />)
 
@@ -36,7 +39,7 @@ export default function AboutMeetTheTeam()
             </div>
             <div className='MeetTheTeamItemsButtons'>
                     <button className='MeetTheTeamItemBookButton'>BOOK A SESSION</button>
-                    <button className='MeetTheTeamItemContactButton'>CONTACT US</button>
+                    <button onClick={() => navigate('/ContactUs')} className='MeetTheTeamItemContactButton'>CONTACT US</button>
             </div>
         </div>
     )

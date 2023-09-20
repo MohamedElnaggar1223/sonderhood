@@ -11,6 +11,7 @@ export default function Service()
     let selectedService
     if(service === 'GroupTherapy') selectedService = 'Group Therapy'
     else if(service === 'ChildTherapy') selectedService = 'Child Therapy'
+    else selectedService = 'Individual Therapy'
 
     const title = selectedService?.split(' ')
     console.log(title)
@@ -23,7 +24,7 @@ export default function Service()
                         <div className='SingleServicePageHeader'>
                             <div className='SingleServicePageHeaderTitle'>
                                 {/*//@ts-ignore*/}
-                                <h1>{title[0].toUpperCase()} <span>{title[1].toUpperCase()}</span></h1>
+                                <h1>{title[0]?.toUpperCase()} <span>{title[1]?.toUpperCase()}</span></h1>
                             </div>
                             <div className='SingleServicePageHeaderDesc'>
                                 Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. 

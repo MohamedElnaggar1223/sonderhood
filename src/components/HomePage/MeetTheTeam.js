@@ -2,9 +2,12 @@ import React from 'react'
 import therapist3 from '../../imgs/therapist1.png'
 import therapist2 from '../../imgs/therapist2.png'
 import therapist1 from '../../imgs/therapist3.png'
+import { useNavigate } from 'react-router-dom'
 
 export default function MeetTheTeam() 
 {
+    const navigate = useNavigate()
+
     return (
         <div className='MeetTheTeamContainer'>
             <div className='MeetTheTeamHeader'>
@@ -145,7 +148,7 @@ export default function MeetTheTeam()
             </div>
             <div className='MeetTheTeamItemsButtons'>
                     <button className='MeetTheTeamItemBookButton'>BOOK A SESSION</button>
-                    <button className='MeetTheTeamItemContactButton'>CONTACT US</button>
+                    <button onClick={() => navigate('/ContactUs')} className='MeetTheTeamItemContactButton'>CONTACT US</button>
             </div>
         </div>
     )

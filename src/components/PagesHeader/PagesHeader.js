@@ -30,7 +30,7 @@ export default function PagesHeader()
                 <path d="M16.3506 14.9016C16.3506 20.2738 20.6759 24.6484 25.9997 24.6484C31.3228 24.6484 35.6487 20.2738 35.6487 14.9016C35.6487 9.5294 31.3228 5.15479 25.9997 5.15479C20.6765 5.15479 16.3506 9.5294 16.3506 14.9016ZM18.3937 14.9016C18.3937 10.6603 21.8089 7.21396 25.9997 7.21396C30.1911 7.21396 33.6056 10.6603 33.6056 14.9016C33.6056 19.1429 30.1911 22.5892 25.9997 22.5892C21.8083 22.5892 18.3937 19.1429 18.3937 14.9016Z" fill="#464834" stroke="#464834" stroke-width="0.5"/>
             </svg>
             <div className='PagesHeaderContent'>
-                <div className='PagesHeaderAnchor'><Link to='/'>CONTACT US</Link></div>
+                <div className='PagesHeaderAnchor'><Link to='/ContactUs'>CONTACT US</Link></div>
                 <div className='PagesHeaderAnchor'><Link to='/'>BOOK A SESSION</Link></div>
             </div>
         </div>

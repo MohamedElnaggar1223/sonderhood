@@ -1,16 +1,19 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
 
 export default function OurServices() 
 {
+    const navigate = useNavigate()
+
     return (
         <div className='OurServicesContainer'>
             <div className='OurServicesHeader'>
                 <h1>OUR SERVICES</h1>
             </div>
             <div className='OurServicesItems'>
-                <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                <div onClick={() => navigate('/Services/IndividualTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                     <div className='OurServicesItemNumber'>
                         01
                     </div>
@@ -22,7 +25,7 @@ export default function OurServices()
                     </div>
                 </div>
 
-                <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                <div onClick={() => navigate('/Services/IndividualTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                     <div className='OurServicesItemNumber'>
                         02
                     </div>
@@ -34,7 +37,7 @@ export default function OurServices()
                     </div>
                 </div>
 
-                <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                <div onClick={() => navigate('/Services/IndividualTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                     <div className='OurServicesItemNumber'>
                         03
                     </div>
@@ -46,7 +49,7 @@ export default function OurServices()
                     </div>
                 </div>
 
-                <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                <div onClick={() => navigate('/Services/IndividualTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                     <div className='OurServicesItemNumber'>
                         04
                     </div>
@@ -58,7 +61,7 @@ export default function OurServices()
                     </div>
                 </div>
 
-                <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                <div onClick={() => navigate('/Services/IndividualTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                     <div className='OurServicesItemNumber'>
                         05
                     </div>
@@ -70,7 +73,7 @@ export default function OurServices()
                     </div>
                 </div>
 
-                <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                <div onClick={() => navigate('/Services/IndividualTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                     <div className='OurServicesItemNumber'>
                         06
                     </div>
@@ -82,7 +85,7 @@ export default function OurServices()
                     </div>
                 </div>
 
-                <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                <div onClick={() => navigate('/Services/IndividualTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                     <div className='OurServicesItemNumber'>
                         07
                     </div>

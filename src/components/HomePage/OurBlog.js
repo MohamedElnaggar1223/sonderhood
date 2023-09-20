@@ -2,9 +2,12 @@ import React from 'react'
 import container1 from '../../imgs/Container1.png'
 import container2 from '../../imgs/Container2.png'
 import container3 from '../../imgs/Container3.png'
+import { useNavigate } from 'react-router-dom'
 
 export default function OurBlog() 
 {
+    const navigate = useNavigate()
+
     return (
         <div className='OurBlogContainer'>
             <div className='OurBlogHeader'>
@@ -98,7 +101,7 @@ export default function OurBlog()
             </div>
             <div className='OurBlogItemsButtons'>
                 <button className='OurBlogItemBookButton'>SEE ALL BLOGS</button>
-                <button className='OurBlogItemContactButton'>CONTACT US</button>
+                <button onClick={() => navigate('/ContactUs')} className='OurBlogItemContactButton'>CONTACT US</button>
             </div>
         </div>
     )

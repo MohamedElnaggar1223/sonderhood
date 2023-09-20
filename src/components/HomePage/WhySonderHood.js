@@ -1,7 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function WhySonderHood() 
 {
+    const navigate = useNavigate()
+
     return (
         <div className='WhySonderContainer'>
             <div className='WhySonderHeader'>
@@ -69,7 +72,7 @@ export default function WhySonderHood()
             </div>
             <div className='WhySonderItemsButtons'>
                     <button className='WhySonderItemBookButton'>BOOK A SESSION</button>
-                    <button className='WhySonderItemContactButton'>CONTACT US</button>
+                    <button onClick={() => navigate('/ContactUs')} className='WhySonderItemContactButton'>CONTACT US</button>
             </div>
         </div>
     )

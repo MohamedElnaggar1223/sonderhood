@@ -5,6 +5,7 @@ import Layout from './components/HomePage/Layout';
 import About from './components/About/About';
 import Services from './components/Services/Services';
 import Service from './components/Services/Service';
+import ContactUs from './components/ContactUs/ContactUs';
 
 function App() 
 {
@@ -26,6 +27,10 @@ function App()
                     <Route path=':service' element={<Service />} />
     
                 </Route>
+
+                <Route path='ContactUs' element={<ContactUs />} />
+                <Route path='contactus' element={<ContactUs />} />
+
             </Route>
 
         </Routes>
