@@ -1,9 +1,12 @@
 import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
+import MeetTheTeam from '../HomePage/MeetTheTeam'
+import AboutMeetTheTeam from './AboutMeetTheTeam'
 
 export default function About() 
 {
     return (
+        <>
         <div className='AboutPageContainer'>
             <PagesHeader />
             <div className='AboutPage'>
@@ -38,5 +41,7 @@ export default function About()
                 </div>
             </div>
         </div>
+        <AboutMeetTheTeam />
+        </>
     )
 }

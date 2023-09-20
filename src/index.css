@@ -1685,6 +1685,82 @@ html, body, #root
 	margin: 0;
 }
 
+.MeetTheTeamHeaderContainer
+{
+	width: 85%;
+	margin-bottom: 3.5%;
+}
+
+.MeetTheTeamHeaderDesc
+{
+	width: 40%;
+	margin-left: 7.6%;
+	color: var(--Text, #90946B);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.2vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 155.556%;
+}
+
+.MeetTheTeamHeaderFilters
+{
+	height: 30.1vh;
+	margin-right: 5%;
+	margin-bottom: 3.5%;
+	justify-content: center;
+	align-items: flex-start;
+	display: flex;
+}
+
+.MeetTheTeamHeaderFiltersInput
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10%;
+}
+
+.MeetTheTeamHeaderFiltersInput label
+{
+	color: var(--Sonder-olive, #464834);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.1vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 128.571%;
+	text-transform: uppercase;
+	margin-right: 2%;
+	text-wrap: nowrap;
+}
+
+.MeetTheTeamHeaderFiltersInput select
+{
+	height: 4vh;
+	width: 9vw;
+	background: transparent;
+	border: 1px solid #000;
+	border-radius: 2rem;
+	padding: 2%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--Sonder-olive, #464834);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 0.75vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 18px; /* 150% */
+	text-transform: uppercase;
+	outline: none;
+}
+
 @media (max-width: 480px)
 {
 	.WhySonderContainer
