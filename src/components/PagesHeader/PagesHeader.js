@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function PagesHeader() 
 {
+    const HeaderRef = useRef()
+
+    useEffect(() => 
+    {
+        //@ts-ignore
+        HeaderRef.current.scrollIntoView({ behavior: 'smooth' })
+    }, [])
+
     return (
+        
         <div className='PagesHeaderContainer'>
             <div className='PagesHeaderContent'>
-                <div className='PagesHeaderAnchor'><Link to='/'>HOME</Link></div>
+            {/*//@ts-ignore*/}
+                <div ref={HeaderRef} className='PagesHeaderAnchor'><Link to='/'>HOME</Link></div>
                 <div className='PagesHeaderAnchor'><Link to='/About'>ABOUT</Link></div>
                 <div className='PagesHeaderAnchor'><Link to='/'>BLOG</Link></div>
-                <div className='PagesHeaderAnchor'><Link to='/'>OUR SERVICES</Link></div>
+                <div className='PagesHeaderAnchor'><Link to='/Services'>OUR SERVICES</Link></div>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="52" height="76" viewBox="0 0 52 76" fill="none">
                 <path d="M22.7106 28.0581V27.8081H22.4606H20.9175H20.6675V28.0581V74.7204V74.9704H20.9175H22.4606H22.7106V74.7204V28.0581Z" fill="#464834" stroke="#464834" stroke-width="0.5"/>

@@ -9,7 +9,7 @@ export default function HomeHeader()
                 <div className='HomeHeaderAnchor'><Link to='/'>HOME</Link></div>
                 <div className='HomeHeaderAnchor'><Link to='/About'>ABOUT</Link></div>
                 <div className='HomeHeaderAnchor'><Link to='/'>BLOG</Link></div>
-                <div className='HomeHeaderAnchor'><Link to='/'>OUR SERVICES</Link></div>
+                <div className='HomeHeaderAnchor'><Link to='/Services'>OUR SERVICES</Link></div>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="52" height="76" viewBox="0 0 52 76" fill="none">
                 <path d="M22.7101 28.0581V27.8081H22.4601H20.917H20.667V28.0581V74.7204V74.9704H20.917H22.4601H22.7101V74.7204V28.0581Z" fill="#F9F3D0" stroke="#F9F3D0"strokeWidth="0.5"/>

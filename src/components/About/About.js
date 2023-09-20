@@ -1,6 +1,5 @@
 import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
-import MeetTheTeam from '../HomePage/MeetTheTeam'
 import AboutMeetTheTeam from './AboutMeetTheTeam'
 
 export default function About() 

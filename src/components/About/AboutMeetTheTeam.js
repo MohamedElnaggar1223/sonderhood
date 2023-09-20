@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import therapist3 from '../../imgs/therapist1.png'
 import therapist2 from '../../imgs/therapist2.png'
 import therapist1 from '../../imgs/therapist3.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import Therapist from '../HomePage/Therapist'
 
 export default function AboutMeetTheTeam() 
