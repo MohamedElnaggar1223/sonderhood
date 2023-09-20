@@ -1463,12 +1463,13 @@ html, body, #root
 	justify-content: center;
 	align-items: flex-start;
 	position: relative;
+	height: 100%;
 }
 
 .HomeFooterSubscribe label
 {
-	margin-left: 20%;
-	margin-bottom: 3%;
+	/* margin-left: 20%;
+	margin-bottom: 3%; */
 	color: var(--bg, #FFFDF4);
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: Arial;
@@ -1476,6 +1477,9 @@ html, body, #root
 	font-style: normal;
 	font-weight: 600;
 	line-height: 100% ;
+	position: absolute;
+	top: 28%;
+	left: 20%;
 }
 
 .HomeFooterSubscribe input
@@ -1483,13 +1487,16 @@ html, body, #root
 	width: 50%;
 	height: 7.5vh;
 	text-indent: 5%;
-	margin-left: 20%;
+	/* margin-left: 20%; */
 	border-radius: 3rem;
 	outline: none;
 	border: 0;
 	box-shadow: none;
 	box-sizing: border-box;
 	font-size: 0.9vw;
+	position: absolute;
+	top: 38%;
+	left: 20%;
 }
 
 .HomeFooterSubscribe input::placeholder
@@ -1506,7 +1513,7 @@ html, body, #root
 {
 	position: absolute;
 	left: 55.5%;
-	top: 47%;
+	top: 40%;
 	width: 6vw;
 	background: var(--Sonder-olive);
 	border-radius: 2rem;
