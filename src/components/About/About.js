@@ -1,6 +1,5 @@
 import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
-import ReactPlayer from 'react-player'
 
 export default function About() 
 {
