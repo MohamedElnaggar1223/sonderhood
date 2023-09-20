@@ -1,12 +1,57 @@
-import React from 'react'
+import React, { useState } from 'react'
 import therapist3 from '../../imgs/therapist1.png'
 import therapist2 from '../../imgs/therapist2.png'
 import therapist1 from '../../imgs/therapist3.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import Therapist from '../HomePage/Therapist'
 
 export default function AboutMeetTheTeam() 
 {
+    const [selectedService, setSelectedService] = useState('All Services')
+
+    const therapists = [
+        {
+            image: therapist1,
+            name: 'Full Name',
+            desc: 'Founder & Counseling Psychologist',
+            services: ['Child Therapy', 'Group Therapy', 'All Services']
+        },
+        {
+            image: therapist2,
+            name: 'Full Name',
+            desc: 'Founder & Counseling Psychologist',
+            services: ['Child Therapy', 'Group Therapy', 'All Services']
+        },
+        {
+            image: therapist3,
+            name: 'Full Name',
+            desc: 'Founder & Counseling Psychologist',
+            services: ['Child Therapy', 'Group Therapy', 'All Services']
+        }
+        ,{
+            image: therapist1,
+            name: 'Full Name',
+            desc: 'Founder & Counseling Psychologist',
+            services: ['Group Therapy', 'All Services']
+        }
+        ,{
+            image: therapist2,
+            name: 'Full Name',
+            desc: 'Founder & Counseling Psychologist',
+            services: [ 'Child Therapy', 'All Services']
+        },
+        {
+            image: therapist3,
+            name: 'Full Name',
+            desc: 'Founder & Counseling Psychologist',
+            services: ['Child Therapy', 'Group Therapy', 'All Services']
+        }
+    ]
+
+    const filteredTherapists = therapists.filter(therapist => therapist.services.includes(selectedService))
+    const therapistsDisplay = filteredTherapists.map(therapist => <Therapist therapist={therapist} />)
+
     return (
         <div className='MeetTheTeamContainer'>
             <div className='MeetTheTeamHeader'>
@@ -21,146 +66,16 @@ export default function AboutMeetTheTeam()
                 <div className='MeetTheTeamHeaderFilters'>
                     <div className='MeetTheTeamHeaderFiltersInput'>
                         <label htmlFor='filters'>FILTER BY:</label>
-                        <select id='filters'>
-                            <option value="allservices">ALL SERVICES</option>
-                            <option value="group">GROUP THERAPY</option>
-                            <option value="child">CHILD THERAPY</option>
+                        <select onChange={(e) => setSelectedService(e.target.value)} id='filters'>
+                            <option value="All Services">ALL SERVICES</option>
+                            <option value="Group Therapy">GROUP THERAPY</option>
+                            <option value="Child Therapy">CHILD THERAPY</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div className='MeetTheTeamItemsContainer'>
-                <div className='MeetTheTeamItem'>
-                    <div className='MeetTheTeamItemImage'>
-                        <img src={therapist1} alt='t4' />
-                    </div>
-                    <div className='MeetTheTeamItemInfo'>
-                        <div className='MeetTheTeamItemName'>
-                            Full Name
-                        </div>
-                        <div className='MeetTheTeamItemDesc'>
-                            Founder & Counseling Psychologist
-                        </div>
-                    </div>
-                    <div className='MeetTheTeamItemProf'>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Child Therapy
-                        </div>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Group Therapy
-                        </div>
-                    </div>
-                </div>
-
-                <div className='MeetTheTeamItem'>
-                    <div className='MeetTheTeamItemImage'>
-                        <img src={therapist2} alt='t2' />
-                    </div>
-                    <div className='MeetTheTeamItemInfo'>
-                        <div className='MeetTheTeamItemName'>
-                            Full Name
-                        </div>
-                        <div className='MeetTheTeamItemDesc'>
-                            Founder & Counseling Psychologist
-                        </div>
-                    </div>
-                    <div className='MeetTheTeamItemProf'>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Child Therapy
-                        </div>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Group Therapy
-                        </div>
-                    </div>
-                </div>
-
-                <div className='MeetTheTeamItem'>
-                    <div className='MeetTheTeamItemImage'>
-                    <img src={therapist3} alt='t3' />
-                    </div>
-                    <div className='MeetTheTeamItemInfo'>
-                        <div className='MeetTheTeamItemName'>
-                            Full Name
-                        </div>
-                        <div className='MeetTheTeamItemDesc'>
-                            Founder & Counseling Psychologist
-                        </div>
-                    </div>
-                    <div className='MeetTheTeamItemProf'>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Child Therapy
-                        </div>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Group Therapy
-                        </div>
-                    </div>
-                </div>
-
-                <div className='MeetTheTeamItem'>
-                    <div className='MeetTheTeamItemImage'>
-                        <img src={therapist1} alt='t1' />
-                    </div>
-                    <div className='MeetTheTeamItemInfo'>
-                        <div className='MeetTheTeamItemName'>
-                            Full Name
-                        </div>
-                        <div className='MeetTheTeamItemDesc'>
-                            Founder & Counseling Psychologist
-                        </div>
-                    </div>
-                    <div className='MeetTheTeamItemProf'>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Child Therapy
-                        </div>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Group Therapy
-                        </div>
-                    </div>
-                </div>
-
-                <div className='MeetTheTeamItem'>
-                    <div className='MeetTheTeamItemImage'>
-                        <img src={therapist2} alt='t2' />
-                    </div>
-                    <div className='MeetTheTeamItemInfo'>
-                        <div className='MeetTheTeamItemName'>
-                            Full Name
-                        </div>
-                        <div className='MeetTheTeamItemDesc'>
-                            Founder & Counseling Psychologist
-                        </div>
-                    </div>
-                    <div className='MeetTheTeamItemProf'>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Child Therapy
-                        </div>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Group Therapy
-                        </div>
-                    </div>
-                </div>
-
-                <div className='MeetTheTeamItem'>
-                    <div className='MeetTheTeamItemImage'>
-                    <img src={therapist3} alt='t3' />
-                    </div>
-                    <div className='MeetTheTeamItemInfo'>
-                        <div className='MeetTheTeamItemName'>
-                            Full Name
-                        </div>
-                        <div className='MeetTheTeamItemDesc'>
-                            Founder & Counseling Psychologist
-                        </div>
-                    </div>
-                    <div className='MeetTheTeamItemProf'>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Child Therapy
-                        </div>
-                        <div className='MeetTheTeamItemProfItem'>
-                            Group Therapy
-                        </div>
-                    </div>
-                </div>
+                {therapistsDisplay}
             </div>
             <div className='MeetTheTeamItemsButtons'>
                     <button className='MeetTheTeamItemBookButton'>BOOK A SESSION</button>
