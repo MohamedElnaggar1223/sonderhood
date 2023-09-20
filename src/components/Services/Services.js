@@ -1,10 +1,13 @@
 import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import WhySonderHood from '../HomePage/WhySonderHood'
+import { useNavigate } from 'react-router-dom'
 const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
 
 export default function Serives() 
 {
+    const navigate = useNavigate()
+
     return (
         <>
         <div className='ServicesPageContainer'>
@@ -17,31 +20,31 @@ export default function Serives()
                 </div>
                 <div className='ServicesPageItems'>
                     <div className='ServicesPageItemsTopPart'>
-                        <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                        <div onClick={() => navigate('/Services/ChildTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                             <div className='OurServicesItemNumber'>
                                 01
                             </div>
                             <div className='OurServicesItemTitle'>
-                                Individual Therapy
+                                Child Therapy
                             </div>
                             <div className='OurServicesItemBody'>
                                 Lorem ipsum dolor sit amet consectetur. Aliquet volutpat sed amet sapien a vitae. Arcu a nibh id cursus ultrices. Magna ut lorem aliquet a. Lobortis habitasse blandit mauris placerat nisl quam.
                             </div>
                         </div>
 
-                        <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                        <div onClick={() => navigate('/Services/GroupTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                             <div className='OurServicesItemNumber'>
                                 02
                             </div>
                             <div className='OurServicesItemTitle'>
-                                Individual Therapy
+                                Group Therapy
                             </div>
                             <div className='OurServicesItemBody'>
                                 Lorem ipsum dolor sit amet consectetur. Aliquet volutpat sed amet sapien a vitae. Arcu a nibh id cursus ultrices. Magna ut lorem aliquet a. Lobortis habitasse blandit mauris placerat nisl quam.
                             </div>
                         </div>
 
-                        <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                        <div onClick={() => navigate('/Services/IndividualTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                             <div className='OurServicesItemNumber'>
                                 03
                             </div>
@@ -55,7 +58,7 @@ export default function Serives()
                     </div>
 
                     <div className='ServicesPageItemsBotPart'>
-                        <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                        <div onClick={() => navigate('/Services/IndividualTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                             <div className='OurServicesItemNumber'>
                                 04
                             </div>
@@ -67,7 +70,7 @@ export default function Serives()
                             </div>
                         </div>
 
-                        <div className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
+                        <div onClick={() => navigate('/Services/IndividualTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                             <div className='OurServicesItemNumber'>
                                 05
                             </div>

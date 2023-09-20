@@ -1799,7 +1799,6 @@ html, body, #root
 	flex-direction: column;
 	flex: 0 0 auto;
 	margin-top: 7.2%;
-
 }
 
 .ServicesPageHeader
@@ -1903,6 +1902,201 @@ html, body, #root
 	font-size: 1.1vw;
 	padding-left: 5%;
 	padding-right: 5%;
+}
+
+.OurServicesItemContainer:hover
+{
+	cursor: pointer;
+}
+
+.SingleServicePageContainer
+{
+	height: 90%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background: var(--Sonder-white);
+	flex: 0 0 auto;
+}
+
+.SingleServicePage
+{
+	max-height: 92.8%;
+	height: 85%;
+	width: 86%;
+	margin-left: 7%;
+	margin-right: 7%;
+	display: flex;
+	flex-direction: row;
+	flex: 0 0 auto;
+	margin-top: 7.2%;
+}
+
+.SingleServicePageDetails
+{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.SingleServicePageHeader
+{
+	display: flex;
+	flex-direction: column;
+	height: 30%;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.SingleServicePageHeaderTitle
+{
+	height: 45%;
+	margin-bottom: 1.5%;
+}
+
+.SingleServicePageHeaderTitle h1
+{
+	width: 100%;
+	color: var(--Sonder-olive);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 3vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 121.739%;
+}
+
+.SingleServicePageHeaderTitle h1 span
+{
+	font-family: Raglika;
+}
+
+.SingleServicePageHeaderDesc
+{
+	width: 90%;
+	color: var(--Text, #90946B);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.1vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 155.556%;
+}
+
+.SingleServicePagePoints
+{
+	height: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.SingleServicePagePoints ul 
+{
+	color: var(--Text, #90946B);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.2vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 166.667%;
+	height: 100%;
+	display: block;
+	padding-left: 1.5%;
+}
+
+.SingleServicePagePoints ul li
+{
+	width: 100%;
+	margin-top: 8%;
+	padding-left: 8%;
+	/* list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M5 10C7.76142 10 10 7.76142 10 5C10 2.23858 7.76142 0 5 0C2.23858 0 0 2.23858 0 5C0 7.76142 2.23858 10 5 10Z' fill='%23E0902C'/%3E%3C/svg%3E"); */
+}
+
+.SingleServicePagePoints ul li::marker
+{
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M5 10C7.76142 10 10 7.76142 10 5C10 2.23858 7.76142 0 5 0C2.23858 0 0 2.23858 0 5C0 7.76142 2.23858 10 5 10Z' fill='%23E0902C'/%3E%3C/svg%3E");
+	margin-right: 10ch;
+}
+
+.SingleServicePageBook
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	height: 35%;
+	margin-top: 1%;
+}
+
+.SingleServicePageBook button
+{
+	height: 30%;
+	margin-right: 1%;
+	margin-left: 1%;
+	width: 40%;
+	color: var(--Sonder-yellow, #F9F3D0);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.05vw;
+	font-style: normal;
+	font-weight: 600;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	letter-spacing: 0.25vw;
+	background: var(--Sonder-olive);
+	border: 0;
+	outline: none;
+	box-shadow: none;
+	padding: 1.8%;
+	padding-right: 2.5%;
+	padding-left: 2.5%;
+	cursor: pointer;
+	
+}
+
+.SingleServicePageShapes
+{
+	width: 50%;
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.SingleServicePageShapes .IVectors
+{
+	width: 65%;
+	height: 65%;
+	z-index: 2;
+}
+
+.SingleServicePageShapes .IVectors .IVector, .SingleServicePageShapes .IVectors .IVectorTilted
+{
+	background: var(--Sonder-olive);
+}
+
+.ICircles
+{
+	width: 25%;
+	height: 100%;
+	z-index: 1;
+}
+
+.ICircle
+{
+	width: 14vw;
+	border-radius: 50%;
+	height: 14vw;
+	background: var(--Sonder-orange);
+	position: absolute;
+	top: 20%;
+	left: 55%;
 }
 
 @media (max-width: 480px)
