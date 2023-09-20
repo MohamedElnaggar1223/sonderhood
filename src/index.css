@@ -2177,11 +2177,13 @@ html, body, #root
 .ContactUsContactMapImage
 {
 	height: 90%;
+	overflow: hidden;
 }
 
 .ContactUsContactMapImage img
 {
 	width: 100%;
+	object-fit: contain;
 }
 
 .ContactUsContactMapInfo
