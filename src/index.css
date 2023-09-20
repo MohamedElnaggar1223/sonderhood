@@ -2276,7 +2276,7 @@ html, body, #root
 	align-items: flex-start;
 }
 
-.ContactUsContactMessageCredentials input
+.ContactUsContactMessageCredentials input, select
 {
 	width: 95%;
 	height: 80%;
@@ -2350,6 +2350,149 @@ html, body, #root
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: Arial;
 	font-size: 1.05vw;
+	font-style: normal;
+	font-weight: 600;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	letter-spacing: 0.25vw;
+	background: var(--Sonder-olive);
+	border: 0;
+	outline: none;
+	box-shadow: none;
+	padding: 1.8%;
+	padding-right: 2.5%;
+	padding-left: 2.5%;
+	cursor: pointer;
+}
+
+.OurSpaceContainer
+{
+	height: 145%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background: #D6DCA2;
+	flex: 0 0 auto;
+}
+
+.OurSpace
+{
+	height: 90%;
+	width: 84.8%;
+	margin-right: 7.6%;
+	margin-left: 7.6%;
+	margin-top: 6%;
+	margin-bottom: 6%;
+	display: flex;
+	flex-direction: column;
+}
+
+.OurSpaceHeading
+{
+	height: 10%;
+}
+
+.OurSpaceHeading h1
+{
+	width: 92.4%;
+	color: var(--Sonder-olive);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 3vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 121.739%;
+}
+
+.OurSpaceHeading h1 span
+{
+	font-family: Raglika;
+	font-size: 3.6vw;
+}
+
+.OurSpaceImages
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 80%;
+	justify-content: center;
+	align-items: center;
+}
+
+.OurSpaceImagesLeft
+{
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.OurSpaceImagesLeft img
+{
+	object-fit: fill;
+	width: 90%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.OurSpaceImagesMid
+{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.OurSpaceImagesMid img
+{
+	height: 100%;
+	width: auto;
+	object-fit: fill;
+	width: 95%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.OurSpaceImagesRight
+{
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.OurSpaceImagesRight img
+{
+	object-fit: fill;
+	width: 90%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.OurSpaceButton
+{
+	height: 20%;
+	margin-bottom: 8%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.OurSpaceButton button
+{
+	height: 90%;
+	margin-right: 1%;
+	margin-left: 1%;
+	width: 25%;
+	color: var(--Sonder-yellow, #F9F3D0);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.4vw;
 	font-style: normal;
 	font-weight: 600;
 	align-items: center;

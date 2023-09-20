@@ -2,12 +2,18 @@ import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import { useNavigate } from 'react-router-dom'
 import map from '../../imgs/map.png'
+import topleft from '../../imgs/topleft.png'
+import botleft from '../../imgs/botleft.png'
+import topright from '../../imgs/topright.png'
+import botright from '../../imgs/botright.png'
+import mid from '../../imgs/mid.png'
 
 export default function ContactUs() 
 {
     const navigate = useNavigate()
 
     return (
+        <>
         <div className='ContactUsPageContainer'>
             <PagesHeader />
             <div className='ContactUsPage'>
@@ -55,7 +61,7 @@ export default function ContactUs()
                                 </div>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageDOB'>
                                     <label htmlFor='DOB'>DOB:</label>
-                                    <input placeholder='' id='DOB' type='text' />
+                                    <select></select>
                                 </div>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageMessage'>
                                     <label htmlFor='Send us a message'>Send us a message:</label>
@@ -70,5 +76,29 @@ export default function ContactUs()
                 </div>
             </div>
         </div>
+        <div className='OurSpaceContainer'>
+            <div className='OurSpace'>
+                <div className='OurSpaceHeading'>
+                    <h1>OUR <span>SPACE</span></h1>
+                </div>
+                <div className='OurSpaceImages'>
+                    <div className='OurSpaceImagesLeft'>
+                        <img src={topleft} alt='tl' />
+                        <img src={botleft} alt='bl' />
+                    </div>
+                    <div className='OurSpaceImagesMid'>
+                        <img src={mid} alt='m' />
+                    </div>
+                    <div className='OurSpaceImagesRight'>
+                        <img src={topright} alt='tr' />
+                        <img src={botright} alt='br' />
+                    </div>
+                </div>
+                <div className='OurSpaceButton'>
+                    <button>BOOK A SESSION</button>
+                </div>
+            </div>
+        </div>
+        </>
     )
 }
