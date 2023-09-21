@@ -1,5 +1,5 @@
 import React from 'react'
-import Therapist from '../HomePage/Therapist'
+import Therapists from '../HomePage/Therapists'
 import { therapists } from '../therapists'
 import { useNavigate } from 'react-router-dom'
 
@@ -8,7 +8,7 @@ export default function AvailableTherapists({ selectedService })
     const navigate = useNavigate()
 
     const filteredTherapists = therapists.filter(therapist => selectedService !== 'All Services' ? therapist.services.includes(selectedService) : therapist)
-    const therapistsDisplay = filteredTherapists.map(therapist => <Therapist therapist={therapist} />)
+    const therapistsDisplay = filteredTherapists.map(therapist => <Therapists therapist={therapist} />)
 
     return (
         <div className='MeetTheTeamContainer'>

@@ -2,6 +2,7 @@ import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import WhySonderHood from '../HomePage/WhySonderHood'
 import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
 
 export default function Serives() 
@@ -10,7 +11,7 @@ export default function Serives()
 
     return (
         <>
-        <div className='ServicesPageContainer'>
+        <motion.div exit={{ x: '-100vw' }} transition={{ duration: 0.5, ease: 'easeInOut', type: 'tween' }} className='ServicesPageContainer'>
             <PagesHeader />
             <div className='ServicesPage'>
                 <div className='ServicesPageHeader'>
@@ -85,7 +86,7 @@ export default function Serives()
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
         <WhySonderHood />
         </>
     )

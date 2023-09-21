@@ -1,39 +1,48 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import HomePage from './components/HomePage/HomePage';
 import Layout from './components/HomePage/Layout';
 import About from './components/About/About';
 import Services from './components/Services/Services';
 import Service from './components/Services/Service';
 import ContactUs from './components/ContactUs/ContactUs';
+import { AnimatePresence } from 'framer-motion';
+import Therapist from './components/TherapistProfile/Therapist';
 
 function App() 
 {
+    const location = useLocation()
+
     return (
-        <Routes>
-            <Route path='/' element={<Layout />}>
-                <Route index element={<HomePage />} />
+        <AnimatePresence mode='wait'>
+            <Routes location={location} key={location.key}>
+                <Route path='/' element={<Layout />}>
+                    <Route index element={<HomePage />} />
 
-                <Route path='About' element={<About />} />
-                <Route path='about' element={<About />} />
+                    <Route path='About' element={<About />} />
+                    <Route path='about' element={<About />} />
 
-                <Route path='Services'>
-                    <Route index element={<Services />} />
-                    <Route path=':service' element={<Service />} />
-    
+                    <Route path='Services'>
+                        <Route index element={<Services />} />
+                        <Route path=':service' element={<Service />} />
+        
+                    </Route>
+                    <Route path='services'>
+                        <Route index element={<Services />} />
+                        <Route path=':service' element={<Service />} />
+        
+                    </Route>
+
+                    <Route path='ContactUs' element={<ContactUs />} />
+                    <Route path='contactus' element={<ContactUs />} />
+
+                    <Route path='Therapists/:therapist' element={<Therapist />} />
+                    <Route path='therapists/:therapist' element={<Therapist />} />
+
                 </Route>
-                <Route path='services'>
-                    <Route index element={<Services />} />
-                    <Route path=':service' element={<Service />} />
-    
-                </Route>
 
-                <Route path='ContactUs' element={<ContactUs />} />
-                <Route path='contactus' element={<ContactUs />} />
-
-            </Route>
-
-        </Routes>
+            </Routes>
+        </AnimatePresence>
     )
 }
 

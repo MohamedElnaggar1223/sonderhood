@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import AvailableTherapists from './AvailableTherapists'
 import FAQ from '../HomePage/FAQ'
 import PagesHeader from '../PagesHeader/PagesHeader'
+import { motion } from 'framer-motion'
 
 export default function Service() 
 {
@@ -17,7 +18,12 @@ export default function Service()
     console.log(title)
     return (
         <>
-            <div className='SingleServicePageContainer'>
+            <motion.div 
+                initial={{ x: '100vw' }}
+                animate={{ x: 0 }}
+                transition={{ duration: 0.5, type: 'tween', ease: 'easeInOut' }} 
+                className='SingleServicePageContainer'
+            >
                 <PagesHeader />
                 <div className='SingleServicePage'>
                     <div className='SingleServicePageDetails'>
@@ -62,7 +68,7 @@ export default function Service()
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <AvailableTherapists selectedService={selectedService} />
             <FAQ />
         </>

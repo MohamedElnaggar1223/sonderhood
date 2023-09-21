@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Therapist from '../HomePage/Therapist'
+import Therapist from '../HomePage/Therapists'
 import { therapists } from '../therapists'
 import { useNavigate } from 'react-router-dom'
 
