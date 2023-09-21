@@ -2636,8 +2636,6 @@ html, body, #root
 
 .TherapistProfileButton button{
 	height: 100%;
-	margin-right: 1%;
-	margin-left: 1%;
 	width: 100%;
 	color: var(--Sonder-yellow, #F9F3D0);
 	text-align: center;
