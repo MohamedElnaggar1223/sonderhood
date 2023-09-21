@@ -5,7 +5,7 @@ export default function MeetTheTeamTherapist({ therapist })
 {
     const navigate = useNavigate()
 
-    const services = therapist.services.map(service => <div className='MeetTheTeamItemProfItem'>{service}</div>
+    const services = therapist.services.map((service) => <div key={service} className='MeetTheTeamItemProfItem'>{service}</div>
     )
 
     return (
@@ -18,7 +18,7 @@ export default function MeetTheTeamTherapist({ therapist })
                     {therapist.name}
                 </div>
                 <div className='MeetTheTeamItemDesc'>
-                    {therapist.desc}
+                    {therapist.position}
                 </div>
             </div>
             <div className='MeetTheTeamItemProf'>

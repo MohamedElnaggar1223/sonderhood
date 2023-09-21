@@ -8,8 +8,9 @@ import MeetTheTeam from './MeetTheTeam';
 import OurBlog from './OurBlog';
 import ClientsSay from './ClientsSay';
 import FAQ from './FAQ';
+import { useScroll } from 'framer-motion';
 
-export default function HomePage() 
+export default function HomePage({ therapists, blogs }) 
 {
     return (
         <>
@@ -18,8 +19,8 @@ export default function HomePage()
             <OurServices />
             <LookingForHelp />
             <WhySonderHood />
-            <MeetTheTeam />
-            <OurBlog />
+            <MeetTheTeam therapists={therapists} />
+            <OurBlog blogs={blogs} />
             <ClientsSay />
             <FAQ />
         </>

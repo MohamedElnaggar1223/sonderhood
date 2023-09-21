@@ -1,9 +1,8 @@
 import React from 'react'
 import Therapists from '../HomePage/Therapists'
-import { therapists } from '../therapists'
 import { useNavigate } from 'react-router-dom'
 
-export default function AvailableTherapists({ selectedService }) 
+export default function AvailableTherapists({ selectedService, therapists }) 
 {
     const navigate = useNavigate()
 

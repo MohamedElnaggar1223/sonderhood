@@ -11,7 +11,7 @@ export default function Therapists({ therapist })
             if(service !== 'All Services')
             {
                 return (
-                    <div className='MeetTheTeamItemProfItem'>
+                    <div key={service} className='MeetTheTeamItemProfItem'>
                             {service}
                     </div>
                 )
@@ -29,7 +29,7 @@ export default function Therapists({ therapist })
                     {therapist.name}
                 </div>
                 <div className='MeetTheTeamItemDesc'>
-                    {therapist.desc}
+                    {therapist.position}
                 </div>
             </div>
             <div className='MeetTheTeamItemProf'>

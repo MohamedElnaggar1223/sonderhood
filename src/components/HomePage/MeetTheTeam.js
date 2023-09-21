@@ -1,13 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { therapists } from '../therapists'
 import MeetTheTeamTherapist from './MeetTheTeamTherapist'
 
-export default function MeetTheTeam() 
+export default function MeetTheTeam({ therapists }) 
 {
     const navigate = useNavigate()
 
-    const therapistsDisplay = therapists.map(therapist => <MeetTheTeamTherapist therapist={therapist} />)
+    const therapistsDisplay = therapists.map((therapist) => <MeetTheTeamTherapist key={therapist.id} therapist={therapist} />)
 
     return (
         <div className='MeetTheTeamContainer'>

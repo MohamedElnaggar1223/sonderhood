@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import Therapist from '../HomePage/Therapists'
-import { therapists } from '../therapists'
 import { useNavigate } from 'react-router-dom'
 
-export default function AboutMeetTheTeam() 
+export default function AboutMeetTheTeam({therapists}) 
 {
     const [selectedService, setSelectedService] = useState('All Services')
 
     const navigate = useNavigate()
     
     const filteredTherapists = therapists.filter(therapist => selectedService !== 'All Services' ? therapist.services.includes(selectedService) : therapist)
-    const therapistsDisplay = filteredTherapists.map(therapist => <Therapist therapist={therapist} />)
+    const therapistsDisplay = filteredTherapists.map(therapist => <Therapist key={therapist.id} therapist={therapist} />)
 
     return (
         <div className='MeetTheTeamContainer'>

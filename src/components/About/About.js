@@ -3,7 +3,7 @@ import PagesHeader from '../PagesHeader/PagesHeader'
 import AboutMeetTheTeam from './AboutMeetTheTeam'
 import AboutTherapistsPledge from './AboutTherapistsPledge'
 
-export default function About() 
+export default function About({ therapists }) 
 {
     return (
         <>
@@ -47,7 +47,7 @@ export default function About()
                 </div>
             </div>
         </div>
-        <AboutMeetTheTeam />
+        <AboutMeetTheTeam therapists={therapists} />
         <AboutTherapistsPledge />
         </>
     )
