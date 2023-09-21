@@ -8,6 +8,7 @@ import Service from './components/Services/Service';
 import ContactUs from './components/ContactUs/ContactUs';
 import { AnimatePresence } from 'framer-motion';
 import Therapist from './components/TherapistProfile/Therapist';
+import Blogs from './components/Blogs/Blogs';
 
 function App() 
 {
@@ -38,6 +39,10 @@ function App()
 
                     <Route path='Therapists/:therapist' element={<Therapist />} />
                     <Route path='therapists/:therapist' element={<Therapist />} />
+
+                    <Route path='Blogs' element={<Blogs />} />
+                    <Route path='blogs' element={<Blogs />} />
+
 
                 </Route>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { therapists } from '../therapists'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import container1 from '../../imgs/Container1.png'
@@ -10,6 +10,8 @@ const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
 export default function Therapist() 
 {
     const { therapist } = useParams()
+
+    const navigate = useNavigate()
 
     const selectedTherapist = therapists.find(therapistProfile => therapistProfile.name.split(" ").join("") === therapist)
 
@@ -209,7 +211,7 @@ export default function Therapist()
 
             </div>
             <div className='OurBlogItemsButtons'>
-                <button className='OurBlogItemBookButton'>SEE ALL BLOGS</button>
+                <button onClick={() => navigate('/Blogs')} className='OurBlogItemBookButton'>SEE ALL BLOGS</button>
             </div>
         </div>
         </>

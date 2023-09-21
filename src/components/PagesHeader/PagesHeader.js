@@ -18,7 +18,7 @@ export default function PagesHeader()
             {/*//@ts-ignore*/}
                 <div ref={HeaderRef} className='PagesHeaderAnchor'><Link to='/'>HOME</Link></div>
                 <div className='PagesHeaderAnchor'><Link to='/About'>ABOUT</Link></div>
-                <div className='PagesHeaderAnchor'><Link to='/'>BLOG</Link></div>
+                <div className='PagesHeaderAnchor'><Link to='/Blogs'>BLOG</Link></div>
                 <div className='PagesHeaderAnchor'><Link to='/Services'>OUR SERVICES</Link></div>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="52" height="76" viewBox="0 0 52 76" fill="none">
