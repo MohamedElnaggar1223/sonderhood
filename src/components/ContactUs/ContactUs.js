@@ -1,6 +1,5 @@
 import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
-import { useNavigate } from 'react-router-dom'
 import map from '../../imgs/map.png'
 import topleft from '../../imgs/topleft.png'
 import botleft from '../../imgs/botleft.png'
@@ -10,8 +9,6 @@ import mid from '../../imgs/mid.png'
 
 export default function ContactUs() 
 {
-    const navigate = useNavigate()
-
     return (
         <>
         <div className='ContactUsPageContainer'>

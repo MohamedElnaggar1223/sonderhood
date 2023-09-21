@@ -5,6 +5,7 @@ export default function Therapists({ therapist })
 {
     const navigate = useNavigate()
 
+    //eslint-disable-next-line
     const services = therapist.services.map(service => 
         {
             if(service !== 'All Services')
