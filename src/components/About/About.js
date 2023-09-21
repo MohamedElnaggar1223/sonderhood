@@ -1,6 +1,7 @@
 import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import AboutMeetTheTeam from './AboutMeetTheTeam'
+import AboutTherapistsPledge from './AboutTherapistsPledge'
 
 export default function About() 
 {
@@ -47,6 +48,7 @@ export default function About()
             </div>
         </div>
         <AboutMeetTheTeam />
+        <AboutTherapistsPledge />
         </>
     )
 }

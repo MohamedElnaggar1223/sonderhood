@@ -12,6 +12,7 @@ export default function Therapist()
     const services = selectedTherapist?.services.map(service => <div className='TherapistProfileService'>{service}</div>)
     
     return (
+        <>
         <div className='TherapistProfileContainer'>
             <PagesHeader />
             <div className='TherapistProfile'>
@@ -34,5 +35,9 @@ export default function Therapist()
                 </div>
             </div>
         </div>
+        <div className='PledgeContainer'>
+
+        </div>
+        </>
     )
 }
