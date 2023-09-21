@@ -4,9 +4,12 @@ import blogmain from '../../imgs/blogmain.png'
 import title from '../../imgs/title.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
-export default function About() 
+export default function Blogs()
 {
+    const navigate = useNavigate()
+
     return (
         <>
         <div className='BlogsPageContainer'>
@@ -72,7 +75,7 @@ export default function About()
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
                     </div>
                     <div className='TopicMainInfoButton'>
-                        <button>Read more</button>
+                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
                     </div>
                 </div>
             </div>
@@ -96,7 +99,7 @@ export default function About()
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
                     </div>
                     <div className='TopicMainInfoButton'>
-                        <button>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
+                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
                     </div>
                 </div>
             </div>
@@ -120,7 +123,7 @@ export default function About()
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
                     </div>
                     <div className='TopicMainInfoButton'>
-                        <button>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
+                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
                     </div>
                 </div>
             </div>
@@ -144,7 +147,7 @@ export default function About()
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
                     </div>
                     <div className='TopicMainInfoButton'>
-                        <button>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
+                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
                     </div>
                 </div>
             </div>
@@ -168,7 +171,7 @@ export default function About()
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
                     </div>
                     <div className='TopicMainInfoButton'>
-                        <button>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
+                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
                     </div>
                 </div>
             </div>
@@ -192,7 +195,7 @@ export default function About()
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
                     </div>
                     <div className='TopicMainInfoButton'>
-                        <button>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
+                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
                     </div>
                 </div>
             </div>
