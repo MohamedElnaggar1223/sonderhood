@@ -2710,7 +2710,6 @@ html, body, #root
 {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	color: var(--Sonder-olive, #464834);
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: Raglika;
@@ -2722,6 +2721,8 @@ html, body, #root
 	margin-left: 1%;
 	margin-right: 1%;
 	text-transform: uppercase;
+	margin-top: 4.2%;
+	height: 100%;
 }
 
 .TestimonialsDesc
@@ -2729,8 +2730,8 @@ html, body, #root
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	height: 86.5%;
-	margin-top: 4.2%;
+	height: 100%;
+	margin-top: 4.5%;
 	color: var(--Text, #90946B);
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: Arial;
