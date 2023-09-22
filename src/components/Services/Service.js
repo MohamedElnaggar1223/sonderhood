@@ -5,7 +5,7 @@ import FAQ from '../HomePage/FAQ'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import { motion } from 'framer-motion'
 
-export default function Service() 
+export default function Service({ therapists }) 
 {
     const { service } = useParams()
 
@@ -69,7 +69,7 @@ export default function Service()
                     </div>
                 </div>
             </motion.div>
-            <AvailableTherapists selectedService={selectedService} />
+            <AvailableTherapists therapists={therapists} selectedService={selectedService} />
             <FAQ />
         </>
     )

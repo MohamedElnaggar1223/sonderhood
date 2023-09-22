@@ -74,7 +74,7 @@ export default function AboutTherapistsPledge()
                     
                 </div>
                 <div className='WhySonderItemsButtons'>
-                        <button className='WhySonderItemBookButton'>BOOK A SESSION</button>
+                        <button onClick={() => navigate('/BookASession')} className='WhySonderItemBookButton'>BOOK A SESSION</button>
                         <button onClick={() => navigate('/ContactUs')} className='WhySonderItemContactButton'>CONTACT US</button>
                 </div>
             </div>

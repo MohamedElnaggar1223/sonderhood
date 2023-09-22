@@ -2279,7 +2279,7 @@ html, body, #root
 	align-items: flex-start;
 }
 
-.ContactUsContactMessageCredentials input, select
+.ContactUsContactMessageCredentials input, select, textarea
 {
 	width: 95%;
 	height: 80%;
@@ -2327,7 +2327,7 @@ html, body, #root
 	height: 10%;
 }
 
-.ContactUsContactMessageMessage input
+.ContactUsContactMessageMessage textarea
 {
 	width: 98.5%;
 	height: 100%;
@@ -3058,8 +3058,9 @@ html, body, #root
 	font-style: normal;
 	font-weight: 400;
 	line-height: 150%; /* 24px */
-	height: 30%;
+	height: 35%;
 	opacity: 0.7;
+	overflow: auto;
 }
 
 .TopicMainInfoButton
@@ -3068,7 +3069,7 @@ html, body, #root
 	margin-right: 7%;
 	margin-bottom: 7%;
 	margin-top: 5%;
-	height: 25%;
+	max-height: 25%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -3619,6 +3620,44 @@ html, body, #root
 	flex-direction: column;
 	align-items: flex-start;
 	margin: 7%;
+}
+
+.TherapistBookSession
+{
+	display: flex;
+	width: 100%;
+	height: max-content;
+	flex-direction: row;
+	position: relative;
+}
+
+.TherapistBookSessionImage
+{
+	width: 60%;
+	z-index: 1;
+	position: relative;
+}
+
+.TherapistBookSessionImage img
+{
+	width: 100%;
+	object-fit: fill;
+	height: 100%;
+}
+
+.BookSessionInfoContainer
+{
+	z-index: 2;
+	position: absolute;
+	width: 45%;
+	height: 80%;
+	background: var(--Sonder-white);
+	border: 1px solid #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 12%;
+	left: 40%;
 }
 
 @media (max-width: 480px)

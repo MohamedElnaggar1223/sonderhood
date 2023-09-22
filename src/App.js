@@ -61,12 +61,12 @@ function App()
 
                     <Route path='Services'>
                         <Route index element={<Services />} />
-                        <Route path=':service' element={<Service />} />
+                        <Route path=':service' element={<Service therapists={therapists} />} />
         
                     </Route>
                     <Route path='services'>
                         <Route index element={<Services />} />
-                        <Route path=':service' element={<Service />} />
+                        <Route path=':service' element={<Service therapists={therapists} />} />
         
                     </Route>
 

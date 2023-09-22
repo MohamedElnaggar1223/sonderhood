@@ -2,9 +2,12 @@ import React from 'react'
 import HomeHeader from './HomeHeader'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 export default function Home() 
 {
+    const navigate = useNavigate()
+
     return (
         <div className='HomePageContainer'>
             <HomeHeader />
@@ -19,7 +22,7 @@ export default function Home()
                         <h6>Your</h6> <h6>Safe</h6> <h6>Haven</h6>
                     </div>
                     <div className='HomePageBookSessionButton'>
-                        <button>Book a Session <FontAwesomeIcon icon={faArrowRight} /></button>
+                        <button onClick={() => navigate('/BookASession')}>BOOK A SESSION <FontAwesomeIcon icon={faArrowRight} /></button>
                     </div>
                 </div>
             </div>

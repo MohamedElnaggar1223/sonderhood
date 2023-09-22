@@ -1,13 +1,72 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import PagesHeader from '../PagesHeader/PagesHeader'
+import book from '../../imgs/book.png'
+import Online from '../Booking/Online'
 const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const therapyTypes = ['Individual Therapy', 'Group Therapy', 'Child Therapy']
+const slots = ['7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM']
 
 export default function Therapist({ therapists, blogs }) 
 {
     const { therapist } = useParams()
 
     const navigate = useNavigate()
+
+    const [location, setLocation] = useState('At The Center')
+    const [month, setMonth] = useState('January')
+    const [days, setDays] = useState(30)
+    const [slot, setSlot] = useState(-1)
+
+    const displayedSlots = slots.map((slotTime, index) => (
+        <div style={{ cursor: 'pointer' }} onClick={() => setSlot(index)} key={index} className={slot === index ? 'BookSessionAvailableSlotsTimingsSlotSelected' : 'BookSessionAvailableSlotsTimingsSlot'}>
+                {slotTime}
+        </div>
+    ))
+
+    const therapyOptions = therapyTypes.map(therapy => (
+        <option
+            key={therapy}
+            value={therapy}
+        >
+            {therapy}
+        </option>
+    ))
+
+    const monthOptions = months.map(mon => 
+        (
+            <option
+                key={mon}
+                value={mon}
+            >
+                {mon}
+            </option>
+        ))
+
+    let daysOptions = []
+    for(let i = 1; i < days+1; i++)
+    {
+        daysOptions.push(
+            <option
+                key={i}
+                value={i}
+            >
+                {i}
+            </option>
+        )
+    }
+
+    useEffect(() => 
+    {
+        const daysNumber = month === 'February'
+        ? 28 
+        : month === 'January' || month === 'March' || month === 'May' || month === 'July' || month === 'August' || month === 'October' || month === 'December'
+        ? 31
+        : 30
+
+        setDays(daysNumber)
+    }, [month])
 
     const selectedTherapist = therapists.find(therapistProfile => therapistProfile.name.split(" ").join("") === therapist)
 
@@ -62,7 +121,7 @@ export default function Therapist({ therapists, blogs })
                         {services}
                     </div>
                     <div className='TherapistProfileButton'>
-                        <button>BOOK A SESSION</button>
+                        <button onClick={() => navigate('/BookASession')}>BOOK A SESSION</button>
                     </div>
                 </div>
             </div>
@@ -97,6 +156,80 @@ export default function Therapist({ therapists, blogs })
             </div>
             <div className='OurBlogItemsButtons'>
                 <button onClick={() => navigate('/Blogs')} className='OurBlogItemBookButton'>SEE ALL BLOGS</button>
+            </div>
+        </div>
+        <div className='TherapistBookSession'>
+            <div className='TherapistBookSessionImage'>
+                <img src={book} alt='book' />
+            </div>
+            <div className='BookSessionInfoContainer'>
+                <div style={{ margin: '0%', border: 'none', height: '100%' }} className='BookSession'>
+                    <div className='BookSessionTitle'>
+                        BOOK A SESSION
+                    </div>
+                    <div style={{ height: '10%' }} className='BookSessionLocation'>
+                        <div style={{ marginBottom: '2%', height: '20%' }} className='BookSessionLocationTitle'>
+                            Location
+                        </div>
+                        <div style={{ height: '80%', width: '100%' }} className='BookSessionLocationButtons'>
+                            <button style={{ marginRight: '0.5%', width: '20%', fontSize: '1vw', height: '70%'}} className={location === 'Online' ? 'BookSessionLocationSelectedButton' : 'BookSessionLocationNotSelectedButton'} onClick={() => setLocation('Online')}>Online</button>
+                            <button style={{ marginLeft: '0.5%', width: '30%', fontSize: '1vw', height: '70%'}} className={location === 'At The Center' ? 'BookSessionLocationSelectedButton' : 'BookSessionLocationNotSelectedButton'} onClick={() => setLocation('At The Center')}>At The Center</button>
+                        </div>
+                    </div>
+                    <div style={{ height: '50%' }} className='BookSessionInfo'>
+                        <div style={{ height: '90%' }} className='BookSessionInfoCredentials BookSessionInfoName'>
+                            <label style={{ marginBottom: '8%' }} htmlFor='Name'>Name</label>
+                            <input placeholder='Name...' id='Name' type='text' />
+                        </div>
+                        <div style={{ height: '90%' }} className='BookSessionInfoCredentials BookSessionInfoEmail'>
+                            <label style={{ marginBottom: '8%' }} htmlFor='Email'>Email</label>
+                            <input placeholder='Email...' id='Email' type='email' />
+                        </div>
+                        <div style={{ height: '90%' }} className='BookSessionInfoCredentials BookSessionInfoTherapist'>
+                            <label style={{ marginBottom: '8%' }} htmlFor='Therapist'>Therapist</label>
+                            <input placeholder='Therapist...' id='Therapist' type='text' />
+                        </div>
+                        <div style={{ height: '90%' }} className='BookSessionInfoCredentials BookSessionInfoTherapyType'>
+                            <label style={{ marginBottom: '8%' }} htmlFor='TherapyType'>TherapyType</label>
+                            <select id='TherapyType'>
+                                {therapyOptions}
+                            </select>
+                        </div>
+                        <div style={{ height: '90%' }} className='BookSessionInfoCredentials BookSessionInfoDay'>
+                            <label style={{ marginBottom: '8%' }} htmlFor='Day'>Day</label>
+                            <select id='Day'>
+                                {daysOptions}
+                            </select>
+                        </div>
+                        <div style={{ height: '90%' }} className='BookSessionInfoCredentials BookSessionInfoMonth'>
+                            <label style={{ marginBottom: '8%' }} htmlFor='Month'>Month</label>
+                            <select onChange={(e) => setMonth(e.target.value)} id='Month'>
+                                {monthOptions}
+                            </select>
+                        </div>
+                        <div style={{ height: '90%' }} className='BookSessionInfoCredentials BookSessionInfoType'>
+                            <label style={{ marginBottom: '4%', height: '13.72%' }} htmlFor='Type'>Session type</label>
+                            <select placeholder='Type...' id='Type' >
+                                <option
+                                    value='Assessment Session'
+                                >
+                                    Assessment Session
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style={{ height: '9%', display: 'flex', justifyContent: 'space-around' }} className='BookSessionAvailableSlots'>
+                        <div className='BookSessionAvailableSlotsTitle'>
+                            Available Slots
+                        </div>
+                        <div className='BookSessionAvailableSlotsTimings'>
+                            {displayedSlots}
+                        </div>
+                    </div>
+                    <div className='BookSessionButton'>
+                        <button>BOOK A SESSION</button>
+                    </div>
+                </div>
             </div>
         </div>
         </>

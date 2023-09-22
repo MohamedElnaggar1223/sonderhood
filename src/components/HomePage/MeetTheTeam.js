@@ -17,7 +17,7 @@ export default function MeetTheTeam({ therapists })
                 {therapistsDisplay}
             </div>
             <div className='MeetTheTeamItemsButtons'>
-                    <button className='MeetTheTeamItemBookButton'>BOOK A SESSION</button>
+                    <button onClick={() => navigate('/BookASession')} className='MeetTheTeamItemBookButton'>BOOK A SESSION</button>
                     <button onClick={() => navigate('/ContactUs')} className='MeetTheTeamItemContactButton'>CONTACT US</button>
             </div>
         </div>

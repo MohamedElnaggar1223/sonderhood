@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import map from '../../imgs/map.png'
 import topleft from '../../imgs/topleft.png'
@@ -6,9 +6,32 @@ import botleft from '../../imgs/botleft.png'
 import topright from '../../imgs/topright.png'
 import botright from '../../imgs/botright.png'
 import mid from '../../imgs/mid.png'
+import { useNavigate } from 'react-router-dom'
+import emailjs from '@emailjs/browser';
 
 export default function ContactUs() 
 {
+    const navigate = useNavigate()
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setName('')
+        setEmail('')
+        setMessage('')
+        //@ts-ignore
+        emailjs.sendForm(process.env.REACT_APP_service_id, process.env.REACT_APP_template_id, form.current, process.env.REACT_APP_public_key)
+            .then((result) => {
+
+            }, (error) => {
+
+            });
+    };
+    
     return (
         <>
         <div className='ContactUsPageContainer'>
@@ -43,14 +66,15 @@ export default function ContactUs()
                             <div className='ContactUsContactMessageTitle'>
                                 SEND US A MESSAGE
                             </div>
-                            <div className='ContactUsContactMessageInfo'>
+                            {/*//@ts-ignore*/}
+                            <form ref={form} className='ContactUsContactMessageInfo'>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageName'>
                                     <label htmlFor='Name'>Name:</label>
-                                    <input placeholder='Name...' id='Name' type='text' />
+                                    <input onChange={(e) => setName(e.target.value)} value={name} placeholder='Name...' id='Name' type='text' name='name' />
                                 </div>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageEmail'>
                                     <label htmlFor='Email'>Email</label>
-                                    <input placeholder='Email...' id='Email' type='email' />
+                                    <input onChange={(e) => setEmail(e.target.value)} value={email} name='email' placeholder='Email...' id='Email' type='email' />
                                 </div>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageNumber'>
                                     <label htmlFor='Number'>Number</label>
@@ -62,11 +86,12 @@ export default function ContactUs()
                                 </div>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageMessage'>
                                     <label htmlFor='Send us a message'>Send us a message:</label>
-                                    <input placeholder='' id='Send us a message' type='text' />
+                                    <textarea onChange={(e) => setMessage(e.target.value)} value={message} name='message' style={{ paddingTop: '2.5%', textIndent: '0%', paddingLeft: '2.5%', justifyContent: 'flex-start', alignItems: 'flex-start' }} placeholder='' id='Send us a message' />
                                 </div>
-                            </div>
+                            </form>
                             <div className='ContactUsContactMessageButton'>
-                                <button>BOOK A SESSION</button>
+                                <button onClick={() => navigate('/BookASession')}>BOOK A SESSION</button>
+                                <button onClick={sendEmail}>SEND MESSAGE</button>
                             </div>
                         </div>
                     </div>
@@ -92,7 +117,7 @@ export default function ContactUs()
                     </div>
                 </div>
                 <div className='OurSpaceButton'>
-                    <button>BOOK A SESSION</button>
+                    <button onClick={() => navigate('/BookASession')}>BOOK A SESSION</button>
                 </div>
             </div>
         </div>
