@@ -226,8 +226,8 @@ export default function Therapist({ therapists, blogs })
                             {displayedSlots}
                         </div>
                     </div>
-                    <div className='BookSessionButton'>
-                        <button>BOOK A SESSION</button>
+                    <div style={{ alignSelf: 'center', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} className='BookSessionButton'>
+                        <button style={{ width: '40%'}}>BOOK A SESSION</button>
                     </div>
                 </div>
             </div>
