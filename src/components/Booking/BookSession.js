@@ -18,7 +18,7 @@ export default function BookSession()
     const [slot, setSlot] = useState(-1)
 
     const displayedSlots = slots.map((slotTime, index) => (
-        <div onClick={() => setSlot(index)} key={index} className={slot === index ? 'BookSessionAvailableSlotsTimingsSlotSelected' : 'BookSessionAvailableSlotsTimingsSlot'}>
+        <div style={{ cursor: 'pointer' }} onClick={() => setSlot(index)} key={index} className={slot === index ? 'BookSessionAvailableSlotsTimingsSlotSelected' : 'BookSessionAvailableSlotsTimingsSlot'}>
                 {slotTime}
         </div>
     ))
