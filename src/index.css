@@ -3274,7 +3274,7 @@ html, body, #root
 	flex-direction: column;
 	background: var(--Sonder-white);
 	flex: 0 0 auto;
-	margin-bottom: 5%;
+	margin-bottom: 15%;
 }
 
 .BookSession
@@ -3507,6 +3507,25 @@ html, body, #root
 	margin-bottom: 1%;
 }
 
+.BookSessionAvailableSlotsTimingsSlotSelected
+{
+	color: var(--Sonder-white);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 0.9vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	margin-right: 1%;
+	border-radius: 2rem;
+	border: 0px;
+	background: var(--Sonder-olive, #464834);
+	padding: 1%;
+	flex: 0 0 auto;
+	margin-bottom: 1%;
+}
+
 .BookSessionButton
 {
 	margin-left: 5%;
@@ -3591,6 +3610,15 @@ html, body, #root
 	border: 0px;
 	box-shadow: none;
 	cursor: pointer;
+}
+
+.RulesPageContainer
+{
+	height: 20%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 7%;
 }
 
 @media (max-width: 480px)

@@ -1,15 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
+import Rules from './Rules';
+import Online from './Online';
+import AtTheCenter from './AtTheCenter';
 
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 const therapyTypes = ['Individual Therapy', 'Group Therapy', 'Child Therapy']
+
+const slots = ['7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM']
 
 export default function BookSession() 
 {
     const [location, setLocation] = useState('At The Center')
     const [month, setMonth] = useState('January')
     const [days, setDays] = useState(30)
+    const [slot, setSlot] = useState(-1)
+
+    const displayedSlots = slots.map((slotTime, index) => (
+        <div onClick={() => setSlot(index)} key={index} className={slot === index ? 'BookSessionAvailableSlotsTimingsSlotSelected' : 'BookSessionAvailableSlotsTimingsSlot'}>
+                {slotTime}
+        </div>
+    ))
 
     const therapyOptions = therapyTypes.map(therapy => (
         <option
@@ -56,6 +68,7 @@ export default function BookSession()
     
 
     return (
+        <>
         <div className='BookSessionContainer'>
             <PagesHeader />
             <div className='BookSession'>
@@ -71,80 +84,16 @@ export default function BookSession()
                         <button style={{ marginLeft: '0.5%', width: '15%'}} className={location === 'At The Center' ? 'BookSessionLocationSelectedButton' : 'BookSessionLocationNotSelectedButton'} onClick={() => setLocation('At The Center')}>At The Center</button>
                     </div>
                 </div>
-                <div style={location === 'At The Center' ? { height: '90vh'} : { height: '52vh' }} className='BookSessionInfo'>
-                    <div className='BookSessionInfoCredentials BookSessionInfoName'>
-                        <label htmlFor='Name'>Name</label>
-                        <input placeholder='Name...' id='Name' type='text' />
-                    </div>
-                    <div className='BookSessionInfoCredentials BookSessionInfoEmail'>
-                        <label htmlFor='Email'>Email</label>
-                        <input placeholder='Email...' id='Email' type='email' />
-                    </div>
-                    <div className='BookSessionInfoCredentials BookSessionInfoTherapist'>
-                        <label htmlFor='Therapist'>Therapist</label>
-                        <input placeholder='Therapist...' id='Therapist' type='text' />
-                    </div>
-                    <div className='BookSessionInfoCredentials BookSessionInfoTherapyType'>
-                        <label htmlFor='TherapyType'>TherapyType</label>
-                        <select id='TherapyType'>
-                            {therapyOptions}
-                        </select>
-                    </div>
-                    <div className='BookSessionInfoCredentials BookSessionInfoDay'>
-                        <label htmlFor='Day'>Day</label>
-                        <select id='Day'>
-                            {daysOptions}
-                        </select>
-                    </div>
-                    <div className='BookSessionInfoCredentials BookSessionInfoMonth'>
-                        <label htmlFor='Month'>Month</label>
-                        <select onChange={(e) => setMonth(e.target.value)} id='Month'>
-                            {monthOptions}
-                        </select>
-                    </div>
-                    <div className='BookSessionInfoCredentials BookSessionInfoType'>
-                        <label htmlFor='Type'>Session type</label>
-                        <select placeholder='Type...' id='Type' >
-                            <option
-                                value='Assessment Session'
-                            >
-                                Assessment Session
-                            </option>
-                        </select>
-                    </div>
-                </div>
-                <div className='BookSessionAvailableSlots'>
-                    <div className='BookSessionAvailableSlotsTitle'>
-                        Available Slots
-                    </div>
-                    <div className='BookSessionAvailableSlotsTimings'>
-                        <div className='BookSessionAvailableSlotsTimingsSlot'>
-                            7:00AM-8:00AM
-                        </div>
-                        <div className='BookSessionAvailableSlotsTimingsSlot'>
-                            7:00AM-8:00AM
-                        </div>
-                        <div className='BookSessionAvailableSlotsTimingsSlot'>
-                            7:00AM-8:00AM
-                        </div>
-                        <div className='BookSessionAvailableSlotsTimingsSlot'>
-                            7:00AM-8:00AM
-                        </div>
-                        <div className='BookSessionAvailableSlotsTimingsSlot'>
-                            7:00AM-8:00AM
-                        </div>
-                        <div className='BookSessionAvailableSlotsTimingsSlot'>
-                            7:00AM-8:00AM
-                        </div>
-                        <div className='BookSessionAvailableSlotsTimingsSlot'>
-                            7:00AM-8:00AM
-                        </div>
-                    </div>
-                </div>
+                {location === 'Online' 
+                ?   <Online therapyOptions={therapyOptions} daysOptions={daysOptions} displayedSlots={displayedSlots} monthOptions={monthOptions} setMonth={setMonth}/>       
+                :   <AtTheCenter />
+                }
                 <div className='BookSessionButton'>
                     <button>BOOK A SESSION</button>
                 </div>
             </div>
         </div>
+        <Rules />
+        </>
     )
 }
