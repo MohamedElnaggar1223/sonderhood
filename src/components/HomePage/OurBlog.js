@@ -7,7 +7,7 @@ export default function OurBlog({ blogs })
 
     const displayedBlogs = blogs.map(blog => 
         (
-            <div key={blog.id} className='OurBlogItemContainer'>
+            <div onClick={() => navigate(`/ArticlePage/${blog.title.split(" ").join("")}`)} key={blog.id} className='OurBlogItemContainer'>
                 <div className='OurBlogItemImage'>
                     <img src={blog.image} alt='c1' />
                 </div>

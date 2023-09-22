@@ -1117,13 +1117,13 @@ html, body, #root
 	font-size: 1.5vw;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 64.286%;
+	line-height: 100%;
 	height: 11%;
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	padding-top: 2%;
+	padding-top: 3%;
 }
 
 .OurBlogItemBody
@@ -1136,6 +1136,7 @@ html, body, #root
 	font-weight: 400;
 	line-height: 166.667%;
 	height: 25%;
+	padding-top: 1%;
 }
 
 .ClientsSayContainer
@@ -2970,7 +2971,8 @@ html, body, #root
 .TopicMainImage img
 {
 	width: 100%;
-	object-fit: fill;
+	object-fit: cover;
+	height: 100%;
 	border-radius: 0;
 }
 
@@ -3262,6 +3264,253 @@ html, body, #root
 {
 	font-family: Raglika;
 	font-size: 3.6vw;
+}
+
+.BookSessionContainer
+{
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background: var(--Sonder-white);
+	flex: 0 0 auto;
+	margin-bottom: 5%;
+}
+
+.BookSession
+{
+	width: 86%;
+	margin-left: 7%;
+	margin-right: 7%;
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 auto;
+	margin-top: 7.2%;
+	border: 1px solid #000;
+	outline: none;
+	box-shadow: none;
+	box-sizing: border-box;
+}
+
+.BookSessionTitle
+{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 10%;
+	color: var(--Sonder-olive, #464834);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Raglika;
+	font-size: 3vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 122.222%;
+	text-transform: uppercase;
+}
+
+.BookSessionLocation
+{
+	margin-left: 5%;
+	margin-right: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	height: 10%;
+}
+
+.BookSessionLocationTitle
+{
+	color: var(--Sonder-olive, #464834);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%; /*  */
+	margin-bottom: 1%;
+}
+
+.BookSessionLocationButtons
+{
+	display: flex;
+	flex-direction: row;
+	height: 60%;
+	width: 100%;
+	margin-bottom: 2%;
+}
+
+.BookSessionInfo
+{
+	margin-left: 5%;
+	margin-right: 5%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-auto-flow: row;
+	justify-content: center;
+	align-items: center;
+	column-gap: 5%;
+	row-gap: 8%;
+}
+
+.BookSessionInfoName
+{
+	grid-column: 1 / span 2;
+}
+
+.BookSessionInfoEmail
+{
+	grid-column: 3 / span 2;
+}
+
+.BookSessionInfoTherapist
+{
+	grid-column: 1 / span 2;
+}
+
+.BookSessionInfoTherapyType
+{
+	grid-column: 3 / span 2;
+}
+
+.BookSessionInfoDay
+{
+	grid-column: 1 / span 2;
+}
+
+.BookSessionInfoMonth
+{
+	grid-column: 3 / span 2;
+}
+
+.BookSessionInfoType
+{
+	grid-column: 1 / span 4;
+}
+
+.BookSessionInfoType select
+{
+	width: 98%;
+}
+
+.BookSessionInfoCredentials
+{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.BookSessionInfoCredentials input, select
+{
+	width: 95%;
+	height: 100%;
+	background: transparent;
+	border: 1px solid #90946B;
+	outline: none;
+	box-sizing: border-box;
+	box-shadow: none;
+	color: var(--Text, #90946B);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.2vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	text-indent: 3%;
+}
+.BookSessionInfoCredentials input::placeholder
+{
+	color: var(--Text, #90946B);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.2vw;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+}
+.BookSessionInfoCredentials label
+{
+	height: 15%;
+	color: var(--Sonder-olive, #464834);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.2vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
+	margin-bottom: 3%;
+}
+
+.BookSessionInfoType label
+{
+	margin-bottom: 1.5%;
+}
+
+.BookSessionAvailableSlots
+{
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 10%;
+}
+
+.BookSessionButton
+{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+}
+
+.BookSessionLocationNotSelectedButton
+{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	padding-top: 0.75%;
+	padding-bottom: 0.75%;
+	padding-right: 1.8%;
+	padding-left: 1.8%;
+	color: var(--Sonder-olive);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: auto; /* 100% */
+	background: transparent;
+	border: 1px solid #000;
+	box-shadow: none;
+	cursor: pointer;
+}
+
+.BookSessionLocationSelectedButton
+{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	padding-top: 0.75%;
+	padding-bottom: 0.75%;
+	padding-right: 1.8%;
+	padding-left: 1.8%;
+	color: var(--Sonder-yellow, #F9F3D0);
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Arial;
+	font-size: 1.1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: auto; /* 100% */
+	background: var(--Sonder-olive);
+	border: 0px;
+	box-shadow: none;
+	cursor: pointer;
 }
 
 @media (max-width: 480px)

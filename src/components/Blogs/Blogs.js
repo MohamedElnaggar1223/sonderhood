@@ -1,7 +1,6 @@
 import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import blogmain from '../../imgs/blogmain.png'
-import title from '../../imgs/title.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
@@ -9,6 +8,34 @@ import { useNavigate } from 'react-router-dom'
 export default function Blogs({blogs})
 {
     const navigate = useNavigate()
+
+    const displayedBlogs = blogs.map(blog => 
+        (
+            <div className='TopicMain'> 
+                <div className='TopicMainImage'>
+                    <img src={blog.image} alt='mid' />
+                </div>
+                <div className='TopicMainInfo'>
+                    <div className='TopicMainInfoService'>
+                        <div className='TopicMainInfoServiceName'>
+                            Therapy Topic
+                        </div>
+                        <div className='TopicMainInfoServiceTime'>
+                            5 min read
+                        </div>
+                    </div>
+                    <div className='TopicMainInfoTitle'>
+                        {blog.title}
+                    </div>
+                    <div className='TopicMainInfoDesc'>
+                        {blog.description}
+                    </div>
+                    <div className='TopicMainInfoButton'>
+                        <button onClick={() => navigate(`/ArticlePage/${blog.title.split(" ").join("")}`)}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
+                    </div>
+                </div>
+            </div>
+        ))
 
     return (
         <>
@@ -55,150 +82,7 @@ export default function Blogs({blogs})
             </div>
         </div>
         <div className='TopicContainer'>
-            <div className='TopicMain'> 
-                <div className='TopicMainImage'>
-                    <img src={title} alt='mid' />
-                </div>
-                <div className='TopicMainInfo'>
-                    <div className='TopicMainInfoService'>
-                        <div className='TopicMainInfoServiceName'>
-                            Therapy Topic
-                        </div>
-                        <div className='TopicMainInfoServiceTime'>
-                            5 min read
-                        </div>
-                    </div>
-                    <div className='TopicMainInfoTitle'>
-                        Lorem ipsum dolor sit amet consectetur
-                    </div>
-                    <div className='TopicMainInfoDesc'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                    </div>
-                    <div className='TopicMainInfoButton'>
-                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
-                    </div>
-                </div>
-            </div>
-            <div className='TopicMain'> 
-                <div className='TopicMainImage'>
-                    <img src={title} alt='mid' />
-                </div>
-                <div className='TopicMainInfo'>
-                    <div className='TopicMainInfoService'>
-                        <div className='TopicMainInfoServiceName'>
-                            Therapy Topic
-                        </div>
-                        <div className='TopicMainInfoServiceTime'>
-                            5 min read
-                        </div>
-                    </div>
-                    <div className='TopicMainInfoTitle'>
-                        Lorem ipsum dolor sit amet consectetur
-                    </div>
-                    <div className='TopicMainInfoDesc'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                    </div>
-                    <div className='TopicMainInfoButton'>
-                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
-                    </div>
-                </div>
-            </div>
-            <div className='TopicMain'> 
-                <div className='TopicMainImage'>
-                    <img src={title} alt='mid' />
-                </div>
-                <div className='TopicMainInfo'>
-                    <div className='TopicMainInfoService'>
-                        <div className='TopicMainInfoServiceName'>
-                            Therapy Topic
-                        </div>
-                        <div className='TopicMainInfoServiceTime'>
-                            5 min read
-                        </div>
-                    </div>
-                    <div className='TopicMainInfoTitle'>
-                        Lorem ipsum dolor sit amet consectetur
-                    </div>
-                    <div className='TopicMainInfoDesc'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                    </div>
-                    <div className='TopicMainInfoButton'>
-                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
-                    </div>
-                </div>
-            </div>
-            <div className='TopicMain'> 
-                <div className='TopicMainImage'>
-                    <img src={title} alt='mid' />
-                </div>
-                <div className='TopicMainInfo'>
-                    <div className='TopicMainInfoService'>
-                        <div className='TopicMainInfoServiceName'>
-                            Therapy Topic
-                        </div>
-                        <div className='TopicMainInfoServiceTime'>
-                            5 min read
-                        </div>
-                    </div>
-                    <div className='TopicMainInfoTitle'>
-                        Lorem ipsum dolor sit amet consectetur
-                    </div>
-                    <div className='TopicMainInfoDesc'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                    </div>
-                    <div className='TopicMainInfoButton'>
-                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
-                    </div>
-                </div>
-            </div>
-            <div className='TopicMain'> 
-                <div className='TopicMainImage'>
-                    <img src={title} alt='mid' />
-                </div>
-                <div className='TopicMainInfo'>
-                    <div className='TopicMainInfoService'>
-                        <div className='TopicMainInfoServiceName'>
-                            Therapy Topic
-                        </div>
-                        <div className='TopicMainInfoServiceTime'>
-                            5 min read
-                        </div>
-                    </div>
-                    <div className='TopicMainInfoTitle'>
-                        Lorem ipsum dolor sit amet consectetur
-                    </div>
-                    <div className='TopicMainInfoDesc'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                    </div>
-                    <div className='TopicMainInfoButton'>
-                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
-                    </div>
-                </div>
-            </div>
-            <div className='TopicMain'> 
-                <div className='TopicMainImage'>
-                    <img src={title} alt='mid' />
-                </div>
-                <div className='TopicMainInfo'>
-                    <div className='TopicMainInfoService'>
-                        <div className='TopicMainInfoServiceName'>
-                            Therapy Topic
-                        </div>
-                        <div className='TopicMainInfoServiceTime'>
-                            5 min read
-                        </div>
-                    </div>
-                    <div className='TopicMainInfoTitle'>
-                        Lorem ipsum dolor sit amet consectetur
-                    </div>
-                    <div className='TopicMainInfoDesc'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                    </div>
-                    <div className='TopicMainInfoButton'>
-                        <button onClick={() => navigate('/ArticlePage')}>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
-                    </div>
-                </div>
-            </div>
+            {displayedBlogs}
         </div>
         </>
     )

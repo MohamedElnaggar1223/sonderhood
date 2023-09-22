@@ -12,6 +12,7 @@ import Blogs from './components/Blogs/Blogs';
 import Article from './components/Blogs/Article';
 import { db } from './Config/firebaseConfig'
 import { collection, getDocs } from 'firebase/firestore'
+import BookSession from './components/Booking/BookSession';
 
 function App() 
 {
@@ -78,8 +79,11 @@ function App()
                     <Route path='Blogs' element={<Blogs blogs={blogs} />} />
                     <Route path='blogs' element={<Blogs blogs={blogs} />} />
 
-                    <Route path='ArticlePage' element={<Article />} />
-                    <Route path='ArticlePage' element={<Article />} />
+                    <Route path='ArticlePage/:title' element={<Article blogs={blogs} />} />
+                    <Route path='ArticlePage/:title' element={<Article blogs={blogs} />} />
+
+                    <Route path='BookASession' element={<BookSession />} />
+                    <Route path='BookASession' element={<BookSession />} />
 
 
                 </Route>

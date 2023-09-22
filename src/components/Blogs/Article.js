@@ -1,35 +1,72 @@
 import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
-import article from '../../imgs/article.png'
-import title from '../../imgs/title.png'
+import { text } from './text'
+import { useNavigate, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { text } from './text'
 
-export default function Article() 
+export default function Article({ blogs }) 
 {
+    const { title } = useParams()
+
+    const navigate = useNavigate()
+
+    const selectedBlog = blogs.find(blog => blog.title.split(" ").join("") === title)
+    const readMoreBlogs = blogs.filter(blog => blog.id !== selectedBlog.id)
+
+    const displayedSelectedBlog = (
+        <div className='ArticlePageMain'> 
+            <div className='ArticlePageMainImage'>
+                <img src={selectedBlog.image} alt='mid' />
+            </div>
+            <div className='ArticlePageMainInfo'>
+                <div className='ArticlePageMainInfoService'>
+                    <div className='ArticleMainInfoServiceName'>
+                        Child Therapy
+                    </div>
+                    <div className='ArticleMainInfoServiceTime'>
+                        5 min read
+                    </div>
+                </div>
+                <div className='ArticleMainInfoTitle'>
+                    {selectedBlog.title}
+                </div>
+            </div>
+        </div>
+    )
+
+    const displayedReadMoreBlogs = readMoreBlogs.map(blog => (
+        <div className='TopicMain'> 
+            <div className='TopicMainImage'>
+                <img src={blog.image} alt='mid' />
+            </div>
+            <div className='TopicMainInfo'>
+                <div className='TopicMainInfoService'>
+                    <div className='TopicMainInfoServiceName'>
+                        Therapy Topic
+                    </div>
+                    <div className='TopicMainInfoServiceTime'>
+                        5 min read
+                    </div>
+                </div>
+                <div className='TopicMainInfoTitle'>
+                    {blog.title}
+                </div>
+                <div className='TopicMainInfoDesc'>
+                    {blog.description}
+                </div>
+                <div className='TopicMainInfoButton'>
+                    <button onClick={() => navigate(`/ArticlePage/${blog.title.split(" ").join("")}`)}>Read more <FontAwesomeIcon icon={faChevronRight} /></button>
+                </div>
+            </div>
+        </div>
+    ))
+
     return (
         <>
         <div className='ArticlePageContainer'>
             <PagesHeader />
-            <div className='ArticlePageMain'> 
-                <div className='ArticlePageMainImage'>
-                    <img src={article} alt='mid' />
-                </div>
-                <div className='ArticlePageMainInfo'>
-                    <div className='ArticlePageMainInfoService'>
-                        <div className='ArticleMainInfoServiceName'>
-                            Child Therapy
-                        </div>
-                        <div className='ArticleMainInfoServiceTime'>
-                            5 min read
-                        </div>
-                    </div>
-                    <div className='ArticleMainInfoTitle'>
-                        Lorem ipsum dolor sit amet consectetur
-                    </div>
-                </div>
-            </div>
+            {displayedSelectedBlog}
         </div>
         <div className='ArticleText'>
             {text}
@@ -39,78 +76,7 @@ export default function Article()
                 <h1>READ <span>MORE</span></h1>
             </div>
             <div className='TopicContainer'>
-                <div className='TopicMain'> 
-                    <div className='TopicMainImage'>
-                        <img src={title} alt='mid' />
-                    </div>
-                    <div className='TopicMainInfo'>
-                        <div className='TopicMainInfoService'>
-                            <div className='TopicMainInfoServiceName'>
-                                Therapy Topic
-                            </div>
-                            <div className='TopicMainInfoServiceTime'>
-                                5 min read
-                            </div>
-                        </div>
-                        <div className='TopicMainInfoTitle'>
-                            Lorem ipsum dolor sit amet consectetur
-                        </div>
-                        <div className='TopicMainInfoDesc'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                        </div>
-                        <div className='TopicMainInfoButton'>
-                            <button>Read more</button>
-                        </div>
-                    </div>
-                </div>
-                <div className='TopicMain'> 
-                    <div className='TopicMainImage'>
-                        <img src={title} alt='mid' />
-                    </div>
-                    <div className='TopicMainInfo'>
-                        <div className='TopicMainInfoService'>
-                            <div className='TopicMainInfoServiceName'>
-                                Therapy Topic
-                            </div>
-                            <div className='TopicMainInfoServiceTime'>
-                                5 min read
-                            </div>
-                        </div>
-                        <div className='TopicMainInfoTitle'>
-                            Lorem ipsum dolor sit amet consectetur
-                        </div>
-                        <div className='TopicMainInfoDesc'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                        </div>
-                        <div className='TopicMainInfoButton'>
-                            <button>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
-                        </div>
-                    </div>
-                </div>
-                <div className='TopicMain'> 
-                    <div className='TopicMainImage'>
-                        <img src={title} alt='mid' />
-                    </div>
-                    <div className='TopicMainInfo'>
-                        <div className='TopicMainInfoService'>
-                            <div className='TopicMainInfoServiceName'>
-                                Therapy Topic
-                            </div>
-                            <div className='TopicMainInfoServiceTime'>
-                                5 min read
-                            </div>
-                        </div>
-                        <div className='TopicMainInfoTitle'>
-                            Lorem ipsum dolor sit amet consectetur
-                        </div>
-                        <div className='TopicMainInfoDesc'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                        </div>
-                        <div className='TopicMainInfoButton'>
-                            <button>Read more <FontAwesomeIcon style={{width: '7%'}} icon={faChevronRight} /></button>
-                        </div>
-                    </div>
-                </div>
+                {displayedReadMoreBlogs}
             </div>
         </div>
         </>
