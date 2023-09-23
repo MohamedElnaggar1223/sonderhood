@@ -3765,18 +3765,20 @@ html, body, #root
 		margin-top: 5%;
 		flex-direction: column;
 		flex: 0 0 auto;
-		height: 30vh;
+		height: 55vh;
 		width: 100%;
 		margin-left: 0;
 	}
 
 	.OurServicesItemContainer
 	{
-		height: 30vh;
-		width: 45vw;
+		height: 38vh;
+		width: 55vw;
 		align-self: center;
 		margin-left: 0;
 		margin-bottom: 5%;
+		border-top-left-radius: 20rem;
+		border-top-right-radius: 20rem;
 	}
 
 	.WhySonderItemsContainer
@@ -3792,13 +3794,13 @@ html, body, #root
 
 	.OurServicesItemNumber
 	{
-		font-size: 3.2vh;
+		font-size: 3.6vh;
 		height: 15%;
 	}
 
 	.OurServicesItemTitle
 	{
-		font-size: 2vh;
+		font-size: 2.2vh;
 		height: 25%;
 		display: flex;
 		justify-content: center;
@@ -3807,7 +3809,7 @@ html, body, #root
 
 	.OurServicesItemBody
 	{
-		font-size: 1.2vh;
+		font-size: 1.5vh;
 		overflow: auto;
 	}
 
