@@ -3755,6 +3755,16 @@ html, body, #root
 		height: 100%;
 	}
 
+	.OurServicesContainer
+	{
+		height: auto;
+	}
+
+	.OurServicesHeader
+	{
+		margin-top: 15%;
+	}
+
 	.OurServicesHeader h1
 	{
 		font-size: 4vh;
@@ -3765,7 +3775,7 @@ html, body, #root
 		margin-top: 5%;
 		flex-direction: column;
 		flex: 0 0 auto;
-		height: 55vh;
+		height: 50vh;
 		width: 100%;
 		margin-left: 0;
 	}
@@ -3781,12 +3791,88 @@ html, body, #root
 		border-top-right-radius: 20rem;
 	}
 
+	.LookingForHelpContainer
+	{
+		height: max-content;
+	}
+
+	.LookingForHelpHeader
+	{
+		margin-top: 15%;
+		height: 20%;
+	}
+
+	.LookingForHelpHeader h1
+	{
+		font-size: 4vh;
+	}
+
+	.LookingForHelpSearch
+	{
+		height: 6vh;
+	}
+
+	.LookingForHelpSearch input
+	{
+		height: 80%;
+		font-size: 1.8vh;
+		text-indent: 5%;
+	}
+
+	.LookingForHelpSearch img
+	{
+		height: 50%;
+		width: 8%;
+		top: 18%;
+		left: 90%;
+	}
+
+	.LookingForHelpItemsMostSearched
+	{
+		height: 10%;
+		font-size: 1.8vh;
+	}
+
+	.LookingForHelpItems
+	{
+		grid-template-columns: auto auto auto;
+		column-gap: 5%;
+	}
+
+	.LookingForHelpItems button
+	{
+		font-size: 1.5vh;
+	}
+
+	.LookingForHelpItemsButtons
+	{
+		height: 12vh;
+		flex-direction: column;
+		margin-top: 5%;
+	}
+
+	.LookingForHelpItemsContainer .LookingForHelpItemsButtons .LookingForHelpItemsFindButton
+	{
+		width: 70% !important;
+		font-size: 5vw;
+		height: 18vw;
+		margin: 2%;
+	}
+
+	.LookingForHelpItemsContainer .LookingForHelpItemsButtons .LookingForHelpItemsAboutButton
+	{
+		width: 50% !important;
+		font-size: 5vw;
+		height: 15vw;
+		margin: 2%;
+	}
+
 	.WhySonderItemsContainer
 	{
 		margin-top: 5%;
 		flex-direction: column;
 		flex: 0 0 auto;
-		height: 30vh;
+		height: auto;
 		width: 100%;
 		overflow: auto;
 		margin-left: 0;
