@@ -37,7 +37,7 @@ export default function HomeHeader()
           onKeyDown={toggleDrawer(anchor, false)}
         >
           <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            {['Home', 'About', 'Blog', 'Our Services', 'Contact Us', 'Book a Session'].map((text, index) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
@@ -49,24 +49,12 @@ export default function HomeHeader()
             ))}
           </List>
           <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
         </Box>
       );
 
     let content = ["left"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button style={{ alignSelf: 'flex-start', margin: '5%', fontSize: '5vw', fontWeight: '600', color: 'var(--Sonder-olive)' }} onClick={toggleDrawer(anchor, true)}>Menu <FontAwesomeIcon style={{ marginLeft: '5%' }} icon={faBars} /></Button>
+          <Button style={{ alignSelf: 'flex-start', margin: '5%', fontSize: '6.5vw', fontWeight: '600', color: 'var(--Sonder-olive)' }} onClick={toggleDrawer(anchor, true)}>Menu <FontAwesomeIcon style={{ marginLeft: '5%' }} icon={faBars} /></Button>
           <SwipeableDrawer
             //@ts-ignore
             anchor={anchor}

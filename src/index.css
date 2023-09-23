@@ -3673,13 +3673,142 @@ html, body, #root
 		font-size: 12vw;
 	}
 
+	.IVectors
+	{
+		width: 0;
+		height: 0;
+	}
+
+	.HomePage
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.HomePageBookSessionText h6
+	{
+		font-size: 15vw;
+	}
+
+	.HomePageBookSession
+	{
+		width: 60%;
+		height: 60%;
+		align-self: center;
+		justify-self: center;
+		margin-bottom: 15%;
+	}
+
+	.HomePageBookSessionButton button
+	{
+		font-size: 3.4vw;
+		text-wrap: nowrap;
+	}
+
+	.TherapyImportanceContainer
+	{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.TherapyImportanceTitle
+	{
+		height: 30%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 0;
+	}
+
+	.TherapyImportanceTitle div
+	{
+		font-size: 4vh;
+		width: 100%;
+		height: 50%;
+		justify-content: center;
+	}
+
+	.TherapyImportanceTitle div span
+	{
+		display: flex;
+		flex-direction: row;
+		width: auto;
+		text-wrap: nowrap;
+	}
+
+	.TherapyImportanceDesc
+	{
+		font-size: 1.5vh;
+		height: 40%;
+		width: 80%;
+		margin-right: 0;
+		line-height: 5vw;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.TherapyImportanceDesc p 
+	{
+		height: 100%;
+	}
+
+	.OurServicesHeader h1
+	{
+		font-size: 4vh;
+	}
+
+	.OurServicesItems
+	{
+		margin-top: 5%;
+		flex-direction: column;
+		flex: 0 0 auto;
+		height: 30vh;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.OurServicesItemContainer
+	{
+		height: 30vh;
+		width: 45vw;
+		align-self: center;
+		margin-left: 0;
+		margin-bottom: 5%;
+	}
+
 	.WhySonderItemsContainer
 	{
 		margin-top: 5%;
 		flex-direction: column;
 		flex: 0 0 auto;
-		height: auto;
+		height: 30vh;
 		width: 100%;
+		overflow: auto;
+		margin-left: 0;
+	}
+
+	.OurServicesItemNumber
+	{
+		font-size: 3.2vh;
+		height: 15%;
+	}
+
+	.OurServicesItemTitle
+	{
+		font-size: 2vh;
+		height: 25%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.OurServicesItemBody
+	{
+		font-size: 1.2vh;
+		overflow: auto;
 	}
 
 	.WhySonderItem
