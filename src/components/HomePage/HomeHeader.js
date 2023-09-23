@@ -1,10 +1,87 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Box from '@mui/material/Box';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function HomeHeader() 
 {
+    const [width, setWidth] = useState(window.innerWidth === 428)
+    const [state, setState] = React.useState({left: false});
+
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (
+          event &&
+          event.type === 'keydown' &&
+          (event.key === 'Tab' || event.key === 'Shift')
+        ) {
+          return;
+        }
+    
+        setState({...state, [anchor]: open});
+      };
+
+      const list = (anchor) => (
+        <Box
+          sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+          role="presentation"
+          onClick={toggleDrawer(anchor, false)}
+          onKeyDown={toggleDrawer(anchor, false)}
+        >
+          <List>
+            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+          <Divider />
+          <List>
+            {['All mail', 'Trash', 'Spam'].map((text, index) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      );
+
+    let content = ["left"].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button style={{ alignSelf: 'flex-start', margin: '5%', fontSize: '5vw', fontWeight: '600', color: 'var(--Sonder-olive)' }} onClick={toggleDrawer(anchor, true)}>Menu <FontAwesomeIcon style={{ marginLeft: '5%' }} icon={faBars} /></Button>
+          <SwipeableDrawer
+            //@ts-ignore
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+            onOpen={toggleDrawer(anchor, true)}
+          >
+            {list(anchor)}
+          </SwipeableDrawer>
+        </React.Fragment>
+      ))
+
+
     return (
-        <div className='HomeHeaderContainer'>
+        <>{width ? content : <div className='HomeHeaderContainer'>
             <div className='HomeHeaderContent'>
                 <div className='HomeHeaderAnchor'><Link to='/'>HOME</Link></div>
                 <div className='HomeHeaderAnchor'><Link to='/About'>ABOUT</Link></div>
@@ -21,8 +98,9 @@ export default function HomeHeader()
             </svg>
             <div className='HomeHeaderContent'>
                 <div className='HomeHeaderAnchor'><Link to='/ContactUs'>CONTACT US</Link></div>
-                <div className='HomeHeaderAnchor'><Link to='/'>BOOK A SESSION</Link></div>
+                <div className='HomeHeaderAnchor'><Link to='/BookAService'>BOOK A SESSION</Link></div>
             </div>
-        </div>
+        </div>}
+        </>
     )
 }

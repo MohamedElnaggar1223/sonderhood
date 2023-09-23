@@ -3346,7 +3346,7 @@ html, body, #root
 	margin-bottom: 2%;
 }
 
-.BookSessionInfo
+.BookSessionInfo, .BookSessionInfoExtra, .BookSessionInfoCenter
 {
 	margin-left: 5%;
 	margin-right: 5%;
@@ -3716,5 +3716,392 @@ html, body, #root
 		font-size: 5vw;
 		height: 15vw;
 		margin: 2%;
+	}
+}
+
+@media (width: 1280px)
+{
+	@media (height: 1024px)
+	{
+		.HomePageContainer
+		{
+			height: 90%;
+		}
+		.HomePage
+		{
+			height: 75%;
+			align-self: center;
+			justify-self: center;
+			margin-bottom: auto;
+			margin-top: 8%;
+		}
+
+		.TherapyImportanceContainer
+		{
+			height: 40%;
+		}
+
+		.OurServicesContainer
+		{
+			height: 45%;
+		}
+
+		.LookingForHelpContainer
+		{
+			height: 45%;
+		}
+
+		.WhySonderContainer
+		{
+			height: 48%;
+		}
+
+		.OurBlogContainer
+		{
+			height: 45%;
+		}
+
+		.ClientsSayContainer
+		{
+			height: 45%;
+		}
+
+		.HomeFooterSubscribe input
+		{
+			height: 15%;
+		}
+
+		.HomeFooterSubscribe button
+		{
+			height: 12%;
+			top: 39.55%;
+		}
+
+		.HomeFooterSocialsFollowUs
+		{
+			height: 20%;
+		}
+
+		.WhySonderContainerUpgraded
+		{
+			height: 60%;
+		}
+
+		.ServicesPageContainer
+		{
+			height: 100%;
+		}
+
+		.OurServicesItemContainer
+		{
+			height: 33vh !important;
+		}
+
+		.ContactUsPageContainer
+		{
+			height: 118%;
+		}
+
+		.OurSpaceContainer
+		{
+			height: 90%;
+		}
+
+		.BookSessionInfoCenter
+		{
+			height: 60vh !important;
+		}
+
+		.BookSessionInfo
+		{
+			height: 40vh !important;
+		}
+
+		.BookSessionInfoExtra
+		{
+			height: 17vh !important;
+		}
+
+		.BookSessionButton
+		{
+			height: 6.5vh;
+		}
+	}
+}
+
+@media (width: 1024px)
+{
+	@media (height: 768px)
+	{
+		.HomePageContainer
+		{
+			height: 95%;
+		}
+		.HomePage
+		{
+			height: 75%;
+			align-self: center;
+			justify-self: center;
+			margin-bottom: auto;
+			margin-top: 8%;
+		}
+
+		.TherapyImportanceContainer
+		{
+			height: 40%;
+		}
+
+		.OurServicesContainer
+		{
+			height: 45%;
+		}
+
+		.LookingForHelpContainer
+		{
+			height: 45%;
+		}
+
+		.WhySonderContainer
+		{
+			height: 48%;
+		}
+
+		.OurBlogContainer
+		{
+			height: 45%;
+		}
+
+		.ClientsSayContainer
+		{
+			height: 45%;
+		}
+
+		.HomeFooterSubscribe input
+		{
+			height: 15%;
+		}
+
+		.HomeFooterSubscribe button
+		{
+			height: 12%;
+			top: 39.55%;
+		}
+
+		.HomeFooterSocialsFollowUs
+		{
+			height: 20%;
+		}
+
+		.WhySonderContainerUpgraded
+		{
+			height: 60%;
+		}
+
+		.ServicesPageContainer
+		{
+			height: 100%;
+		}
+
+		.OurServicesItemContainer
+		{
+			height: 33vh !important;
+		}
+
+		.ContactUsPageContainer
+		{
+			height: 118%;
+		}
+
+		.OurSpaceContainer
+		{
+			height: 90%;
+		}
+
+		.BookSessionInfoCenter
+		{
+			height: 60vh !important;
+		}
+
+		.BookSessionInfo
+		{
+			height: 40vh !important;
+		}
+
+		.BookSessionInfoExtra
+		{
+			height: 17vh !important;
+		}
+
+		.BookSessionButton
+		{
+			height: 6.5vh;
+		}
+	}
+}
+
+@media (width: 768px)
+{
+	@media (height: 1024px)
+	{
+		.HomePageContainer
+		{
+			height: 95%;
+		}
+		.HomePage
+		{
+			height: 75%;
+			align-self: center;
+			justify-self: center;
+			margin-bottom: auto;
+			margin-top: 8%;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.IVectors
+		{
+			margin-left: 0;
+			height: 45%;
+			width: 35%;
+		}
+
+		.HomePageBookSession
+		{
+			margin-right: 0;
+			margin-top: 12%;
+			width: 32%;
+		}
+
+		.TherapyImportanceContainer
+		{
+			height: 30%;
+		}
+
+		.OurServicesContainer
+		{
+			height: 45%;
+		}
+
+		.OurServicesItems
+		{
+			height: 50%;
+		}
+
+		.LookingForHelpContainer
+		{
+			height: 35%;
+		}
+
+		.LookingForHelpSearch img
+		{
+			top: 30%;
+		}
+
+		.WhySonderContainer
+		{
+			height: 35%;
+		}
+
+		.OurServicesItemContainer
+		{
+			height: 20vh !important;
+		}
+
+		.LookingForHelpItems
+		{
+			grid-template-columns: auto auto auto auto;
+		}
+
+		.LookingForHelpItems button
+		{
+			height: 4vh;
+			font-size: 1.2vh;
+		}
+
+		.OurServicesItemContainer
+		{
+			justify-self: center;
+			height: 20%;
+		}
+
+		.OurBlogContainer
+		{
+			height: 35%;
+		}
+
+		.ClientsSayContainer
+		{
+			height: 30%;
+		}
+
+		.ClientsSayItemRating
+		{
+			height: 15%;
+			width: 60%;
+		}
+
+		.ClientsSayItemRating svg
+		{
+			width: 100%;
+			height: 100%;
+		}
+
+		.FAQItemHeadingNumber
+		{
+			font-size: 3vh;
+		}
+
+		.FAQItemHeadingQuestion
+		{
+			font-size: 2vh;
+		}
+
+		.FAQItemAnswerTemp
+		{
+			font-size: 1.5vh;
+		}
+
+		.HomeFooterInfo
+		{
+			width: 15%;
+		}
+
+		.HomeFooterSubscribe label
+		{
+			font-size: 1.3vh;
+		}
+
+		.HomeFooterSubscribe input
+		{
+			width: 70%;
+			height: 12.5%;
+			font-size: 2vw;
+		}
+
+		.HomeFooterSubscribe button
+		{
+			width: 20.5%;
+			height: 10%;
+			font-size: 1.5vw;
+			left: 68%;
+			top: 39.35%;
+		}
+
+		.HomeFooterSocialsFollowUs
+		{
+			height: 15%;
+			font-size: 2vw;
+		}
+
+		.HomeFooterSocialsIcons
+		{
+			width: 80%;
+		}
+
+		.HomeFooterSocialsIcons svg
+		{
+			width: 100%;
+		}
 	}
 }

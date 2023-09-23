@@ -31,7 +31,7 @@ export default function PagesHeader()
             </svg>
             <div className='PagesHeaderContent'>
                 <div className='PagesHeaderAnchor'><Link to='/ContactUs'>CONTACT US</Link></div>
-                <div className='PagesHeaderAnchor'><Link to='/'>BOOK A SESSION</Link></div>
+                <div className='PagesHeaderAnchor'><Link to='/BookAService'>BOOK A SESSION</Link></div>
             </div>
         </div>
     )

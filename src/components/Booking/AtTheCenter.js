@@ -15,7 +15,7 @@ export default function AtTheCenter()
 
     return (
         <>
-        <div style={{ height: '73vh', gridTemplateRows: '1fr 1fr 1fr 1fr 1fr', rowGap: '8%', marginBottom: '10%' }} className='BookSessionInfo'>
+        <div style={{ height: '73vh', gridTemplateRows: '1fr 1fr 1fr 1fr 1fr', rowGap: '8%', marginBottom: '10%' }} className='BookSessionInfoCenter'>
             <div className='BookSessionInfoCredentials BookSessionInfoName'>
                 <label htmlFor='Name'>First Name</label>
                 <input placeholder='Name...' id='Name' type='text' />
@@ -56,7 +56,7 @@ export default function AtTheCenter()
             </div>
         </div>
 
-        <div style={{ height: '21.55vh', gridTemplateRows: '1fr 1fr', rowGap: '8%', marginBottom: '3%' }} className='BookSessionInfo'>
+        <div style={{ height: '21.55vh', gridTemplateRows: '1fr 1fr', rowGap: '8%', marginBottom: '3%' }} className='BookSessionInfoExtra'>
             <div style={{ gridColumn: '1 / span 2' }} className='BookSessionInfoCredentials BookSessionInfoEmail'>
                 <label htmlFor='Emergency'>Emergency Contact Name <span style={{ fontSize: '0.75vw', fontWeight: '400' }}>(has to be 18+ years old)</span></label>
                 <input placeholder='Emergency...' id='Emergency' type='text' />
