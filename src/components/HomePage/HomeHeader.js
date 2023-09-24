@@ -37,15 +37,17 @@ export default function HomeHeader()
           onKeyDown={toggleDrawer(anchor, false)}
         >
           <List>
-            {['Home', 'About', 'Blog', 'Our Services', 'Contact Us', 'Book a Session'].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
+            {['Home', 'About', 'Blog', 'Our Services', 'Contact Us', 'Book A Session'].map((text, index) => (
+              <Link to ={text === 'Home' ? '' : `/${text.replace(/\s/g, '')}`}>
+                <ListItem key={text} disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      
+                    </ListItemIcon>
+                    <ListItemText primary={text} />
+                  </ListItemButton>
+                </ListItem>
+              </Link>
             ))}
           </List>
           <Divider />

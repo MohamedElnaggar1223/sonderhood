@@ -3934,6 +3934,63 @@ html, body, #root
 		height: 15vw;
 		margin: 2%;
 	}
+
+	.AboutPageContainer
+	{
+		height: 70vh;
+	}
+
+	.AboutPage
+	{
+		height: 60%;
+	}
+
+	.AboutPageOurStory
+	{
+		height: 40%;
+	}
+
+	.AboutPageOurStoryTitle
+	{
+		font-size: 4vh;
+	}
+
+	.AboutPageDescFirstPart, .AboutPageDescSecPart 
+	{
+		font-size: 1.5vh;
+		line-height: 4vw;
+	}
+
+	.AboutPageOurStory
+	{
+		height: 70%;
+	}
+
+	.AboutPageOurStoryDesc
+	{
+		height: 100%;
+	}
+
+	.AboutPageVideo
+	{
+		height: 80%;
+		width: 90vw;
+		justify-self: center;
+		align-items: center;
+	}
+
+	.AboutPageVideo .IFrameClone
+	{
+		justify-self: center;
+		align-self: center;
+		width: 100%;
+		margin-right: 4vw;
+	}
+
+	.WhySonderContainerUpgraded
+	{
+		height: auto;
+	}
 }
 
 @media (width: 1280px)

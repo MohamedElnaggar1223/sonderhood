@@ -1,5 +1,16 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Box from '@mui/material/Box';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function PagesHeader() 
 {
@@ -8,11 +19,68 @@ export default function PagesHeader()
     useEffect(() => 
     {
         //@ts-ignore
-        HeaderRef.current.scrollIntoView({ behavior: 'smooth' })
+        (!width) && HeaderRef.current.scrollIntoView({ behavior: 'smooth' })
+
+        //eslint-disable-next-line
     }, [])
 
+    const [width, setWidth] = useState(window.innerWidth <= 428)
+    const [state, setState] = React.useState({left: false});
+
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (
+          event &&
+          event.type === 'keydown' &&
+          (event.key === 'Tab' || event.key === 'Shift')
+        ) {
+          return;
+        }
+    
+        setState({...state, [anchor]: open});
+      };
+
+      const list = (anchor) => (
+        <Box
+          sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+          role="presentation"
+          onClick={toggleDrawer(anchor, false)}
+          onKeyDown={toggleDrawer(anchor, false)}
+        >
+          <List>
+            {['Home', 'About', 'Blog', 'Our Services', 'Contact Us', 'Book A Session'].map((text, index) => (
+              <Link to ={text === 'Home' ? '' : `/${text.replace(/\s/g, '')}`}>
+                <ListItem key={text} disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      
+                    </ListItemIcon>
+                    <ListItemText primary={text} />
+                  </ListItemButton>
+                </ListItem>
+              </Link>
+            ))}
+          </List>
+          <Divider />
+        </Box>
+      );
+
+    let content = ["left"].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button style={{ alignSelf: 'flex-start', margin: '5%', fontSize: '4vw', fontWeight: '600', color: 'var(--Sonder-olive)' }} onClick={toggleDrawer(anchor, true)}>Menu <FontAwesomeIcon style={{ marginLeft: '5%' }} icon={faBars} /></Button>
+          <SwipeableDrawer
+            //@ts-ignore
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+            onOpen={toggleDrawer(anchor, true)}
+          >
+            {list(anchor)}
+          </SwipeableDrawer>
+        </React.Fragment>
+      ))
+
     return (
-        
+        <>{width ? content :
         <div className='PagesHeaderContainer'>
             <div className='PagesHeaderContent'>
             {/*//@ts-ignore*/}
@@ -33,6 +101,7 @@ export default function PagesHeader()
                 <div className='PagesHeaderAnchor'><Link to='/ContactUs'>CONTACT US</Link></div>
                 <div className='PagesHeaderAnchor'><Link to='/BookAService'>BOOK A SESSION</Link></div>
             </div>
-        </div>
+        </div>}
+        </>
     )
 }
