@@ -88,7 +88,7 @@ export default function HomeHeader()
             </svg>
             <div className='HomeHeaderContent'>
                 <div className='HomeHeaderAnchor'><Link to='/ContactUs'>CONTACT US</Link></div>
-                <div className='HomeHeaderAnchor'><Link to='/BookAService'>BOOK A SESSION</Link></div>
+                <div className='HomeHeaderAnchor'><Link to='/BookASession'>BOOK A SESSION</Link></div>
             </div>
         </div>}
         </>

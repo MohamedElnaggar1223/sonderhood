@@ -24,7 +24,7 @@ export default function PagesHeader()
         //eslint-disable-next-line
     }, [])
 
-    const [width, setWidth] = useState(window.innerWidth <= 428)
+    const [width, setWidth] = useState(window.innerWidth <= 480)
     const [state, setState] = React.useState({left: false});
 
     const toggleDrawer = (anchor, open) => (event) => {
@@ -99,7 +99,7 @@ export default function PagesHeader()
             </svg>
             <div className='PagesHeaderContent'>
                 <div className='PagesHeaderAnchor'><Link to='/ContactUs'>CONTACT US</Link></div>
-                <div className='PagesHeaderAnchor'><Link to='/BookAService'>BOOK A SESSION</Link></div>
+                <div className='PagesHeaderAnchor'><Link to='/BookASession'>BOOK A SESSION</Link></div>
             </div>
         </div>}
         </>

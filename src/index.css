@@ -3660,7 +3660,7 @@ html, body, #root
 	left: 40%;
 }
 
-@media (max-width: 480px)
+@media (max-width: 480px), (width: 1080px)
 {
 	.WhySonderContainer
 	{
@@ -4144,6 +4144,8 @@ html, body, #root
 	{
 		height: auto;
 	}
+
+	
 }
 
 @media (width: 1280px)
