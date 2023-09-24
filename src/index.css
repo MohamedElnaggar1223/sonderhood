@@ -3670,7 +3670,7 @@ html, body, #root
 
 	.WhySonderHeader h1
 	{
-		font-size: 12vw;
+		font-size: 4vh;
 	}
 
 	.IVectors
@@ -3875,7 +3875,11 @@ html, body, #root
 		height: auto;
 		width: 100%;
 		overflow: auto;
-		margin-left: 0;
+	}
+
+	.WhySonderItemBookButton
+	{
+		width: 60% !important;
 	}
 
 	.OurServicesItemNumber
@@ -3902,23 +3906,30 @@ html, body, #root
 	.WhySonderItem
 	{
 		margin: 5%;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.WhySonderItemSVG svg
 	{
-		width: 60%;
-		height: 60%;
+		width: 40%;
+		height: 40%;
 	}
 
 	.WhySonderItemTitle
 	{
-		font-size: 9vw;
+		font-size: 3.2vh;
 		margin: 5%;
 	}
 
 	.WhySonderItemBody
 	{
-		font-size: 7vw;
+		font-size: 2.5vh;
+		margin: 5%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
 	}
 
 	.WhySonderItemsButtons
@@ -3933,6 +3944,148 @@ html, body, #root
 		font-size: 5vw;
 		height: 15vw;
 		margin: 2%;
+	}
+
+	.MeetTheTeamHeader h1
+	{
+		font-size: 4vh;
+	}
+
+	.MeetTheTeamHeader h1 span
+	{
+		font-size: 4.8vh;
+	}
+
+	.MeetTheTeamItemsContainer
+	{
+		grid-template-columns: auto;
+		row-gap: 5vh;
+	}
+
+	.MeetTheTeamItemName
+	{
+		font-size: 2.5vh;
+	}
+
+	.MeetTheTeamItemDesc
+	{
+		font-size: 2vh;
+	}
+
+	.MeetTheTeamItemProfItem
+	{
+		font-size: 1.2vh;
+	}
+
+	.MeetTheTeamItemProf
+	{
+		column-gap: 1.5vh;
+	}
+
+	.MeetTheTeamItemsButtons
+	{
+		flex-direction: column;
+    	height: 18vh;
+	}
+
+	.MeetTheTeamItemBookButton
+	{
+		font-size: 5vw;
+		margin: 2%;
+		width: 60% !important;
+	}
+
+	.MeetTheTeamItemContactButton
+	{
+		width: 50% !important;
+		font-size: 5vw;
+		margin: 2%;
+	}
+
+	.OurBlogHeader h1
+	{
+		font-size: 4vh;
+	}
+
+	.OurBlogItems
+	{
+		flex-direction: column;
+		margin-left: 0;
+		align-items: center;
+		height: 80%;
+	}
+
+	.OurBlogItemContainer
+	{
+		width: 90%;
+		margin-left: 10%;
+		margin-right: 10%;
+		height: 90%;
+	}
+
+	.OurBlogItemTitle
+	{
+		font-size: 2.5vh;
+		height: auto;
+		padding-top: 5%;
+	}
+
+	.OurBlogItemBody
+	{
+		font-size: 1.5vh;
+	}
+
+	.OurBlogItemImage
+	{
+		display: flex;
+		height: 70%;
+	}
+
+	.OurBlogItemImage img
+	{
+		margin-top: auto;
+	}
+
+	.OurBlogItemsButtons
+	{
+		flex-direction: column;
+		height: max-content;
+	}
+
+	.OurBlogItemBookButton
+	{
+		width: 60% !important;
+		font-size: 5vw;
+		height: 10vh !important;
+		margin-bottom: 2%;
+		margin-top: 2%;
+	}
+
+	.OurBlogItemContactButton
+	{
+		width: 50% !important;
+		font-size: 5vw;
+	}
+
+	.ClientsSayHeader h1
+	{
+		font-size: 4vh;
+		margin-bottom: 15%;
+	}
+
+	.ClientsSayItems
+	{
+		flex-direction: column;
+		margin: 0%;
+		width: 95%;
+		flex: 0 0 auto;
+	}
+
+	.ClientsSayItem
+	{
+		width: 85% !important;
+		align-self: center;
+		width: 100%;
 	}
 
 	.AboutPageContainer
