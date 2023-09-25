@@ -4488,6 +4488,174 @@ html, body, #root
 	{
 		font-size: 2vh !important;
 	}
+
+	.ContactUsPageContainer
+	{
+		height: auto;
+		margin-bottom: 10%;
+	}
+
+	.ContactUsPageOurStory
+	{
+		height: auto;
+	}
+
+	.ContactUsPageOurStoryTitle
+	{
+		font-size: 4vh;
+	}
+
+	.ContactUsPageOurStoryDesc
+	{
+		font-size: 1.5vh;
+	}
+
+	.ContactUsContact
+	{
+		flex-direction: column;
+	}
+
+	.ContactUsContactMap
+	{
+		margin: 0;
+		width: 90%;
+		align-self: center !important;
+		margin-bottom: 5%;
+	}
+
+	.ContactUsContactMapInfo
+	{
+		font-size: 1.3vh;
+	}
+
+	.ContactUsContactMessage
+	{
+		align-self: center !important;
+		width: 95%;
+		height: 80vh;
+	}
+
+	.ContactUsContactMessageTitle
+	{
+		font-size: 3.2vh;
+		height: 10%;
+	}
+
+	.ContactUsContactMessageInfo
+	{
+		grid-template-columns: auto;
+		grid-template-rows: auto auto auto auto auto auto auto auto;
+		justify-content: stretch;
+		height: 75%;
+	}
+
+	.ContactUsContactMessageCredentials
+	{
+		grid-column: auto !important;
+		width: 100% !important;
+	}
+
+	.ContactUsContactMessageCredentials input, .ContactUsContactMessageCredentials select
+	{
+		width: 100%;
+		font-size: 1.8vh;
+	}
+
+	.ContactUsContactMessageCredentials input::placeholder
+	{
+		font-size: 1.8vh;
+	}
+
+	.ContactUsContactMessageCredentials label
+	{
+		font-size: 1.8vh;
+	}
+
+	.ContactUsContactMessageMessage
+	{
+		grid-row: span 4 !important;
+	}
+
+	.ContactUsContactMessageButton
+	{
+		flex-direction: column;
+	}
+
+	.ContactUsContactMessageButton button
+	{
+		width: 65%;
+		text-wrap: nowrap;
+		font-size: 3.8vw;
+		margin-bottom: 2%;
+		margin-top: 2%;
+	}
+
+	.OurSpaceContainer
+	{
+		height: auto;
+	}
+
+	.OurSpaceHeading h1
+	{
+		font-size: 3.7vh;
+	}
+
+	.OurSpaceHeading h1 span
+	{
+		font-size: 4vh;
+	}
+
+	.OurSpaceImages
+	{
+		flex-direction: column;
+	}
+
+	.OurSpaceImagesLeft
+	{
+		flex-direction: row;
+		width: 100%;
+		height: auto;
+	}
+
+	.OurSpaceImagesLeft img
+	{
+		width: 45%;
+		height: 100%;
+		margin: 0;
+		margin-right: 2.5%;
+		margin-left: 2.5%;
+	}
+
+	.OurSpaceImagesRight
+	{
+		flex-direction: row;
+		width: 100%;
+		height: auto;
+	}
+
+	.OurSpaceImagesRight img
+	{
+		width: 45%;
+		height: 100%;
+		margin: 0;
+		margin-right: 2.5%;
+		margin-left: 2.5%;
+		margin-bottom: 5%;
+	}
+
+	.OurSpaceImagesMid
+	{
+		width: 100%;
+	}
+
+	.OurSpaceButton button
+	{
+		width: 55%;
+		text-wrap: nowrap;
+		font-size: 3.8vw;
+		height: 5vh;
+		margin-top: 2%;
+	}
 }
 
 @media (width: 1280px)

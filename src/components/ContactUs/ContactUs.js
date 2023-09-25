@@ -90,7 +90,7 @@ export default function ContactUs()
                                 </div>
                             </form>
                             <div className='ContactUsContactMessageButton'>
-                                <button onClick={() => navigate('/BookASession')}>BOOK A SESSION</button>
+                                {/* <button onClick={() => navigate('/BookASession')}>BOOK A SESSION</button> */}
                                 <button onClick={sendEmail}>SEND MESSAGE</button>
                             </div>
                         </div>
