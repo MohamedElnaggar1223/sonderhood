@@ -48,8 +48,8 @@ export default function PagesHeader()
         >
           <List>
             {['Home', 'About', 'Blog', 'Our Services', 'Contact Us', 'Book A Session'].map((text, index) => (
-              <Link to ={text === 'Home' ? '' : `/${text.replace(/\s/g, '')}`}>
-                <ListItem key={text} disablePadding>
+              <Link key={text} to ={text === 'Home' ? '' : `/${text.replace(/\s/g, '')}`}>
+                <ListItem disablePadding>
                   <ListItemButton>
                     <ListItemIcon>
                       
