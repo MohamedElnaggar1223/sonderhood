@@ -4656,6 +4656,11 @@ html, body, #root
 		height: 5vh;
 		margin-top: 2%;
 	}
+
+	.RulesPageContainer
+	{
+		height: auto;
+	}
 }
 
 @media (width: 1280px)
