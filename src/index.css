@@ -4101,10 +4101,6 @@ html, body, #root
 		width: 100%;
 		margin-left: 5%;
 	}
-	
-	.ClientsSayItemRating svg
-	{
-	}
 
 	.ClientsSayItemComments
 	{
@@ -4221,6 +4217,7 @@ html, body, #root
 	.HomeFooter
 	{
 		flex-direction: column;
+		height: 38vh;
 	}
 
 	.HomeFooterInfo
@@ -4453,6 +4450,43 @@ html, body, #root
 	.TopicMainInfoService
 	{
 		height: 10%;
+	}
+
+	.ServicesPageHeaderTitle
+	{
+		font-size: 4vh;
+	}
+
+	.ServicesPageContainer
+	{
+		height: max-content;
+	}
+
+	.ServicesPageItemsTopPart, .ServicesPageItemsBotPart
+	{
+		grid-template-columns: auto;
+	}
+
+	.ServicesPageItemsTopPart .OurServicesItemContainer, .ServicesPageItemsBotPart .OurServicesItemContainer
+	{
+		width: 90% !important;
+		justify-self: center !important;
+		margin-bottom: 15%;
+	}
+
+	.OurServicesItemNumber
+	{
+		font-size: 3.8vh !important;
+	}
+	
+	.OurServicesItemTitle
+	{
+		font-size: 3.5vh !important;
+	}
+
+	.OurServicesItemBody
+	{
+		font-size: 2vh !important;
 	}
 }
 
