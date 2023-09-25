@@ -4217,6 +4217,95 @@ html, body, #root
 	{
 		height: auto;
 	}
+
+	.HomeFooter
+	{
+		flex-direction: column;
+	}
+
+	.HomeFooterInfo
+	{
+		width: 100%;
+		order: 3;
+	}
+
+	.HomeFooterInfoLogo
+	{
+		width: 20%;
+		align-self: flex-start;
+		margin-left: 5%;
+	}
+
+	.HomeFooterInfoLogo svg
+	{
+		margin-top: auto;
+		height: auto;
+	}
+
+	.HomeFooterInfoCopyRights
+	{
+		font-size: 1vh;
+		margin-left: 5%;
+	}
+
+	.HomeFooterSocials
+	{
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom: 5%;
+	}
+
+	.HomeFooterSocialsFollowUs
+	{
+		font-size: 2vh;
+		margin-bottom: 2.5%;
+	}
+
+	.HomeFooterSocialsIcons
+	{
+		width: 100%;
+		margin-left: 5%;
+	}
+
+	.HomeFooterSocialsIcons svg
+	{
+		width: 8%;
+	}
+
+	.HomeFooterSocialsIcons
+	{
+		width: 100%;
+	}
+
+	.HomeFooterSubscribe
+	{
+		width: 100%;
+	}
+
+	.HomeFooterSubscribe input
+	{
+		width: 80%;
+		height: 30%;
+		left: 10%;
+		font-size: 1.8vh;
+	}
+
+	.HomeFooterSubscribe label
+	{
+		left: 10%;
+		font-size: 1.8vh;
+		top: 20%;
+	}
+
+	.HomeFooterSubscribe button
+	{
+		width: 18%;
+		height: 25%;
+		left: 71%;
+		top: 40.5%;
+		font-size: 1.5vh;
+	}
 }
 
 @media (width: 1280px)
