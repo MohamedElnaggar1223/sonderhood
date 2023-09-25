@@ -4227,6 +4227,7 @@ html, body, #root
 	{
 		width: 100%;
 		order: 3;
+		margin-bottom: 2.5%;
 	}
 
 	.HomeFooterInfoLogo
@@ -4281,12 +4282,13 @@ html, body, #root
 	.HomeFooterSubscribe
 	{
 		width: 100%;
+		height: 75%;
 	}
 
 	.HomeFooterSubscribe input
 	{
 		width: 80%;
-		height: 30%;
+		height: 5.5vh;
 		left: 10%;
 		font-size: 1.8vh;
 	}
@@ -4301,9 +4303,9 @@ html, body, #root
 	.HomeFooterSubscribe button
 	{
 		width: 18%;
-		height: 25%;
-		left: 71%;
-		top: 40.5%;
+		height: 4.6vh;
+		left: 70.8%;
+		top: 41.2%;
 		font-size: 1.5vh;
 	}
 }
