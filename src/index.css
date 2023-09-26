@@ -35,6 +35,11 @@ html, body, #root
 	background: var(--Sonder-white);
 }
 
+textarea
+{
+	resize: none;
+}
+
 .HomePageContainer
 {
 	display: flex;
