@@ -66,7 +66,7 @@ export default function PagesHeader()
 
     let content = ["left"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button style={{ alignSelf: 'flex-start', margin: '5%', fontSize: '4vw', fontWeight: '600', color: 'var(--Sonder-olive)' }} onClick={toggleDrawer(anchor, true)}>Menu <FontAwesomeIcon style={{ marginLeft: '5%' }} icon={faBars} /></Button>
+          <Button style={{ alignSelf: 'flex-start', margin: '5%', fontSize: '4vw', fontWeight: '600', color: 'var(--Sonder-olive)' }} onClick={toggleDrawer(anchor, true)}><FontAwesomeIcon style={{ marginLeft: '5%' }} icon={faBars} /></Button>
           <SwipeableDrawer
             //@ts-ignore
             anchor={anchor}

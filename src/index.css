@@ -4847,10 +4847,25 @@ textarea
 		height: 8vh;
 	}
 
+	.SingleServicePage
+	{
+		height: 90%;
+	}
+
 	.SingleServicePageDetails
 	{
 		width: 90%;
-		height: 70%;
+		height: 100%;
+	}
+
+	.SingleServicePageHeader
+	{
+		height: auto;
+	}
+
+	.SingleServicePageHeaderTitle
+	{
+		height: auto;
 	}
 
 	.SingleServicePageHeaderTitle h1
