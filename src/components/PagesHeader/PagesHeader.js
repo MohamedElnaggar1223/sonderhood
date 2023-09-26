@@ -47,7 +47,7 @@ export default function PagesHeader()
           onKeyDown={toggleDrawer(anchor, false)}
         >
           <List>
-            {['Home', 'About', 'Blogs', 'Services', 'Contact Us', 'Book A Session'].map((text, index) => (
+            {['Home', 'About', 'Blogs', 'Services', 'Contact Us', 'Request A Session'].map((text, index) => (
               <Link key={text} to ={text === 'Home' ? '' : `/${text.replace(/\s/g, '')}`}>
                 <ListItem disablePadding>
                   <ListItemButton>
@@ -99,7 +99,8 @@ export default function PagesHeader()
             </svg>
             <div className='PagesHeaderContent'>
                 <div className='PagesHeaderAnchor'><Link to='/ContactUs'>CONTACT US</Link></div>
-                <div className='PagesHeaderAnchor'><Link to='/BookASession'>BOOK A SESSION</Link></div>
+                {/* <div className='PagesHeaderAnchor'><Link to='/BookASession'>BOOK A SESSION</Link></div> */}
+                <div className='PagesHeaderAnchor'><Link to='/RequestASession'>REQUEST A SESSION</Link></div>
             </div>
         </div>}
         </>

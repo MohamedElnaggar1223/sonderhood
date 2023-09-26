@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import map from '../../imgs/map.png'
 import topleft from '../../imgs/topleft.png'
@@ -9,12 +9,30 @@ import mid from '../../imgs/mid.png'
 import { useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
 
+const NAME_REGEX = /^[A-z]{2,24}\s[A-z]{2,24}/
+const NUMBER_REGEX = /^[0][1][0125][0-9]{8}/
+
 export default function ContactUs() 
 {
     const navigate = useNavigate()
     const [name, setName] = useState('')
+    const [verifyName, setVerifyName] = useState(false)
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    const [number, setNumber] = useState('')
+    const [verifyNumber, setVerifyNumber] = useState(false)
+
+    useEffect(() => 
+    {
+        setVerifyName(NAME_REGEX.test(name))
+    }, [name])
+
+    useEffect(() => 
+    {
+        setVerifyNumber(NUMBER_REGEX.test(number))
+    }, [number])
+
+    const canSend = [verifyName, verifyNumber, message.length].every(Boolean)
 
     const form = useRef();
 
@@ -78,7 +96,7 @@ export default function ContactUs()
                                 </div>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageNumber'>
                                     <label htmlFor='Number'>Number</label>
-                                    <input placeholder='Number...' id='Number' type='tel' />
+                                    <input onChange={(e) => setNumber(e.target.value)} placeholder='Number...' id='Number' type='tel' />
                                 </div>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageDOB'>
                                     <label htmlFor='DOB'>DOB:</label>
@@ -91,7 +109,7 @@ export default function ContactUs()
                             </form>
                             <div className='ContactUsContactMessageButton'>
                                 {/* <button onClick={() => navigate('/BookASession')}>BOOK A SESSION</button> */}
-                                <button onClick={sendEmail}>SEND MESSAGE</button>
+                                <button disabled={!canSend} onClick={sendEmail}>SEND MESSAGE</button>
                             </div>
                         </div>
                     </div>

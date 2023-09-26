@@ -3661,7 +3661,117 @@ html, body, #root
 	left: 40%;
 }
 
-@media (max-width: 480px), (width: 1080px)
+@media (max-width: 1280px)
+{
+	@media (min-width: 901px)
+	{
+		.HomePageContainer
+		{
+			height: 90%;
+		}
+		.HomePage
+		{
+			height: 75%;
+			align-self: center;
+			justify-self: center;
+			margin-bottom: auto;
+			margin-top: 8%;
+		}
+
+		.TherapyImportanceContainer
+		{
+			height: 40%;
+		}
+
+		.OurServicesContainer
+		{
+			height: 45%;
+		}
+
+		.LookingForHelpContainer
+		{
+			height: 45%;
+		}
+
+		.WhySonderContainer
+		{
+			height: 48%;
+		}
+
+		.OurBlogContainer
+		{
+			height: 45%;
+		}
+
+		.ClientsSayContainer
+		{
+			height: 45%;
+		}
+
+		.HomeFooterSubscribe input
+		{
+			height: 15%;
+		}
+
+		.HomeFooterSubscribe button
+		{
+			height: 12%;
+			top: 39.55%;
+		}
+
+		.HomeFooterSocialsFollowUs
+		{
+			height: 20%;
+		}
+
+		.WhySonderContainerUpgraded
+		{
+			height: 60%;
+		}
+
+		.ServicesPageContainer
+		{
+			height: 100%;
+		}
+
+		.OurServicesItemContainer
+		{
+			height: 33vh !important;
+		}
+
+		.ContactUsPageContainer
+		{
+			height: 118%;
+		}
+
+		.OurSpaceContainer
+		{
+			height: 90%;
+		}
+
+		.BookSessionInfoCenter
+		{
+			height: 60vh !important;
+		}
+
+		.BookSessionInfo
+		{
+			height: 40vh !important;
+		}
+
+		.BookSessionInfoExtra
+		{
+			height: 17vh !important;
+		}
+
+		.BookSessionButton
+		{
+			height: 6.5vh;
+		}
+	}
+}
+
+@media (max-width: 900px)
 {
 	.WhySonderContainer
 	{
@@ -4661,115 +4771,113 @@ html, body, #root
 	{
 		height: auto;
 	}
-}
 
-@media (width: 1280px)
-{
-	@media (height: 1024px)
+	.BookSessionInfo
 	{
-		.HomePageContainer
-		{
-			height: 90%;
-		}
-		.HomePage
-		{
-			height: 75%;
-			align-self: center;
-			justify-self: center;
-			margin-bottom: auto;
-			margin-top: 8%;
-		}
+		grid-template-columns: auto !important;
+		grid-template-rows: auto auto auto !important;
+		justify-content: stretch;
+		height: 30vh !important;
+	}
 
-		.TherapyImportanceContainer
-		{
-			height: 40%;
-		}
+	.BookSessionInfoCredentials
+	{
+		grid-column: auto !important;
+    	width: 100% !important;
+	}
 
-		.OurServicesContainer
-		{
-			height: 45%;
-		}
+	.BookSessionInfoCredentials input, .BookSessionInfoCredentials select
+	{
+		width: 100%;
+		font-size: 2vh;
+	}
 
-		.LookingForHelpContainer
-		{
-			height: 45%;
-		}
+	.BookSessionInfoCredentials input::placeholder
+	{
+		font-size: 2vh;
+	}
 
-		.WhySonderContainer
-		{
-			height: 48%;
-		}
+	.BookSessionInfoCredentials label
+	{
+		font-size: 2vh;
+	}
 
-		.OurBlogContainer
-		{
-			height: 45%;
-		}
+	.BookSessionTitle
+	{
+		font-size: 4vh;
+	}
 
-		.ClientsSayContainer
-		{
-			height: 45%;
-		}
+	.BookSessionButton
+	{
+		height: 14.4vh;
+	}
 
-		.HomeFooterSubscribe input
-		{
-			height: 15%;
-		}
+	.BookSessionButton button
+	{
+		width: 65%;
+		text-wrap: nowrap;
+		font-size: 3.8vw;
+		margin-bottom: 2%;
+		margin-top: 2%;
+		height: 50%;
+	}
 
-		.HomeFooterSubscribe button
-		{
-			height: 12%;
-			top: 39.55%;
-		}
+	.SingleServicePage
+	{
+		flex-direction: column;
+	}
 
-		.HomeFooterSocialsFollowUs
-		{
-			height: 20%;
-		}
+	.SingleServicePageShapes
+	{
+		width: 60%;
+		height: 30%;
+		justify-self: center;
+		align-self: center;
 
-		.WhySonderContainerUpgraded
-		{
-			height: 60%;
-		}
+	}
 
-		.ServicesPageContainer
-		{
-			height: 100%;
-		}
+	.ICircle
+	{
+		width: 8vh;
+		height: 8vh;
+	}
 
-		.OurServicesItemContainer
-		{
-			height: 33vh !important;
-		}
+	.SingleServicePageDetails
+	{
+		width: 90%;
+		height: 70%;
+	}
 
-		.ContactUsPageContainer
-		{
-			height: 118%;
-		}
+	.SingleServicePageHeaderTitle h1
+	{
+		font-size: 4vh;
+	}
 
-		.OurSpaceContainer
-		{
-			height: 90%;
-		}
+	.SingleServicePageHeaderDesc
+	{
+		font-size: 1.4vh;
+		height: auto;
+		margin-bottom: 5%;
+	}
 
-		.BookSessionInfoCenter
-		{
-			height: 60vh !important;
-		}
+	.SingleServicePagePoints
+	{
+		margin-top: 5%;
+	}
 
-		.BookSessionInfo
-		{
-			height: 40vh !important;
-		}
+	.SingleServicePagePoints li
+	{
+		font-size: 1.5vh;
+	}
 
-		.BookSessionInfoExtra
-		{
-			height: 17vh !important;
-		}
-
-		.BookSessionButton
-		{
-			height: 6.5vh;
-		}
+	.SingleServicePageBook button
+	{
+		width: 65%;
+		text-wrap: nowrap;
+		font-size: 3.8vw;
+		margin-bottom: 2%;
+		margin-top: 2%;
+		height: 35%;
 	}
 }
 
