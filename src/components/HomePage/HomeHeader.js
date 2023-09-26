@@ -39,7 +39,7 @@ export default function HomeHeader()
           <List>
             {['Home', 'About', 'Blogs', 'Services', 'Contact Us', 'Request A Session'].map((text, index) => (
               <Link key={text} to ={text === 'Home' ? '' : `/${text.replace(/\s/g, '')}`}>
-                <ListItem disablePadding>
+                <ListItem style={{ textDecoration: 'none' }} disablePadding>
                   <ListItemButton>
                     <ListItemIcon>
                       

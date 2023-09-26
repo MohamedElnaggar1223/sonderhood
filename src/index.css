@@ -3778,6 +3778,29 @@ textarea
 
 @media (max-width: 900px)
 {
+	.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.css-4t3x6l-MuiPaper-root-MuiDrawer-paper
+	{
+		background: var(--Sonder-olive);
+	}
+
+	.MuiTypography-root.MuiTypography-body1.MuiListItemText-primary.css-10hburv-MuiTypography-root
+	{
+		font-size: 2vh;
+		color: var(--Sonder-yellow);
+		text-decoration: underline;
+		text-decoration-color: var(--Sonder-yellow);
+		text-transform: uppercase;
+		letter-spacing: 0.25vw;
+		text-underline-offset: 1vw;
+	}
+
+	/* .MuiList-root.MuiList-padding.css-h4y409-MuiList-root
+	{
+		display: flex;
+		flex-direction: column;
+		align-self: flex-start !important;
+	} */
+
 	.WhySonderContainer
 	{
 		flex: 0 0 auto;
