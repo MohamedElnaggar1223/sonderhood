@@ -3778,7 +3778,7 @@ textarea
 
 @media (max-width: 900px)
 {
-	.MuiList-root.MuiList-padding.css-h4y409-MuiList-root a
+	/* .MuiList-root.MuiList-padding.css-h4y409-MuiList-root a
 	{
 		text-decoration: none !important;
 	}
@@ -3825,7 +3825,74 @@ textarea
 	.MuiListItemIcon-root.css-cveggr-MuiListItemIcon-root
 	{
 		min-width: 2vw !important;
+	} */
+
+
+
+
+
+
+
+
+	.MuiDrawer-paperAnchorLeft
+	{
+		text-decoration: none !important;
 	}
+
+	.MuiDrawer-paperAnchorLeft
+	{
+		height: 100% !important;
+	}
+
+	.MuiDrawer-paperAnchorLeft
+	{
+		width: 70% !important;
+	}
+
+	.MuiDrawer-paperAnchorLeft
+	{
+		background: var(--Sonder-olive) !important;
+	}
+
+	.MuiDrawer-paperAnchorLeft a, .MuiDrawer-paperAnchorLeft ul li, .MuiDrawer-paperAnchorLeft span
+	{
+		font-size: 2.5vh !important;
+		color: var(--Sonder-yellow) !important;
+		text-decoration: underline !important;
+		text-decoration-color: var(--Sonder-yellow) !important;
+		text-transform: uppercase !important;
+		letter-spacing: 0.25vw !important;
+		text-underline-offset: 1vw !important;
+		text-wrap: nowrap !important;
+	}
+
+	.MuiDrawer-paperAnchorLeft ul li
+	{
+		margin-bottom: 5% !important;
+	}
+
+	/* .MuiList-root.MuiList-padding.css-h4y409-MuiList-root
+	{
+		display: flex;
+		flex-direction: column;
+		align-self: flex-start !important;
+	} */
+
+	.MuiDrawer-paperAnchorLeft ul
+	{
+		margin-left: 2.5vw !important;
+		margin-top: 2.5vw;
+	}
+
+
+
+
+
+
+
+
+
+
 
 
 
