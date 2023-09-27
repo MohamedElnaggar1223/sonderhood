@@ -26,7 +26,7 @@ export default function PagesHeader()
 
     // eslint-disable-next-line
     const [width, setWidth] = useState(window.innerWidth <= 480)
-    const [state, setState] = React.useState({left: false});
+    const [state, setState] = useState({left: false});
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (
@@ -41,12 +41,13 @@ export default function PagesHeader()
       };
 
       const list = (anchor) => (
-        <div style={{ background: 'var(--Sonder-olive)' }}>
+        <>
         <Box
           sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
           role="presentation"
           onClick={toggleDrawer(anchor, false)}
           onKeyDown={toggleDrawer(anchor, false)}
+          className='TESTT'
         >
           <List>
             {['Home', 'About', 'Blogs', 'Services', 'Contact Us', 'Request A Session'].map((text, index) => (
@@ -69,7 +70,7 @@ export default function PagesHeader()
           <path d="M0.75 75.5V75.75H1H50.7494H50.9994H51V75.5H51.2494V25.7597C51.2494 11.6959 39.9244 0.25 25.9997 0.25C12.075 0.25 0.75 11.6959 0.75 25.7597V75.5ZM49.2069 25.7597V73.6908H2.79313V25.7597C2.79313 12.8274 13.2062 2.30918 26.0003 2.30918C38.7944 2.30918 49.2069 12.8268 49.2069 25.7597Z" fill="#F9F3D0" stroke="#F9F3D0"strokeWidth="0.5"/>
           <path d="M16.3506 14.9016C16.3506 20.2738 20.6759 24.6484 25.9997 24.6484C31.3228 24.6484 35.6487 20.2738 35.6487 14.9016C35.6487 9.5294 31.3228 5.15479 25.9997 5.15479C20.6765 5.15479 16.3506 9.5294 16.3506 14.9016ZM18.3937 14.9016C18.3937 10.6603 21.8089 7.21396 25.9997 7.21396C30.1911 7.21396 33.6056 10.6603 33.6056 14.9016C33.6056 19.1429 30.1911 22.5892 25.9997 22.5892C21.8083 22.5892 18.3937 19.1429 18.3937 14.9016Z" fill="#F9F3D0" stroke="#F9F3D0"strokeWidth="0.5"/>
         </svg>
-        </div>
+        </>
       );
 
     let content = ["left"].map((anchor) => (
@@ -81,6 +82,7 @@ export default function PagesHeader()
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
+            sx={{ ":first-child": {background: 'var(--Sonder-olive)'} }}
           >
             {list(anchor)}
           </SwipeableDrawer>
