@@ -573,7 +573,7 @@ textarea
 
 .WhySonderContainer
 {
-	height: 65.5%;
+	height: auto;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -686,6 +686,8 @@ textarea
 	font-style: normal;
 	font-weight: 700;
 	line-height: 71.429%;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
 .WhySonderItemBody
@@ -1186,7 +1188,7 @@ textarea
 	display: flex;
 	flex-direction: row;
 	overflow-x: auto;
-	height: 70%;
+	height: auto;
 	width: 92.4%;
 	flex: 0 0 auto;
 	margin-left: 7.6%;
@@ -1216,6 +1218,8 @@ textarea
 	width: 100%;
 	display: flex;
 	flex-direction: row;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
 }
 
 .ClientsSayItemRating svg
@@ -1784,7 +1788,7 @@ textarea
 
 .ServicesPageContainer
 {
-	height: 160%;
+	height: auto !important;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -1834,7 +1838,7 @@ textarea
 
 .ServicesPageItems
 {
-	height: 90%;
+	height: auto !important;
 	margin-bottom: 2%;
 	margin-top: 1%;
 	display: flex;
@@ -2119,8 +2123,7 @@ textarea
 }
 .ContactUsPage
 {
-	max-height: 92.8%;
-	height: 78%;
+	height: fit-content;
 	width: 86%;
 	margin-left: 7%;
 	margin-right: 7%;
@@ -5336,5 +5339,89 @@ textarea
 		{
 			width: 100%;
 		}
+	}
+}
+
+@media (max-height: 699px)
+{
+	.HomeHeaderContainer
+	{
+		height: 7%;
+	}
+
+	.PagesHeaderContainer
+	{
+		height: 7%;
+	}
+
+	.ServicesPageContainer .PagesHeaderContainer
+	{
+		height: 7%;
+	}
+
+	.HomePageBookSession
+	{
+		height: 100%;
+		margin-bottom: 5%;
+	}
+
+	.IVectors
+	{
+		height: 80%;
+	}
+
+	.WhySonderItemsContainer
+	{
+		margin-top: 2.5%;
+	}
+
+	.OurServicesContainer
+	{
+		height: 50%;
+	}
+
+	.LookingForHelpContainer
+	{
+		height: 50%;
+	}
+
+	.LookingForHelpSearch
+	{
+		height: 15vh;
+	}
+
+	.LookingForHelpItemsButtons
+	{
+		height: 15vh;
+	}
+
+	.WhySonderContainerUpgraded
+	{
+		height: 70%;
+	}
+
+	.OurServicesItemContainer
+	{
+		height: 45vh !important;
+	}
+
+	.ContactUsPageContainer
+	{
+		height: 140%;
+	}
+
+	.OurSpaceContainer
+	{
+		height: 125%;
+	}
+
+	.BookSessionInfo
+	{
+		height: 30vh !important;
+	}
+
+	.BookSessionButton
+	{
+		height: 12vh !important;
 	}
 }
