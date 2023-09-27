@@ -43,7 +43,7 @@ export default function PagesHeader()
       const list = (anchor) => (
         <>
         <Box
-          sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+          sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250, background: 'var(--Sonder-olive)' }}
           role="presentation"
           onClick={toggleDrawer(anchor, false)}
           onKeyDown={toggleDrawer(anchor, false)}
@@ -53,9 +53,6 @@ export default function PagesHeader()
               <Link key={text} to ={text === 'Home' ? '/' : `/${text.replace(/\s/g, '')}`}>
                 <ListItem style={{ textDecoration: 'none' }} disablePadding>
                   <ListItemButton>
-                    <ListItemIcon>
-                      
-                    </ListItemIcon>
                     <ListItemText primary={text} />
                   </ListItemButton>
                 </ListItem>
