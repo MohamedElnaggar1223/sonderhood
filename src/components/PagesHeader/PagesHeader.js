@@ -43,7 +43,7 @@ export default function PagesHeader()
       const list = (anchor) => (
         <>
         <Box
-          sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250, background: '#000' }}
+          sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250, background: 'var(--Sonder-olive)' }}
           role="presentation"
           onClick={toggleDrawer(anchor, false)}
           onKeyDown={toggleDrawer(anchor, false)}
@@ -81,7 +81,6 @@ export default function PagesHeader()
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
-            sx={{background: 'var(--Sonder-olive)', }}
           >
             {list(anchor)}
           </SwipeableDrawer>
