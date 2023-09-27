@@ -81,6 +81,7 @@ export default function PagesHeader()
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
+            sx={{background: 'var(--Sonder-olive)', }}
           >
             {list(anchor)}
           </SwipeableDrawer>
