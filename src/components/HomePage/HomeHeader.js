@@ -37,15 +37,13 @@ export default function HomeHeader()
           role="presentation"
           onClick={toggleDrawer(anchor, false)}
           onKeyDown={toggleDrawer(anchor, false)}
+          className='TESTT'
         >
           <List>
             {['Home', 'About', 'Blogs', 'Services', 'Contact Us', 'Request A Session'].map((text, index) => (
-              <Link key={text} to ={text === 'Home' ? '' : `/${text.replace(/\s/g, '')}`}>
-                <ListItem style={{ textDecoration: 'none' }} disablePadding >
+              <Link key={text} to ={text === 'Home' ? '/' : `/${text.replace(/\s/g, '')}`}>
+                <ListItem style={{ textDecoration: 'none' }} disablePadding>
                   <ListItemButton>
-                    <ListItemIcon>
-                      
-                    </ListItemIcon>
                     <ListItemText primary={text} />
                   </ListItemButton>
                 </ListItem>
