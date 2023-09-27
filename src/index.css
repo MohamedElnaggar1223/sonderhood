@@ -4977,6 +4977,23 @@ textarea
 		font-size: 3.7vh;
 	}
 
+	.TherapistProfileContainer
+	{
+		height: auto !important;
+	}
+
+	.TherapistProfileImage
+	{
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.TherapistProfileImage img
+	{
+		width: 100%;
+		object-fit: fill;
+	}
+
 	.TherapistProfile
 	{
 		flex-direction: column;
@@ -5017,7 +5034,7 @@ textarea
 	.TherapistProfileButton
 	{
 		width: 50%;
-		height: 22%;
+		height: 6vh;
 		margin-top: 5%;
 	}
 
