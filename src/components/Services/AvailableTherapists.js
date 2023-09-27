@@ -25,7 +25,7 @@ export default function AvailableTherapists({ selectedService, therapists })
                 {therapistsDisplay}
             </div>
             <div className='MeetTheTeamItemsButtons'>
-                    <button className='MeetTheTeamItemBookButton'>BOOK A SESSION</button>
+                    <button onClick={() => navigate('/RequestASession')} className='MeetTheTeamItemBookButton'>BOOK A SESSION</button>
                     <button onClick={() => navigate('/ContactUs')} className='MeetTheTeamItemContactButton'>CONTACT US</button>
             </div>
         </div>

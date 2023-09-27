@@ -135,7 +135,7 @@ export default function ContactUs()
                     </div>
                 </div>
                 <div className='OurSpaceButton'>
-                    <button onClick={() => navigate('/BookASession')}>BOOK A SESSION</button>
+                    <button onClick={() => navigate('/RequestASession')}>BOOK A SESSION</button>
                 </div>
             </div>
         </div>

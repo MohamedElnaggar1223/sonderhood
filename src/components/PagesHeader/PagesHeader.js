@@ -25,7 +25,7 @@ export default function PagesHeader()
     }, [])
 
     // eslint-disable-next-line
-    const [width, setWidth] = useState(window.innerWidth <= 480)
+    const [width, setWidth] = useState(window.innerWidth <= 900)
     const [state, setState] = useState({left: false});
 
     const toggleDrawer = (anchor, open) => (event) => {
@@ -83,7 +83,6 @@ export default function PagesHeader()
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
-            sx={{ ":first-child": {background: 'var(--Sonder-olive)'} }}
           >
             {list(anchor)}
           </SwipeableDrawer>
@@ -111,7 +110,7 @@ export default function PagesHeader()
             <div className='PagesHeaderContent'>
                 <div className='PagesHeaderAnchor'><Link to='/ContactUs'>CONTACT US</Link></div>
                 {/* <div className='PagesHeaderAnchor'><Link to='/BookASession'>BOOK A SESSION</Link></div> */}
-                <div className='PagesHeaderAnchor'><Link to='/RequestASession'>REQUEST A SESSION</Link></div>
+                <div className='PagesHeaderAnchor'><Link to='/RequestASession'>BOOK A SESSION</Link></div>
             </div>
         </div>}
         </>

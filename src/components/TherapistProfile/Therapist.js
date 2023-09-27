@@ -18,6 +18,8 @@ export default function Therapist({ therapists, blogs })
     const [month, setMonth] = useState('January')
     const [days, setDays] = useState(30)
     const [slot, setSlot] = useState(-1)
+    //eslint-disable-next-line
+    const [width, setWidth] = useState(window.innerWidth <= 900)
 
     const displayedSlots = slots.map((slotTime, index) => (
         <div style={{ cursor: 'pointer' }} onClick={() => setSlot(index)} key={index} className={slot === index ? 'BookSessionAvailableSlotsTimingsSlotSelected' : 'BookSessionAvailableSlotsTimingsSlot'}>
@@ -121,7 +123,7 @@ export default function Therapist({ therapists, blogs })
                         {services}
                     </div>
                     <div className='TherapistProfileButton'>
-                        <button onClick={() => navigate('/BookASession')}>BOOK A SESSION</button>
+                        <button onClick={() => navigate('/RequestASession')}>BOOK A SESSION</button>
                     </div>
                 </div>
             </div>
@@ -158,7 +160,7 @@ export default function Therapist({ therapists, blogs })
                 <button onClick={() => navigate('/Blogs')} className='OurBlogItemBookButton'>SEE ALL BLOGS</button>
             </div>
         </div>
-        <div className='TherapistBookSession'>
+        {!width &&<div className='TherapistBookSession'>
             <div className='TherapistBookSessionImage'>
                 <img src={book} alt='book' />
             </div>
@@ -227,11 +229,11 @@ export default function Therapist({ therapists, blogs })
                         </div>
                     </div>
                     <div style={{ alignSelf: 'center', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} className='BookSessionButton'>
-                        <button style={{ width: '40%'}}>BOOK A SESSION</button>
+                        <button onClick={() => navigate('/RequestASession')} style={{ width: '40%'}}>BOOK A SESSION</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>}
         </>
     )
 }

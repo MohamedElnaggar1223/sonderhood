@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import AvailableTherapists from './AvailableTherapists'
 import FAQ from '../HomePage/FAQ'
 import PagesHeader from '../PagesHeader/PagesHeader'
@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 export default function Service({ therapists }) 
 {
     const { service } = useParams()
+    const navigate = useNavigate()
 
     let selectedService
     if(service === 'GroupTherapy') selectedService = 'Group Therapy'
@@ -46,7 +47,7 @@ export default function Service({ therapists })
                             </ul>
                         </div>
                         <div className='SingleServicePageBook'>
-                            <button className='SingleServicePageBookButton'>BOOK A SESSION</button>
+                            <button onClick={() => navigate('/RequestASession')} className='SingleServicePageBookButton'>BOOK A SESSION</button>
                         </div>
                     </div>
                     <div className='SingleServicePageShapes'>

@@ -70,7 +70,7 @@ export default function BookSession()
                     </div>
                 </form>
                 <div className='BookSessionButton'>
-                    <button onClick={sendEmail} disabled={!canRequest}>REQUEST A SESSION</button>
+                    <button onClick={sendEmail} disabled={!canRequest}>BOOK A SESSION</button>
                 </div>
             </div>
         </div>
