@@ -1060,11 +1060,10 @@ textarea
 .OurBlogHeader
 {
 	display: flex;
-	height: 10%;
+	height: auto;
 	width: 100%;
 	justify-content: flex-start;
 	align-items: center;
-	margin-bottom: 1%;
 }
 
 .OurBlogHeader h1
@@ -1078,6 +1077,7 @@ textarea
 	font-weight: 400;
 	line-height: 121.739%; /* 121.739% */
 	margin-left: 7.6%;
+	margin-bottom: 0;
 }
 
 .OurBlogItems
@@ -1085,7 +1085,7 @@ textarea
 	display: flex;
 	flex-direction: row;
 	overflow-x: auto;
-	height: 110%;
+	height: 100%;
 	width: 92.4%;
 	flex: 0 0 auto;
 	margin-left: 7.6%;
