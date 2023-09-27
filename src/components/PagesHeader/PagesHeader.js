@@ -19,7 +19,7 @@ export default function PagesHeader()
     useEffect(() => 
     {
         //@ts-ignore
-        (!width) && HeaderRef.current.scrollIntoView({ behavior: 'smooth' })
+        HeaderRef.current.scrollIntoView({ behavior: 'smooth' })
 
         //eslint-disable-next-line
     }, [])
