@@ -17,7 +17,7 @@ export default function HomePage({ therapists, blogs })
             <Home />
             <TherapyImportance />
             <OurServices />
-            <LookingForHelp />
+            <LookingForHelp therapists={therapists} />
             <WhySonderHood />
             <MeetTheTeam therapists={therapists} />
             <OurBlog blogs={blogs} />

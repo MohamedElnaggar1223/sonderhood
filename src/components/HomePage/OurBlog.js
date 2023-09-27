@@ -12,7 +12,7 @@ export default function OurBlog({ blogs })
                     <img src={blog.image} alt='c1' />
                 </div>
                 <div className='OurBlogItemTitle'>
-                    {blog.title}
+                    {blog.title.split(' ')[0]}
                 </div>
                 <div className='OurBlogItemBody'>
                     {blog.description}
