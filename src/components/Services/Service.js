@@ -107,7 +107,7 @@ export default function Service()
                     </div>
                 </div>
             </motion.div>
-            <AvailableTherapists availableTherapists={availableTherapists.slice(0, availableTherapists.length - 1)} therapists={therapists} selectedService={selectedService} />
+            <AvailableTherapists availableTherapists={availableTherapists} therapists={therapists} selectedService={selectedService} />
             <FAQ faqs={selectedService?.faqs} />
         </>
     )
