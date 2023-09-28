@@ -6,7 +6,7 @@ export default function AvailableTherapists({ availableTherapists, selectedServi
 {
     const navigate = useNavigate()
 
-    const therapistsDisplay = availableTherapists?.map(therapist => <Therapists therapist={therapist} />)
+    const therapistsDisplay = availableTherapists?.map((therapist, index) => <Therapists key={index} therapist={therapist} />)
 
     return (
         <div className='MeetTheTeamContainer'>

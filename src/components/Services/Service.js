@@ -41,7 +41,7 @@ export default function Service()
                 setRan(true)
             }
 
-            selectedService.therapists?.map(therapist => getFaqs(therapist))
+            selectedService?.therapists?.length && selectedService.therapists?.map(therapist => getFaqs(therapist))
         }
 
         return () => effRan.current = true
@@ -53,6 +53,8 @@ export default function Service()
     const title = selectedService?.title.split(' ')
 
     const selectedServiceTitle = title?.map((text, index) => index === 0 ? text : <span key={index}> {text}</span>)
+    
+    const displayPoints = selectedService?.points?.map((point, index) => <li key={index}> {point}</li>)
     
     return (
         <>
@@ -76,11 +78,7 @@ export default function Service()
                         </div>
                         <div className='SingleServicePagePoints'>
                             <ul>
-                                <li>Communication difficulties</li>
-                                <li>Issues with family-in-law</li>
-                                <li>Decline in sexual desire</li>
-                                <li>Jealousy</li>
-                                <li>Finding family/work balance</li>
+                                {displayPoints}
                             </ul>
                         </div>
                         <div className='SingleServicePageBook'>

@@ -5,9 +5,6 @@ export default function Therapists({ therapist })
 {
     const navigate = useNavigate()
 
-    console.log('test')
-    console.log(therapist)
-
     //eslint-disable-next-line
     const services = therapist?.clientele?.map(service => 
         {
