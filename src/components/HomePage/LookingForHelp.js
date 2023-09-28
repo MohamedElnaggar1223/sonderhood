@@ -2,17 +2,18 @@ import React, { useEffect, useState } from 'react'
 import searchImage from '../../imgs/Search.png'
 import HelpButton from './HelpButton'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { selectedTherapists } from '../../app/therapists/therapistsSlice'
 
-export default function LookingForHelp({ therapists }) 
+export default function LookingForHelp() 
 {
-    const buttons = ['Depression & Anxiety', 'Eating problems', 'Anxiety', 'Marriage problems', 'Body dysmorphic disorder (BDD)', 'Loneliness', 'Depression & Anxiety', 'Eating problems', 'Anxiety', 'Marriage problems', 'Body dysmorphic disorder (BDD)', 'Loneliness']
+    const therapists = useSelector(selectedTherapists)
+
+    const buttons = ['Depression', 'Eating Disorder', 'Anxiety', 'Marriage', 'Body Dysmorphia', 'Relationship', 'Personality Disorder', 'Addiction', 'Self esteem', 'Social anxiety', 'OCD', 'Trauma', 'Codependency', 'Abusive parents', 'Family problems']
     const buttonItems = buttons.map((button, index) => <HelpButton key={index} button={button} />)
 
     const [search, setSearch] = useState([''])
     const [showResults, setShowResults] = useState(false)
-
-    console.log(search)
-    console.log(showResults)
 
     useEffect(() => 
     {
@@ -31,7 +32,7 @@ export default function LookingForHelp({ therapists })
     return (
         <div className='LookingForHelpContainer'>
             <div className='LookingForHelpHeader'>
-                <h1>I AM LOOKING FOR HELP WITH:</h1>
+                <h1>I AM LOOKING FOR A THERAPIST TO HELP ME WITH MY:</h1>
             </div>
             <form onSubmit={handleSubmit} className='LookingForHelpSearch'>
                 <input

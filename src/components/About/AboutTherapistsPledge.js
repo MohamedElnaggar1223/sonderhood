@@ -11,7 +11,7 @@ export default function AboutTherapistsPledge()
                     <h1 style={{ marginBottom: '1%' }}>THERAPISTS' <span>PLEDGE</span></h1>
                 </div>
                 <div className='TherapistsPledgeDesc'>
-                    Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel.
+                    The 'Therapists Pledge' is a vital document that all our therapists vow to uphold. It consists of the following rules to maintain professionalism, ethics, and top-quality service during sessions. It ensures we provide the best care to our clients.
                 </div>
                 <div className='WhySonderItemsContainer'>
                     <div className='WhySonderItem'>

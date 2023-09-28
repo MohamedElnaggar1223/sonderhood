@@ -2,9 +2,13 @@ import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import AboutMeetTheTeam from './AboutMeetTheTeam'
 import AboutTherapistsPledge from './AboutTherapistsPledge'
+import { useSelector } from 'react-redux'
+import { selectedTherapists } from '../../app/therapists/therapistsSlice'
 
-export default function About({ therapists }) 
+export default function About() 
 {
+    const therapists = useSelector(selectedTherapists)
+
     return (
         <>
         <div className='AboutPageContainer'>
@@ -16,10 +20,14 @@ export default function About({ therapists })
                     </div>
                     <div className='AboutPageOurStoryDesc'>
                         <div className='AboutPageDescFirstPart'>
-                            Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel.
+                            "The most valuable aspect of my undergraduate years was the university campus's 24/7 accessibility. It was the sole location where I felt truly accommodated at any hour. This place bore witness to my moments of reflection, intensive study, pivotal decision-making, genuine laughter with cherished companions, and much more. In contrast, all other environments seemed to exert pressure, preventing these activities from occurring with peace of mind. As a graduate student, I continued to frequent this place,  
                         </div>
                         <div className='AboutPageDescSecPart'>
-                            Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel.
+                            but it wasn't until the COVID-19 pandemic forced campus closure that I recognized its profound significance. It was then that I realized everyone should have access to such a place.
+                            <br/>A sanctuary accessible around the clock.
+                            <br/>A haven devoid of external pressures.
+                            <br/>A space where, for once, the focus is solely on oneself.
+                            <br/>A place to feel, for once, that “it’s about me now, not others” A place to feel home….​"
                         </div>
                     </div>
                 </div>

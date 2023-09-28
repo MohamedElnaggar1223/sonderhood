@@ -1,9 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import MeetTheTeamTherapist from './MeetTheTeamTherapist'
+import { useSelector } from 'react-redux'
+import { selectedTherapists } from '../../app/therapists/therapistsSlice'
 
-export default function MeetTheTeam({ therapists }) 
+export default function MeetTheTeam() 
 {
+    const therapists = useSelector(selectedTherapists)
+
     const navigate = useNavigate()
 
     const therapistsDisplay = therapists.map((therapist) => <MeetTheTeamTherapist key={therapist.id} therapist={therapist} />)

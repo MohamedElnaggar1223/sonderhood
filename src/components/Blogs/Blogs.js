@@ -4,12 +4,19 @@ import blogmain from '../../imgs/blogmain.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { selectedBlogs } from '../../app/blogs/blogsSlice'
 
-export default function Blogs({blogs})
+export default function Blogs()
 {
+    const blogs = useSelector(selectedBlogs)
+
     const navigate = useNavigate()
 
-    const displayedBlogs = blogs.map(blog => 
+    const restofBlogs = blogs.slice(1)
+    const firstBlog = blogs.slice(0, 1)
+
+    const displayedBlogs = restofBlogs.map(blog => 
         (
             <div className='TopicMain'> 
                 <div className='TopicMainImage'>
@@ -48,31 +55,31 @@ export default function Blogs({blogs})
                     </div>
                     <div className='AboutPageOurStoryDesc'>
                         <div className='AboutPageDescFirstPart'>
-                        Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel.
+                            Our blog section is a valuable resource for insights into mental health, well-being, and personal growth. Our expert therapists regularly share informative articles, practical tips, and strategies to help you navigate life's challenges.
                         </div>
                         <div className='AboutPageDescSecPart'>
-                            Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel.
+                            Whether you're seeking guidance on managing stress, improving relationships, or enhancing your overall mental health, our blog offers evidence-based information in an accessible and relatable format. Explore a wealth of knowledge, empowering you to lead a happier, healthier life.
                         </div>
                     </div>
                 </div>
                 <div className='BlogsMain'> 
                     <div className='BlogsMainImage'>
-                        <img src={blogmain} alt='mid' />
+                        <img src={firstBlog[0].image} alt='mid' />
                     </div>
                     <div className='BlogsMainInfo'>
                         <div className='BlogsMainInfoService'>
                             <div className='BlogsMainInfoServiceName'>
-                                Child Therapy
+                                {firstBlog[0].topic}
                             </div>
                             <div className='BlogsMainInfoServiceTime'>
-                                5 min read
+                                {firstBlog[0].duration}
                             </div>
                         </div>
                         <div className='BlogsMainInfoTitle'>
-                            Lorem ipsum dolor sit amet consectetur
+                            {firstBlog[0].title}
                         </div>
                         <div className='BlogsMainInfoDesc'>
-                            Lorem ipsum dolor sit amet consectetur. Nulla sociis tortor sed leo vulputate ipsum semper sed ullamcorper. In est gravida imperdiet sodales erat pharetra. Mauris dui velit sagittis vitae risus faucibus nec amet. Urna nunc sapien mauris posuere ullamcorper tristique arcu. Risus mi dis arcu amet lacus nulla sed tortor. Bibendum nulla eget commodo at.
+                            {firstBlog[0].description}
                         </div>
                         <div className='BlogsMainInfoButton'>
                             <button>READ MORE</button>

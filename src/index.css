@@ -344,7 +344,7 @@ textarea
 
 .OurServicesItemTitle
 {
-	height: 10%;
+	height: auto;
 	color: var(--Sonder-olive);
 	text-align: center;
 	font-feature-settings: 'clig' off, 'liga' off;
@@ -353,6 +353,8 @@ textarea
 	font-style: normal;
 	font-weight: 700;
 	line-height: 135.714%;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
 }
 
 .OurServicesItemBody
@@ -868,13 +870,13 @@ textarea
 .MeetTheTeamItemsContainer
 {
 	display: grid;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: 33.3333333% 33.3333333% 33.3333333%;
 	grid-template-rows: auto;
 	column-gap: 2.5%;
 	row-gap: 10vh;
 	width: 85%;
-	margin-right: 7.55%;
-	margin-left: 7.5%;
+	margin-right: 7.5%;
+	margin-left: 5%;
 	margin-bottom: 5%;
 	transition: all 1s;
 }
@@ -895,6 +897,7 @@ textarea
 	height: 85%;
 	width: 100%;
 	overflow: hidden;
+	border-radius: 16rem 16rem 0 0;
 }
 
 .MeetTheTeamItemImage img
@@ -950,8 +953,8 @@ textarea
 	min-height: 5%;
 	height: 8%;
 	display: grid;
-	grid-template-columns: 33% 33% 33%;
-	grid-template-rows: auto auto;
+	grid-template-columns: minmax(30%, min-content) minmax(30%, min-content) ;
+	grid-template-rows: minmax(50%, max-content) minmax(50%, max-content);
 	column-gap: 0.8vw;
 	row-gap: 0.5vw;
 }
@@ -973,7 +976,7 @@ textarea
 	justify-content: center;
 	align-items: center;
 	text-wrap: nowrap;
-	width: 100%;
+	width: auto;
 	border: 1px solid #000;
 	border-radius: 0.65rem;
 }
@@ -1113,6 +1116,13 @@ textarea
 	align-items: flex-end;
 }
 
+.OurBlogItemInfo
+{
+	display: flex;
+	flex-direction: column;
+	height: 50%;
+}
+
 .OurBlogItemImage img
 {
 	width: 100%;
@@ -1146,7 +1156,7 @@ textarea
 	font-style: normal;
 	font-weight: 400;
 	line-height: 166.667%;
-	height: 25%;
+	height: auto;
 	padding-top: 1%;
 	overflow: auto;
 }
@@ -1652,7 +1662,7 @@ textarea
 
 .AboutPageOurStory
 {
-	height: 20%;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -1676,7 +1686,7 @@ textarea
 {
 	display: flex;
 	flex-direction: row;
-	height: 98%;
+	height: auto;
 	margin-bottom: 2%;
 	color: var(--Text, #90946B);
 	font-feature-settings: 'clig' off, 'liga' off;
@@ -1685,6 +1695,18 @@ textarea
 	font-style: normal;
 	font-weight: 400;
 	line-height: 155.556%;
+}
+
+.AboutPageDescFirstPart
+{
+	width: 49%;
+	margin-right: 1%;
+}
+
+.AboutPageDescSecPart
+{
+	width: 49%;
+	margin-left: 1%;
 }
 
 .AboutPageVideo
@@ -2608,14 +2630,16 @@ textarea
 .TherapistProfileServices
 {
 	min-height: 5%;
-	height: 8%;
+	max-height: 12%;
 	display: grid;
-	grid-template-columns: 50% 50% ;
+	grid-template-columns: auto auto ;
 	grid-template-rows: auto;
 	column-gap: 0.8vw;
-	row-gap: 0.5vw;
+	row-gap: 1vw;
 	margin-top: 2.5%;
-	margin-bottom: 6%;
+	margin-bottom: 2.5%;
+	min-width: 30%;
+	width: fit-content;
 }
 
 .TherapistProfileService
@@ -2635,11 +2659,13 @@ textarea
 	justify-content: center;
 	align-items: center;
 	text-wrap: nowrap;
-	width: 100%;
+	min-width: 100%;
 	border: 1px solid #000;
 	border-radius: 0.65rem;
-	height: 50%;
+	min-height: 50%;
+	height: 100%;
 	padding: 2%;
+	width: fit-content;
 }
 
 .TherapistProfileButton
@@ -3026,9 +3052,10 @@ textarea
 	justify-content: center;
 	align-items: center;
 	text-wrap: nowrap;
-	width: 30%;
-	height: 100%;
-	padding: 0.5%;
+	min-width: 30%;
+	width: auto;
+	max-height: 100%;
+	padding: 1.5%;
 	margin-right: 5%;
 	border-radius: 0.2rem;
 	color: #FFFDF4;
@@ -3190,7 +3217,8 @@ textarea
 	justify-content: center;
 	align-items: center;
 	text-wrap: nowrap;
-	width: 8%;
+	min-width: 8%;
+	width: auto;
 	height: 60%;
 	border: 1px solid #000;
 	border-radius: 0.65rem;

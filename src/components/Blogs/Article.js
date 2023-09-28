@@ -4,9 +4,13 @@ import { text } from './text'
 import { useNavigate, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { useSelector } from 'react-redux'
+import { selectedBlogs } from '../../app/blogs/blogsSlice'
 
-export default function Article({ blogs }) 
+export default function Article() 
 {
+    const blogs = useSelector(selectedBlogs)
+
     const { title } = useParams()
 
     const navigate = useNavigate()
@@ -22,10 +26,10 @@ export default function Article({ blogs })
             <div className='ArticlePageMainInfo'>
                 <div className='ArticlePageMainInfoService'>
                     <div className='ArticleMainInfoServiceName'>
-                        Child Therapy
+                        {selectedBlog.topic}
                     </div>
                     <div className='ArticleMainInfoServiceTime'>
-                        5 min read
+                        {selectedBlog.duration}
                     </div>
                 </div>
                 <div className='ArticleMainInfoTitle'>
@@ -43,10 +47,10 @@ export default function Article({ blogs })
             <div className='TopicMainInfo'>
                 <div className='TopicMainInfoService'>
                     <div className='TopicMainInfoServiceName'>
-                        Therapy Topic
+                        {blog.topic}
                     </div>
                     <div className='TopicMainInfoServiceTime'>
-                        5 min read
+                        {blog.duration}
                     </div>
                 </div>
                 <div className='TopicMainInfoTitle'>
@@ -69,7 +73,7 @@ export default function Article({ blogs })
             {displayedSelectedBlog}
         </div>
         <div className='ArticleText'>
-            {text}
+            {selectedBlog.body}
         </div>
         <div className='ReadMoreContainer'>
             <div className='ReadMoreTitle'>

@@ -1,8 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { selectedBlogs } from '../../app/blogs/blogsSlice'
 
-export default function OurBlog({ blogs }) 
+export default function OurBlog() 
 {
+    const blogs = useSelector(selectedBlogs)
+
     const navigate = useNavigate()
 
     const displayedBlogs = blogs.map(blog => 
@@ -11,11 +15,13 @@ export default function OurBlog({ blogs })
                 <div className='OurBlogItemImage'>
                     <img src={blog.image} alt='c1' />
                 </div>
-                <div className='OurBlogItemTitle'>
-                    {blog.title.split(' ')[0]}
-                </div>
-                <div className='OurBlogItemBody'>
-                    {blog.description}
+                <div className='OurBlogItemInfo'>
+                    <div className='OurBlogItemTitle'>
+                        {blog.title}
+                    </div>
+                    <div className='OurBlogItemBody'>
+                        {blog.description}
+                    </div>
                 </div>
             </div>
         ))

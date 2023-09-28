@@ -5,7 +5,7 @@ export default function TherapyImportance()
     return (
         <div className='TherapyImportanceContainer'>
             <div className='TherapyImportanceTitle'><div><span>WHY IS </span><span style={{ fontFamily: 'Raglika' }}>THERAPY</span></div><div> IMPORTANT?</div></div>
-            <div className='TherapyImportanceDesc'>Lorem ipsum dolor sit amet consectetur. Pretium commodo mattis enim mattis in. Quam nisi neque eros habitant. Vitae at eu risus id amet blandit duis. Justo tincidunt tortor ipsum egestas dignissim malesuada lacus. Amet ac viverra ut nibh. Feugiat ornare elit donec urna. Porttitor netus pulvinar neque vivamus consectetur commodo egestas. Sollicitudin sit aenean vestibulum eget. Vitae convallis vitae amet et sagittis nunc mattis habitant nulla. Aliquet lectus egestas augue suspendisse. Nisl nisl fermentum tellus dignissim.</div>
+            <div className='TherapyImportanceDesc'>Therapy is a structured, confidential process facilitated by trained professionals. It provides individuals with a supportive environment to explore and address their emotional, psychological, and behavioral challenges. Through open dialogue, therapists offer guidance, insights, and evidence-based strategies to help clients improve their mental well-being, cope with difficulties, and achieve personal growth. It is a collaborative journey that fosters self-awareness, resilience, and the development of effective coping skills to enhance one's overall quality of life.</div>
         </div>
     )
 }

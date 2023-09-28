@@ -19,7 +19,7 @@ export default function AboutMeetTheTeam({therapists})
                         <h1>MEET THE <span>TEAM</span></h1>
                     </div>
                     <div className='MeetTheTeamHeaderDesc'>
-                        Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel.
+                        Get to know our exceptional team of experienced and compassionate therapists. Each member is dedicated to supporting your well-being and helping you thrive on your journey toward personal growth and mental health.
                     </div>
                 </div>
                 <div className='MeetTheTeamHeaderFilters'>

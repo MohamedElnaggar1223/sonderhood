@@ -4,19 +4,23 @@ import AvailableTherapists from './AvailableTherapists'
 import FAQ from '../HomePage/FAQ'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import { motion } from 'framer-motion'
+import { useSelector } from 'react-redux'
+import { selectedServices } from '../../app/services/servicesSlice'
+import { selectedTherapists } from '../../app/therapists/therapistsSlice'
 
-export default function Service({ therapists }) 
+export default function Service() 
 {
     const { service } = useParams()
     const navigate = useNavigate()
+    const services = useSelector(selectedServices)
+    const therapists = useSelector(selectedTherapists)
 
-    let selectedService
-    if(service === 'GroupTherapy') selectedService = 'Group Therapy'
-    else if(service === 'ChildTherapy') selectedService = 'Child Therapy'
-    else selectedService = 'Individual Therapy'
+    const selectedService = services?.find(serviceItem => serviceItem.title.replace(/\s/g, '') === service)
 
-    const title = selectedService?.split(' ')
-    console.log(title)
+    const title = selectedService?.title.split(' ')
+
+    const selectedServiceTitle = title.map((text, index) => index === 0 ? text : <span> {text}</span>)
+    
     return (
         <>
             <motion.div 
@@ -31,10 +35,10 @@ export default function Service({ therapists })
                         <div className='SingleServicePageHeader'>
                             <div className='SingleServicePageHeaderTitle'>
                                 {/*//@ts-ignore*/}
-                                <h1>{title[0]?.toUpperCase()} <span>{title[1]?.toUpperCase()}</span></h1>
+                                <h1>{selectedServiceTitle}</h1>
                             </div>
                             <div className='SingleServicePageHeaderDesc'>
-                                Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. 
+                                {selectedService.description}    
                             </div>
                         </div>
                         <div className='SingleServicePagePoints'>

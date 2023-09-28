@@ -10,17 +10,17 @@ import ClientsSay from './ClientsSay';
 import FAQ from './FAQ';
 import { useScroll } from 'framer-motion';
 
-export default function HomePage({ therapists, blogs }) 
+export default function HomePage() 
 {
     return (
         <>
             <Home />
             <TherapyImportance />
             <OurServices />
-            <LookingForHelp therapists={therapists} />
+            <LookingForHelp />
             <WhySonderHood />
-            <MeetTheTeam therapists={therapists} />
-            <OurBlog blogs={blogs} />
+            <MeetTheTeam />
+            <OurBlog />
             <ClientsSay />
             <FAQ />
         </>
