@@ -22,7 +22,7 @@ export default function HomePage()
             <MeetTheTeam />
             <OurBlog />
             <ClientsSay />
-            <FAQ />
+            <FAQ faqs={[]} />
         </>
     )
 }

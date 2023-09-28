@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function Therapists({ therapist }) 
 {
     const navigate = useNavigate()
 
+    console.log('test')
+    console.log(therapist)
+
     //eslint-disable-next-line
-    const services = therapist.services.map(service => 
+    const services = therapist?.clientele?.map(service => 
         {
             if(service !== 'All Services')
             {

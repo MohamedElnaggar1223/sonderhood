@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function FAQItem({ questions, index, question }) 
+export default function FAQItem({ faq, faqs, index }) 
 {
     const [shown, setShown] = useState(false)
 
@@ -20,13 +20,13 @@ export default function FAQItem({ questions, index, question })
 
     return (
         <>
-        <div style={ questions.length === (index+1) ? {} : shown ? {} : {borderBottom: '1px solid #000'} } onClick={() => setShown(prev => !prev)} className='FAQItem'>
+        <div style={ faqs.length === (index+1) ? {} : shown ? {} : {borderBottom: '1px solid #000'} } onClick={() => setShown(prev => !prev)} className='FAQItem'>
             <div className='FAQItemHeading'>
                 <div className='FAQItemHeadingNumber'>
                     { Math.floor((index+1) / 10) === 0 ? `0${index+1}` : index+1 }
                 </div>
                 <div className='FAQItemHeadingQuestion'>
-                    {question}
+                    {faq.question}
                 </div>
                 <div className='FAQItemHeadingController'>
                     { shown ? closeIcon : openIcon }
@@ -35,8 +35,8 @@ export default function FAQItem({ questions, index, question })
         </div>
         <div className={shown ? 'FAQItemAnswerWrapper open' : 'FAQItemAnswerWrapper'}>
             {shown && 
-                <div style={ questions.length === (index+1) ? {} : {borderBottom: '1px solid #000'} } className={'FAQItemAnswerTemp'}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes. 
+                <div style={ faqs.length === (index+1) ? {} : {borderBottom: '1px solid #000'} } className={'FAQItemAnswerTemp'}>
+                    {faq.answer}    
                 </div>
             }
         </div>

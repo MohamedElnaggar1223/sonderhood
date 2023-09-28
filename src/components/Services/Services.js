@@ -17,7 +17,7 @@ export default function Serives()
     {
         const number = Math.floor((index+1) / 10) === 0 ? `0${index+1}` : index+1
         return(
-            <div key={index} onClick={() => navigate('/Services/ChildTherapy')} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)], marginTop: '10%' }}>
+            <div key={index} onClick={() => navigate(`/Services/${service.title.replace(/\s/g, '')}`)} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)], marginTop: '10%' }}>
                 <div className='OurServicesItemNumber'>
                     {number}
                 </div>

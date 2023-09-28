@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import AvailableTherapists from './AvailableTherapists'
 import FAQ from '../HomePage/FAQ'
@@ -7,6 +7,8 @@ import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'
 import { selectedServices } from '../../app/services/servicesSlice'
 import { selectedTherapists } from '../../app/therapists/therapistsSlice'
+import { doc, getDoc } from 'firebase/firestore'
+import { db } from '../../Config/firebaseConfig'
 
 export default function Service() 
 {
@@ -14,12 +16,43 @@ export default function Service()
     const navigate = useNavigate()
     const services = useSelector(selectedServices)
     const therapists = useSelector(selectedTherapists)
+    const [ran, setRan] = useState(false)
+    const [availableTherapists, setAvailableTherapists] = useState([])
+    const effRan = useRef(false) 
 
     const selectedService = services?.find(serviceItem => serviceItem.title.replace(/\s/g, '') === service)
 
+    //@ts-ignore
+    useEffect(() => 
+    {
+        if(effRan.current === true || process.env.NODE_ENV !== 'development')
+        {
+            const getFaqs = async (therapist) => 
+            {
+                const dataRef = doc(db, "therapists", therapist.id)
+                const data = await getDoc(dataRef)
+                //@ts-ignore
+                setAvailableTherapists(prev => {
+                    const array = prev
+                    //@ts-ignore
+                    array.push(data.data())
+                    return array
+                })
+                setRan(true)
+            }
+
+            selectedService.therapists?.map(therapist => getFaqs(therapist))
+        }
+
+        return () => effRan.current = true
+        //eslint-disable-next-line
+    }, [])
+
+    // effRan.current && setRan(true)
+
     const title = selectedService?.title.split(' ')
 
-    const selectedServiceTitle = title.map((text, index) => index === 0 ? text : <span> {text}</span>)
+    const selectedServiceTitle = title?.map((text, index) => index === 0 ? text : <span key={index}> {text}</span>)
     
     return (
         <>
@@ -38,7 +71,7 @@ export default function Service()
                                 <h1>{selectedServiceTitle}</h1>
                             </div>
                             <div className='SingleServicePageHeaderDesc'>
-                                {selectedService.description}    
+                                {selectedService?.description}    
                             </div>
                         </div>
                         <div className='SingleServicePagePoints'>
@@ -74,8 +107,8 @@ export default function Service()
                     </div>
                 </div>
             </motion.div>
-            <AvailableTherapists therapists={therapists} selectedService={selectedService} />
-            <FAQ />
+            <AvailableTherapists availableTherapists={availableTherapists.slice(0, availableTherapists.length - 1)} therapists={therapists} selectedService={selectedService} />
+            <FAQ faqs={selectedService?.faqs} />
         </>
     )
 }
