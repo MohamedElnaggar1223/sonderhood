@@ -953,8 +953,8 @@ textarea
 	min-height: 5%;
 	height: 8%;
 	display: grid;
-	grid-template-columns: minmax(30%, min-content) minmax(30%, min-content) ;
-	grid-template-rows: minmax(50%, max-content) minmax(50%, max-content);
+	grid-template-columns: minmax(30%, 70%) minmax(30%, 70%);
+	grid-template-rows: minmax(70%, max-content) minmax(70%, max-content);
 	column-gap: 0.8vw;
 	row-gap: 0.5vw;
 }
@@ -965,7 +965,7 @@ textarea
 	text-align: center;
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: DM Sans;
-	font-size: 0.75vw;
+	font-size: 0.85vw;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 200%;
@@ -4164,12 +4164,13 @@ textarea
 
 	.MeetTheTeamItemDesc
 	{
-		font-size: 2vh;
+		font-size: 1.9vh;
+		text-wrap: nowrap;
 	}
 
 	.MeetTheTeamItemProfItem
 	{
-		font-size: 1.2vh;
+		font-size: 1.1vh;
 	}
 
 	.MeetTheTeamItemProf
