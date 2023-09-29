@@ -3,6 +3,7 @@ import { twitter } from '../../imgs/twitterIcon'
 import { instagram } from '../../imgs/InstagramIcon'
 import { In } from '../../imgs/inIcon'
 import { yt } from '../../imgs/YoutubeIcon'
+import { Link } from 'react-router-dom'
 
 export default function Footer()
 {    
@@ -54,14 +55,24 @@ export default function Footer()
                         Follow us
                     </div>
                     <div className='HomeFooterSocialsIcons'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                            <rect width="36" height="36" rx="8" fill="#F9F3D0"/>
-                            <path d="M19.4638 27V18.7894H22.3585L22.7919 15.5895H19.4637V13.5465C19.4637 12.6201 19.7339 11.9888 21.1293 11.9888L22.909 11.988V9.12607C22.6012 9.08715 21.5447 9 20.3157 9C17.7497 9 15.9929 10.4912 15.9929 13.2297V15.5895H13.0908V18.7894H15.9929V26.9999H19.4638V27Z" fill="#90946B"/>
-                        </svg>
-                        {twitter}
-                        {instagram}
-                        {In}
-                        {yt}
+                        <Link to='https://www.facebook.com/profile.php?id=100092881591617'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <rect width="36" height="36" rx="8" fill="#F9F3D0"/>
+                                <path d="M19.4638 27V18.7894H22.3585L22.7919 15.5895H19.4637V13.5465C19.4637 12.6201 19.7339 11.9888 21.1293 11.9888L22.909 11.988V9.12607C22.6012 9.08715 21.5447 9 20.3157 9C17.7497 9 15.9929 10.4912 15.9929 13.2297V15.5895H13.0908V18.7894H15.9929V26.9999H19.4638V27Z" fill="#90946B"/>
+                            </svg>
+                        </Link>
+                        <Link to=''>
+                            {twitter}
+                        </Link>
+                        <Link to='https://www.instagram.com/thesonderhood/'>
+                            {instagram}
+                        </Link>
+                        <Link to='https://www.linkedin.com/company/94863370/admin/feed/posts/'>
+                            {In}
+                        </Link>
+                        <Link to=''>
+                            {yt}
+                        </Link>
                     </div>
                 </div>
             </footer>

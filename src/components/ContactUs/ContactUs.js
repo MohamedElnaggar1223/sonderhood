@@ -6,7 +6,7 @@ import botleft from '../../imgs/botleft.png'
 import topright from '../../imgs/topright.png'
 import botright from '../../imgs/botright.png'
 import mid from '../../imgs/mid.png'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
 
 const NAME_REGEX = /^[A-z]{2,24}\s[A-z]{2,24}/
@@ -71,7 +71,7 @@ export default function ContactUs()
                 <div className='ContactUsContact'>
                     <div className='ContactUsContactMap'>
                         <div className='ContactUsContactMapImage'>
-                            <img src={map} alt='map' />
+                            <Link to='https://maps.app.goo.gl/qf4ZGCDJwEFf3dfK7'><img src={map} alt='map' /></Link>
                         </div>
                         <div className='ContactUsContactMapInfo'>
                             201094292553 <br />
