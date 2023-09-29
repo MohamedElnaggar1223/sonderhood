@@ -27,10 +27,10 @@ export default function TherapyImportance()
 
 
     return (
-        <div className='TherapyImportanceContainer'>
+        <div style={{ overflowX: 'hidden' }} className='TherapyImportanceContainer'>
             <motion.div 
                 variants={{ 
-                    hidden: { opacity: 0, x: -100 }, 
+                    hidden: { opacity: 0, x: -200 }, 
                     visible: { opacity: 1, x: 0 } 
                 }} 
                 initial='hidden'
@@ -42,7 +42,7 @@ export default function TherapyImportance()
             </motion.div>
             <motion.div 
                 variants={{ 
-                    hidden: { opacity: 0, x: 100 }, 
+                    hidden: { opacity: 0, x: 200 }, 
                     visible: { opacity: 1, x: 0 } 
                 }} 
                 initial='hidden'
