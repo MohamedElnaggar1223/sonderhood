@@ -11,18 +11,20 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useInView } from 'framer-motion';
 
 export default function PagesHeader() 
 {
-    const HeaderRef = useRef()
+    const HeaderRef = useRef(null)
+    const scrollRef = useRef(null)
+    const headerInView = useInView(scrollRef)
 
     useEffect(() => 
     {
         //@ts-ignore
-        HeaderRef.current.scrollIntoView({ behavior: 'smooth' })
-
+        if(!headerInView) scrollRef.current.scrollIntoView({ behavior: 'smooth' })
         //eslint-disable-next-line
-    }, [])
+    }, [headerInView])
 
     // eslint-disable-next-line
     const [width, setWidth] = useState(window.innerWidth <= 900)
@@ -91,7 +93,7 @@ export default function PagesHeader()
 
     return (
         <>{width ? content :
-        <div className='PagesHeaderContainer'>
+        <div ref={scrollRef} className='PagesHeaderContainer'>
             <div className='PagesHeaderContent'>
             {/*//@ts-ignore*/}
                 <div ref={HeaderRef} className='PagesHeaderAnchor'><Link to='/'>HOME</Link></div>

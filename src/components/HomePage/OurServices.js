@@ -45,7 +45,7 @@ export default function OurServices()
                 }} 
                 initial='hidden'
                 animate={mainRefAnimation}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.75, delay: 0.25 }}
             >
                 <div className='OurServicesItemNumber'>
                     {number}

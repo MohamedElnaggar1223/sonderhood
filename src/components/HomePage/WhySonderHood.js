@@ -1,16 +1,43 @@
-import React from 'react'
+import { motion, useAnimation, useInView } from 'framer-motion'
+import React, { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function WhySonderHood() 
 {
     const navigate = useNavigate()
+    const ref = useRef(null)
+    const refInView = useInView(ref)
+
+    const mainRefAnimation = useAnimation()
+
+    useEffect(() =>
+    {
+        if(refInView) 
+        {
+            mainRefAnimation.start('visible')
+        }
+        else
+        {
+            mainRefAnimation.start('hidden')
+        }
+        //eslint-disable-next-line
+    }, [refInView])
 
     return (
-        <div className='WhySonderContainer'>
+        <div ref={ref} className='WhySonderContainer'>
             <div className='WhySonderHeader'>
                 <h1>WHY CHOOSE <span>THE SONDERHOOD?</span></h1>
             </div>
-            <div className='WhySonderItemsContainer'>
+            <motion.div 
+                className='WhySonderItemsContainer'
+                variants={{ 
+                    hidden: { opacity: 0,  }, 
+                    visible: { opacity: 1,  }
+                }} 
+                initial='hidden'
+                animate={mainRefAnimation}
+                transition={{ duration: 1, delay: 0.4 }}
+            >
                 <div className='WhySonderItem'>
                     <div className='WhySonderItemSVG'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="104" height="103" viewBox="0 0 104 103" fill="none">
@@ -77,7 +104,7 @@ export default function WhySonderHood()
                     </div>
                 </div>
                 
-            </div>
+            </motion.div>
             <div className='WhySonderItemsButtons'>
                     <button onClick={() => navigate('/RequestASession')} className='WhySonderItemBookButton'>BOOK A SESSION</button>
                     <button onClick={() => navigate('/ContactUs')} className='WhySonderItemContactButton'>CONTACT US</button>

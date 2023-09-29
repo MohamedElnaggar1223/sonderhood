@@ -664,6 +664,7 @@ textarea
 	flex-direction: row;
 	width: 50%;
 	align-self: center;
+	margin-bottom: 5%;
 	margin-bottom: 2.5%;
 }
 
@@ -1693,6 +1694,7 @@ textarea
 	flex-direction: column;
 	background: var(--Sonder-white);
 	flex: 0 0 auto;
+	margin-bottom: 5%;
 }
 
 .AboutPage
@@ -3835,7 +3837,7 @@ textarea
 
 		.ContactUsPageContainer
 		{
-			height: 118%;
+			height: 95%;
 		}
 
 		.OurSpaceContainer
@@ -3850,7 +3852,7 @@ textarea
 
 		.BookSessionInfo
 		{
-			height: 40vh !important;
+			height: 18vh !important;
 		}
 
 		.BookSessionInfoExtra
@@ -4026,6 +4028,7 @@ textarea
 		height: 50vh;
 		width: 100%;
 		margin-left: 0;
+		overflow-y: auto;
 	}
 
 	.OurServicesItemContainer
@@ -5300,9 +5303,9 @@ textarea
 	}
 }
 
-@media (width: 768px)
+/* @media (max-width: 768px)
 {
-	@media (height: 1024px)
+	@media (min-height: 1024px)
 	{
 		.HomePageContainer
 		{
@@ -5476,7 +5479,7 @@ textarea
 			width: 100%;
 		}
 	}
-}
+} */
 
 @media (max-height: 699px)
 {
