@@ -1,15 +1,55 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Therapist from '../HomePage/Therapists'
 import { useNavigate } from 'react-router-dom'
+import { selectedServices } from '../../app/services/servicesSlice'
+import { useSelector } from 'react-redux'
+import { doc, getDoc } from 'firebase/firestore'
+import { db } from '../../Config/firebaseConfig'
+import { selectedTherapists } from '../../app/therapists/therapistsSlice'
 
 export default function AboutMeetTheTeam({therapists}) 
 {
     const [selectedService, setSelectedService] = useState('All Services')
 
+    const services = useSelector(selectedServices)
+    const therapistsData = useSelector(selectedTherapists)
+
+    const [availableTherapists, setAvailableTherapists] = useState(therapists)
+
+
+    async function handleFilter(e)
+    {
+        const serviceTitle = e.target.value
+        setSelectedService(serviceTitle)
+
+        const service = services?.find(serviceItem => serviceItem.title === serviceTitle)
+
+        if(service)
+        {
+            let therapistsArray = []
+            service.therapists.map(therapist => 
+                {
+                    const foundTherapist = therapistsData.find(data => data.id === therapist.id)
+                    therapistsArray.push(foundTherapist)
+                })
+            setAvailableTherapists(therapistsArray)
+        }
+        else setAvailableTherapists(therapists)
+    }
+
+    const servicesOptions = services.map(service => (
+        <option
+            value={service.title}
+            key={service.title}
+        >
+            {service.title}
+        </option>
+    ))
+
     const navigate = useNavigate()
-    
-    const filteredTherapists = therapists.filter(therapist => selectedService !== 'All Services' ? therapist.services.includes(selectedService) : therapist)
-    const therapistsDisplay = filteredTherapists.map(therapist => <Therapist key={therapist.id} therapist={therapist} />)
+
+    //@ts-ignore
+    const therapistsDisplay = availableTherapists.map((therapist, index) => <Therapist key={index} therapist={therapist} />)
 
     return (
         <div className='MeetTheTeamContainer'>
@@ -25,10 +65,9 @@ export default function AboutMeetTheTeam({therapists})
                 <div className='MeetTheTeamHeaderFilters'>
                     <div className='MeetTheTeamHeaderFiltersInput'>
                         <label htmlFor='filters'>FILTER BY:</label>
-                        <select onChange={(e) => setSelectedService(e.target.value)} id='filters'>
-                            <option value="All Services">ALL SERVICES</option>
-                            <option value="Group Therapy">GROUP THERAPY</option>
-                            <option value="Child Therapy">CHILD THERAPY</option>
+                        <select onChange={handleFilter} id='filters'>
+                            <option value='All Services'>All Services</option>
+                            {servicesOptions}
                         </select>
                     </div>
                 </div>

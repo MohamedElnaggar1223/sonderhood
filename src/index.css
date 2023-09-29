@@ -643,10 +643,47 @@ textarea
 	height: 55%;
 }
 
+.WhySonderItemsFirstRow
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin-bottom: 5%;
+	margin-top: 2.5%;
+}
+
+.WhySonderItemsFirstRow .WhySonderItem
+{
+	width: 25%;
+}
+
+.WhySonderItemsSecondRow
+{
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+	align-self: center;
+	margin-bottom: 2.5%;
+}
+
+.WhySonderItemsSecondRow .WhySonderItem
+{
+	width: 50%;
+}
+
 .WhySonderItemsContainer
 {
 	display: flex;
 	flex-direction: row;
+	width: 84.8%;
+	margin-left: 7.6%;
+	margin-right: 7.6%;
+}
+
+.WhySonderItemsContainerPledge
+{
+	display: flex;
+	flex-direction: column;
 	width: 84.8%;
 	margin-left: 7.6%;
 	margin-right: 7.6%;
@@ -696,11 +733,11 @@ textarea
 .WhySonderItemBody
 {
 	height: 33%;
-	width: 60%;
+	width: 75%;
 	margin-bottom: 2%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	color: var(--Text, #90946B);
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: 'DM Sans';
@@ -709,6 +746,7 @@ textarea
 	font-weight: 400;
 	line-height: 155.556%;
 	margin-top: 5%;
+	text-align: center;
 }
 
 .WhySonderItemBookButton
@@ -2700,7 +2738,7 @@ textarea
 
 .WhySonderContainerUpgraded
 {
-	height: 90%;
+	height: auto;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -3705,6 +3743,11 @@ textarea
 {
 	@media (min-width: 901px)
 	{
+		.MeetTheTeamHeaderFiltersInput
+		{
+			margin-top: 35%;
+		}
+
 		.HomePageContainer
 		{
 			height: 90%;
@@ -3766,7 +3809,7 @@ textarea
 
 		.WhySonderContainerUpgraded
 		{
-			height: 60%;
+			height: auto;
 		}
 
 		.ServicesPageContainer
@@ -4070,6 +4113,11 @@ textarea
 		width: 100%;
 		overflow: auto;
 	}
+	
+	.WhySonderItemsContainerPledge
+	{
+		height: auto;
+	}
 
 	.WhySonderItemBookButton
 	{
@@ -4098,11 +4146,34 @@ textarea
 		margin-bottom: 2.5%;
 	}
 
-	.WhySonderItem
+	.WhySonderItemsFirstRow
+	{
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+
+	.WhySonderItemsSecondRow
+	{
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+
+	.WhySonderItemsFirstRow .WhySonderItem
 	{
 		margin: 5%;
 		justify-content: center;
 		align-items: center;
+		width: 100%;
+	}
+
+	.WhySonderItemsSecondRow .WhySonderItem
+	{
+		margin: 5%;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
 	}
 
 	.WhySonderItemSVG svg
@@ -4356,7 +4427,8 @@ textarea
 
 	.AboutPageContainer
 	{
-		height: 70vh;
+		height: 75vh;
+
 	}
 
 	.AboutPage
@@ -4376,8 +4448,8 @@ textarea
 
 	.AboutPageDescFirstPart, .AboutPageDescSecPart 
 	{
-		font-size: 1.5vh;
-		line-height: 4vw;
+		font-size: 1.25vh;
+		line-height: 3vw;
 	}
 
 	.AboutPageOurStory
@@ -5164,7 +5236,7 @@ textarea
 
 		.WhySonderContainerUpgraded
 		{
-			height: 60%;
+			height: auto;
 		}
 
 		.ServicesPageContainer
@@ -5239,8 +5311,19 @@ textarea
 		.HomePageBookSession
 		{
 			margin-right: 0;
-			margin-top: 12%;
+			margin-top: 5%;
 			width: 32%;
+			height: 100%;
+		}
+
+		.HomePageBookSessionText h6
+		{
+			font-size: 6vh;
+		}
+
+		.HomePageBookSessionButton button
+		{
+			font-size: 1.5vh;
 		}
 
 		.TherapyImportanceContainer
@@ -5407,6 +5490,8 @@ textarea
 	.WhySonderItemsContainer
 	{
 		margin-top: 2.5%;
+		flex-direction: row;
+		height: auto;
 	}
 
 	.OurServicesContainer
@@ -5431,7 +5516,7 @@ textarea
 
 	.WhySonderContainerUpgraded
 	{
-		height: 70%;
+		height: auto;
 	}
 
 	.OurServicesItemContainer

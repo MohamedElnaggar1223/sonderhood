@@ -17,7 +17,7 @@ export default function Service()
     const services = useSelector(selectedServices)
     const therapists = useSelector(selectedTherapists)
     const [ran, setRan] = useState(false)
-    const [availableTherapists, setAvailableTherapists] = useState([])
+    const [availableTherapists, setAvailableTherapists] = useState(therapists)
     const effRan = useRef(false) 
 
     const selectedService = services?.find(serviceItem => serviceItem.title.replace(/\s/g, '') === service)
@@ -25,30 +25,41 @@ export default function Service()
     //@ts-ignore
     useEffect(() => 
     {
-        if(effRan.current === true || process.env.NODE_ENV !== 'development')
+        // if(effRan.current === true || process.env.NODE_ENV !== 'development')
+        // {
+        //     const getFaqs = async (therapist) => 
+        //     {
+        //         const dataRef = doc(db, "therapists", therapist.id)
+        //         const data = await getDoc(dataRef)
+        //         //@ts-ignore
+        //         setAvailableTherapists(prev => {
+        //             const array = prev
+        //             //@ts-ignore
+        //             array.push(data.data())
+        //             return array
+        //         })
+        //         setRan(true)
+        //     }
+
+        //     selectedService?.therapists?.length && selectedService.therapists?.map(therapist => getFaqs(therapist))
+        // }
+
+        // return () => effRan.current = true
+
+        if(selectedService)
         {
-            const getFaqs = async (therapist) => 
-            {
-                const dataRef = doc(db, "therapists", therapist.id)
-                const data = await getDoc(dataRef)
-                //@ts-ignore
-                setAvailableTherapists(prev => {
-                    const array = prev
-                    //@ts-ignore
-                    array.push(data.data())
-                    return array
+            let therapistsArray = []
+            selectedService.therapists.map(therapist => 
+                {
+                    const foundTherapist = therapists.find(data => data.id === therapist.id)
+                    therapistsArray.push(foundTherapist)
                 })
-                setRan(true)
-            }
-
-            selectedService?.therapists?.length && selectedService.therapists?.map(therapist => getFaqs(therapist))
+            setAvailableTherapists(therapistsArray)
         }
-
-        return () => effRan.current = true
+        else setAvailableTherapists(therapists)
         //eslint-disable-next-line
     }, [])
 
-    // effRan.current && setRan(true)
 
     const title = selectedService?.title.split(' ')
 
