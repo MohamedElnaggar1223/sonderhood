@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'
 import { selectedServices } from '../../app/services/servicesSlice'
+import WhySonderHoodSec from './WhySonderHoodSec'
 const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
 
 export default function Serives() 
@@ -48,7 +49,7 @@ export default function Serives()
                 </div>
             </div>
         </motion.div>
-        <WhySonderHood />
+        <WhySonderHoodSec />
         </>
     )
 }

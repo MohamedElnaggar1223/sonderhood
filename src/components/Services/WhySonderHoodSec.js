@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export default function WhySonderHood() 
+export default function WhySonderHoodSec() 
 {
     const navigate = useNavigate()
 
@@ -21,10 +21,10 @@ export default function WhySonderHood()
                     </div>
                     <div className='WhySonderItemInfo'>
                         <div className='WhySonderItemTitle'>
-                            Everything is digital
+                            Short waiting time
                         </div>
                         <div className='WhySonderItemBody'>
-                            In an attempt to stay environment friendly, all our forms, assessments, and payments are done using zero papers.
+                            You do not have to wait forever to find a slot. We guarantee to find you the nearest availability.
                         </div>
                     </div>
                 </div>
@@ -37,10 +37,10 @@ export default function WhySonderHood()
                     </div>
                     <div className='WhySonderItemInfo'>
                         <div className='WhySonderItemTitle'>
-                            The team
+                            Confidentiality
                         </div>
                         <div className='WhySonderItemBody'>
-                            We are a team of experts dedicated to providing professional, compassionate, and effective therapy services.
+                            All your data remains entirely confidential. Whatever you say in the therapy room to your therapist, stays there. 
                         </div>
                     </div>
                 </div>
@@ -53,10 +53,10 @@ export default function WhySonderHood()
                     </div>
                     <div className='WhySonderItemInfo'>
                         <div className='WhySonderItemTitle'>
-                            Outstanding location
+                            Safety
                         </div>
                         <div className='WhySonderItemBody'>
-                            It is the combination of being in an office building as well as a public hang-out place!
+                            We offer a safe, guarded space for you to vent, protected by 24/7 security service for therapists and clients.
                         </div>
                     </div>
                 </div>
@@ -69,10 +69,10 @@ export default function WhySonderHood()
                     </div>
                     <div className='WhySonderItemInfo'>
                         <div className='WhySonderItemTitle'>
-                            Flexibility
+                            Professional
                         </div>
                         <div className='WhySonderItemBody'>
-                            You can decide on your therapist, timeslot, mode of therapy, and frequency of sessions.
+                            Our process includes a detailed Consent Form and assessments to set the boundaries as well as track your progress in therapy. 
                         </div>
                     </div>
                 </div>
