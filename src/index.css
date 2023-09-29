@@ -293,6 +293,7 @@ textarea
 	width: 92.4%;
 	flex: 0 0 auto;
 	margin-left: 7.6%;
+	overflow-y: hidden;
 }
 
 ::-webkit-scrollbar-track
