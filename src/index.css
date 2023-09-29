@@ -4281,6 +4281,7 @@ textarea
 		width: 95%;
 		flex: 0 0 auto;
 		overflow: auto;
+		height: 40vh;
 	}
 
 	.ClientsSayItem
@@ -4347,7 +4348,7 @@ textarea
 
 	.FAQItemAnswerTemp
 	{
-		font-size: 1.8vh;
+		font-size: 1.5vh;
 		padding: 0;
 		padding-left: 5%;
 	}
