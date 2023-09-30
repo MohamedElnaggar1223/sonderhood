@@ -3867,7 +3867,7 @@ textarea
 	}
 }
 
-@media (max-width: 900px)
+@media (max-width: 768px)
 {
 	.MuiDrawer-paperAnchorLeft
 	{
@@ -5305,7 +5305,7 @@ textarea
 
 @media (max-width: 900px)
 {
-	@media (min-width: 768px)
+	@media (min-width: 769px)
 	{
 		.HomePageBookSession
 		{

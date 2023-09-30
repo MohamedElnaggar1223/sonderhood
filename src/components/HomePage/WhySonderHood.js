@@ -18,7 +18,6 @@ export default function WhySonderHood()
         }
         else
         {
-            // mainRefAnimation.start('hidden')
             mainRefAnimation.set('hidden')
         }
         //eslint-disable-next-line
