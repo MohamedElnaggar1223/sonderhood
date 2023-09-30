@@ -15,7 +15,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 export default function HomeHeader() 
 {
     // eslint-disable-next-line
-    const [width, setWidth] = useState(window.innerWidth <= 428)
+    const [width, setWidth] = useState(window.innerWidth <= 900)
     const [state, setState] = React.useState({left: false});
 
     const toggleDrawer = (anchor, open) => (event) => {
