@@ -5651,11 +5651,11 @@ textarea
 		height: 7%;
 	}
 
-	.HomePageBookSession
+	/* .HomePageBookSession
 	{
 		height: 100%;
 		margin-bottom: 5%;
-	}
+	} */
 
 	.IVectors
 	{
@@ -5674,15 +5674,15 @@ textarea
 		height: auto;
 	} */
 
-	.OurServicesContainer
+	/* .OurServicesContainer
 	{
 		height: 50%;
-	}
+	} */
 
-	.LookingForHelpContainer
+	/* .LookingForHelpContainer
 	{
 		height: 50%;
-	}
+	} */
 
 	.LookingForHelpSearch
 	{
