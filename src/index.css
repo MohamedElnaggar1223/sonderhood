@@ -5636,91 +5636,94 @@ textarea
 
 @media (max-height: 699px)
 {
-	.HomeHeaderContainer
+	@media (min-width: 1280px)
 	{
-		height: 7%;
-	}
+		.HomeHeaderContainer
+		{
+			height: 7%;
+		}
 
-	.PagesHeaderContainer
-	{
-		height: 7%;
-	}
+		.PagesHeaderContainer
+		{
+			height: 7%;
+		}
 
-	.ServicesPageContainer .PagesHeaderContainer
-	{
-		height: 7%;
-	}
+		.ServicesPageContainer .PagesHeaderContainer
+		{
+			height: 7%;
+		}
 
-	/* .HomePageBookSession
-	{
-		height: 100%;
-		margin-bottom: 5%;
-	} */
+		.HomePageBookSession
+		{
+			height: 100%;
+			margin-bottom: 5%;
+		}
 
-	.IVectors
-	{
-		height: 80%;
-	}
+		.IVectors
+		{
+			height: 80%;
+		}
 
-	.WhySonderContainer
-	{
-		height: auto;
-	}
+		.WhySonderContainer
+		{
+			height: auto;
+		}
 
-	/* .WhySonderItemsContainer
-	{
-		margin-top: 2.5%;
-		flex-direction: row;
-		height: auto;
-	} */
+		.WhySonderItemsContainer
+		{
+			margin-top: 2.5%;
+			flex-direction: row;
+			height: auto;
+		}
 
-	/* .OurServicesContainer
-	{
-		height: 50%;
-	} */
+		.OurServicesContainer
+		{
+			height: 50%;
+		}
 
-	/* .LookingForHelpContainer
-	{
-		height: 50%;
-	} */
+		.LookingForHelpContainer
+		{
+			height: 50%;
+		}
 
-	.LookingForHelpSearch
-	{
-		height: 15vh;
-	}
+		.LookingForHelpSearch
+		{
+			height: 15vh;
+		}
 
-	.LookingForHelpItemsButtons
-	{
-		height: 15vh;
-	}
+		.LookingForHelpItemsButtons
+		{
+			height: 15vh;
+		}
 
-	.WhySonderContainerUpgraded
-	{
-		height: auto;
-	}
+		.WhySonderContainerUpgraded
+		{
+			height: auto;
+		}
 
-	.OurServicesItemContainer
-	{
-		height: 45vh !important;
-	}
+		.OurServicesItemContainer
+		{
+			height: 45vh !important;
+		}
 
-	.ContactUsPageContainer
-	{
-		height: 140%;
-	}
+		.ContactUsPageContainer
+		{
+			height: 140%;
+		}
 
-	.OurSpaceContainer
-	{
-		height: 125%;
-	}
+		.OurSpaceContainer
+		{
+			height: 125%;
+		}
 
-	.BookSessionInfo
-	{
-		height: 30vh !important;
-	}
+		.BookSessionInfo
+		{
+			height: 30vh !important;
+		}
 
-	.BookSessionButton
-	{
-		height: 12vh !important;
+		.BookSessionButton
+		{
+			height: 12vh !important;
+		}
 	}
 }
