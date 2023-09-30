@@ -4022,48 +4022,6 @@ textarea
 
 @media (max-width: 768px)
 {
-	.MuiDrawer-paperAnchorLeft
-	{
-		text-decoration: none !important;
-	}
-
-	.MuiDrawer-paperAnchorLeft
-	{
-		height: 100% !important;
-	}
-
-	.MuiDrawer-paperAnchorLeft
-	{
-		width: 70% !important;
-	}
-
-	.MuiDrawer-paperAnchorLeft
-	{
-		background: var(--Sonder-olive) !important;
-	}
-
-	.MuiDrawer-paperAnchorLeft a, .MuiDrawer-paperAnchorLeft ul li, .MuiDrawer-paperAnchorLeft span
-	{
-		font-size: 2.5vh !important;
-		color: var(--Sonder-yellow) !important;
-		text-decoration: underline !important;
-		text-decoration-color: var(--Sonder-yellow) !important;
-		text-transform: uppercase !important;
-		letter-spacing: 0.25vw !important;
-		text-underline-offset: 1vw !important;
-		text-wrap: nowrap !important;
-	}
-
-	.MuiDrawer-paperAnchorLeft ul li
-	{
-		margin-bottom: 5% !important;
-	}
-
-	.MuiDrawer-paperAnchorLeft ul
-	{
-		margin-left: 2.5vw !important;
-		margin-top: 2.5vw !important;
-	}
 
 	.WhySonderContainer
 	{
@@ -4176,12 +4134,13 @@ textarea
 	.OurServicesItems
 	{
 		margin-top: 5%;
-		flex-direction: column;
+		flex-direction: row;
 		flex: 0 0 auto;
 		height: 50vh;
 		width: 100%;
 		margin-left: 0;
 		overflow-y: auto;
+		margin-left: 30%;
 	}
 
 	.OurServicesItemContainer
@@ -4193,6 +4152,7 @@ textarea
 		margin-bottom: 5%;
 		border-top-left-radius: 20rem;
 		border-top-right-radius: 20rem;
+		margin-right: 15%;
 	}
 
 	.LookingForHelpContainer
@@ -4451,7 +4411,7 @@ textarea
 
 	.OurBlogItems
 	{
-		flex-direction: column;
+		flex-direction: row;
 		margin-left: 0;
 		align-items: center;
 		height: 80%;
@@ -4523,12 +4483,13 @@ textarea
 
 	.ClientsSayItems
 	{
-		flex-direction: column;
+		flex-direction: row;
 		margin: 0%;
 		width: 95%;
 		flex: 0 0 auto;
 		overflow: auto;
 		height: 40vh;
+		margin-left: 15%;
 	}
 
 	.ClientsSayItem
@@ -4536,6 +4497,7 @@ textarea
 		width: 85% !important;
 		align-self: center;
 		width: 100%;
+		margin-right: 15%;
 	}
 
 	.ClientsSayItemRating
@@ -4909,6 +4871,11 @@ textarea
 	.ServicesPageItemsTopPart, .ServicesPageItemsBotPart
 	{
 		grid-template-columns: auto;
+	}
+
+	.ServicesPageItemsTopPart .OurServicesItemContainer, .ServicesPageItemsBotPart .OurServicesItemContainer
+	{
+		margin-right: 0%;
 	}
 
 	.ServicesPageItemsTopPart .OurServicesItemContainer, .ServicesPageItemsBotPart .OurServicesItemContainer
@@ -5727,3 +5694,46 @@ textarea
 		}
 	}
 }
+
+.MuiDrawer-paperAnchorLeft
+	{
+		text-decoration: none !important;
+	}
+
+	.MuiDrawer-paperAnchorLeft
+	{
+		height: 100% !important;
+	}
+
+	.MuiDrawer-paperAnchorLeft
+	{
+		width: 70% !important;
+	}
+
+	.MuiDrawer-paperAnchorLeft
+	{
+		background: var(--Sonder-olive) !important;
+	}
+
+	.MuiDrawer-paperAnchorLeft a, .MuiDrawer-paperAnchorLeft ul li, .MuiDrawer-paperAnchorLeft span
+	{
+		font-size: 2.5vh !important;
+		color: var(--Sonder-yellow) !important;
+		text-decoration: underline !important;
+		text-decoration-color: var(--Sonder-yellow) !important;
+		text-transform: uppercase !important;
+		letter-spacing: 0.25vw !important;
+		text-underline-offset: 1vw !important;
+		text-wrap: nowrap !important;
+	}
+
+	.MuiDrawer-paperAnchorLeft ul li
+	{
+		margin-bottom: 5% !important;
+	}
+
+	.MuiDrawer-paperAnchorLeft ul
+	{
+		margin-left: 2.5vw !important;
+		margin-top: 2.5vw !important;
+	}	
