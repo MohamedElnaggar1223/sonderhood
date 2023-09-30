@@ -3867,6 +3867,159 @@ textarea
 	}
 }
 
+@media (max-width: 900px)
+{
+	@media (min-width: 769px)
+	{
+		.HomePageBookSession
+		{
+			width: 50%;
+		}
+
+		.HomePageBookSessionText h6
+		{
+			font-size: 8vh;
+		}
+
+		.HomePageBookSessionButton button
+		{
+			font-size: 1.8vh;
+		}
+
+		.OurServicesItemContainer
+		{
+			width: 45vw;
+			height: 48vh;
+		}
+
+		.LookingForHelpSearch
+		{
+			height: 8vh;
+		}
+
+		.LookingForHelpSearch img
+		{
+			width: 6%;
+			left: 92%;
+		}
+
+		.LookingForHelpItemsContainer .LookingForHelpItemsButtons .LookingForHelpItemsFindButton
+		{
+			width: 50% !important;
+			font-size: 2.5vh;
+			height: 15vw !important;
+		}
+
+		.LookingForHelpItemsContainer .LookingForHelpItemsButtons .LookingForHelpItemsAboutButton
+		{
+			width: 30% !important;
+			height: 6vw !important;
+			font-size: 2.5vh;
+		}
+
+		.WhySonderItem
+		{
+			width: 70%;
+		}
+
+		.WhySonderItemBookButton
+		{
+			width: 50% !important;
+			font-size: 2.5vh !important;
+			height: 10vw !important;
+		}
+
+		.WhySonderItemContactButton
+		{
+			width: 45% !important;
+			font-size: 2.5vh !important;
+			height: 8vw !important;
+		}
+		
+		.MeetTheTeamItem
+		{
+			width: 80%;
+			justify-self: center;
+		}
+
+		.MeetTheTeamItemName
+		{
+			font-size: 3.4vh;
+		}
+
+		.MeetTheTeamItemDesc
+		{
+			font-size: 2.2vh;
+		}
+
+		.MeetTheTeamItemProfItem
+		{
+			font-size: 1.5vh;
+		}
+
+		.OurBlogItems
+		{
+			width: 60%;
+		}
+
+		.MeetTheTeamItemBookButton
+		{
+			width: 50% !important;
+			font-size: 2.5vh !important;
+			height: 10vw !important;
+		}
+
+		.MeetTheTeamItemContactButton
+		{
+			width: 45% !important;
+			font-size: 2.5vh !important;
+			height: 8vw !important;
+		}
+
+		.OurBlogItemBookButton
+		{
+			width: 50% !important;
+			font-size: 2.5vh !important;
+			height: 9.5vw !important;
+		}
+
+		.OurBlogItemContactButton
+		{
+			width: 45% !important;
+			font-size: 2.5vh !important;
+			height: 8vw !important;
+		}
+
+		.ClientsSayItems
+		{
+			width: 70%;
+		}
+
+		.HomeFooter
+		{
+			height: 42vh;
+		}
+
+		.TopicContainer
+		{
+			width: 60%;
+			align-self: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.ServicesPageItems .ServicesPageItemsTopPart .OurServicesItemContainer
+		{
+			width: 65% !important;
+		}
+
+		.OurSpaceButton button
+		{
+			height: 7vh;
+		}
+	}
+}
+
 @media (max-width: 768px)
 {
 	.MuiDrawer-paperAnchorLeft
@@ -5299,159 +5452,6 @@ textarea
 		.BookSessionButton
 		{
 			height: 6.5vh;
-		}
-	}
-}
-
-@media (max-width: 900px)
-{
-	@media (min-width: 769px)
-	{
-		.HomePageBookSession
-		{
-			width: 50%;
-		}
-
-		.HomePageBookSessionText h6
-		{
-			font-size: 8vh;
-		}
-
-		.HomePageBookSessionButton button
-		{
-			font-size: 1.8vh;
-		}
-
-		.OurServicesItemContainer
-		{
-			width: 45vw;
-			height: 48vh;
-		}
-
-		.LookingForHelpSearch
-		{
-			height: 8vh;
-		}
-
-		.LookingForHelpSearch img
-		{
-			width: 6%;
-			left: 92%;
-		}
-
-		.LookingForHelpItemsContainer .LookingForHelpItemsButtons .LookingForHelpItemsFindButton
-		{
-			width: 50% !important;
-			font-size: 2.5vh;
-			height: 15vw !important;
-		}
-
-		.LookingForHelpItemsContainer .LookingForHelpItemsButtons .LookingForHelpItemsAboutButton
-		{
-			width: 30% !important;
-			height: 6vw !important;
-			font-size: 2.5vh;
-		}
-
-		.WhySonderItem
-		{
-			width: 70%;
-		}
-
-		.WhySonderItemBookButton
-		{
-			width: 50% !important;
-			font-size: 2.5vh !important;
-			height: 10vw !important;
-		}
-
-		.WhySonderItemContactButton
-		{
-			width: 45% !important;
-			font-size: 2.5vh !important;
-			height: 8vw !important;
-		}
-		
-		.MeetTheTeamItem
-		{
-			width: 80%;
-			justify-self: center;
-		}
-
-		.MeetTheTeamItemName
-		{
-			font-size: 3.4vh;
-		}
-
-		.MeetTheTeamItemDesc
-		{
-			font-size: 2.2vh;
-		}
-
-		.MeetTheTeamItemProfItem
-		{
-			font-size: 1.5vh;
-		}
-
-		.OurBlogItems
-		{
-			width: 60%;
-		}
-
-		.MeetTheTeamItemBookButton
-		{
-			width: 50% !important;
-			font-size: 2.5vh !important;
-			height: 10vw !important;
-		}
-
-		.MeetTheTeamItemContactButton
-		{
-			width: 45% !important;
-			font-size: 2.5vh !important;
-			height: 8vw !important;
-		}
-
-		.OurBlogItemBookButton
-		{
-			width: 50% !important;
-			font-size: 2.5vh !important;
-			height: 9.5vw !important;
-		}
-
-		.OurBlogItemContactButton
-		{
-			width: 45% !important;
-			font-size: 2.5vh !important;
-			height: 8vw !important;
-		}
-
-		.ClientsSayItems
-		{
-			width: 70%;
-		}
-
-		.HomeFooter
-		{
-			height: 42vh;
-		}
-
-		.TopicContainer
-		{
-			width: 60%;
-			align-self: center;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		.ServicesPageItems .ServicesPageItemsTopPart .OurServicesItemContainer
-		{
-			width: 65% !important;
-		}
-
-		.OurSpaceButton button
-		{
-			height: 7vh;
 		}
 	}
 }
