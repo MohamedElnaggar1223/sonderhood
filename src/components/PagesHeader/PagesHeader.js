@@ -22,9 +22,9 @@ export default function PagesHeader()
     useEffect(() => 
     {
         //@ts-ignore
-        if(!headerInView) scrollRef.current.scrollIntoView({ behavior: 'smooth' })
+        if(!headerInView) HeaderRef.current.scrollIntoView({ behavior: 'smooth' })
         //eslint-disable-next-line
-    }, [headerInView])
+    }, [])
 
     // eslint-disable-next-line
     const [width, setWidth] = useState(window.innerWidth <= 900)
