@@ -6,7 +6,7 @@ export default function WhySonderHood()
 {
     const navigate = useNavigate()
     const ref = useRef(null)
-    const refInView = useInView(ref)
+    const refInView = useInView(ref, { once: true })
 
     const mainRefAnimation = useAnimation()
 
