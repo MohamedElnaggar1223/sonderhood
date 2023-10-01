@@ -132,7 +132,7 @@ export default function Therapist()
                         {services}
                     </div>
                     <div className='TherapistProfileButton'>
-                        <button onClick={() => navigate('/RequestASession')}>BOOK A SESSION</button>
+                        <button onClick={() => navigate('/RequestASession')}>REQUEST A BOOKING</button>
                     </div>
                 </div>
             </div>
@@ -176,7 +176,7 @@ export default function Therapist()
             <div className='BookSessionInfoContainer'>
                 <div style={{ margin: '0%', border: 'none', height: '100%' }} className='BookSession'>
                     <div className='BookSessionTitle'>
-                        BOOK A SESSION
+                        REQUEST A BOOKING
                     </div>
                     <div style={{ height: '10%' }} className='BookSessionLocation'>
                         <div style={{ marginBottom: '2%', height: '20%' }} className='BookSessionLocationTitle'>
@@ -238,7 +238,7 @@ export default function Therapist()
                         </div>
                     </div>
                     <div style={{ alignSelf: 'center', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} className='BookSessionButton'>
-                        <button onClick={() => navigate('/RequestASession')} style={{ width: '40%'}}>BOOK A SESSION</button>
+                        <button onClick={() => navigate('/RequestASession')} style={{ width: '40%'}}>REQUEST A BOOKING</button>
                     </div>
                 </div>
             </div>

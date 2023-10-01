@@ -98,7 +98,7 @@ export default function HomeHeader()
             <div className='HomeHeaderContent'>
                 <div className='HomeHeaderAnchor'><Link to='/ContactUs'>CONTACT US</Link></div>
                 {/* <div className='HomeHeaderAnchor'><Link to='/BookASession'>BOOK A SESSION</Link></div> */}
-                <div className='HomeHeaderAnchor'><Link to='/RequestASession'>BOOK A SESSION</Link></div>
+                <div className='HomeHeaderAnchor'><Link to='/RequestASession'>REQUEST A BOOKING</Link></div>
             </div>
         </div>}
         </>

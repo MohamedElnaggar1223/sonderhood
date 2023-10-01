@@ -65,7 +65,7 @@ export default function Home()
                         <h6>Your</h6> <h6>Safe</h6> <h6>Haven</h6>
                     </div>
                     <div className='HomePageBookSessionButton'>
-                        <button onClick={() => navigate('/RequestASession')}>Book A Session <FontAwesomeIcon icon={faArrowRight} /></button>
+                        <button onClick={() => navigate('/RequestASession')}>Request A Session <FontAwesomeIcon icon={faArrowRight} /></button>
                     </div>
                 </motion.div>
             </div>

@@ -112,7 +112,7 @@ export default function PagesHeader()
             <div className='PagesHeaderContent'>
                 <div className='PagesHeaderAnchor'><Link to='/ContactUs'>CONTACT US</Link></div>
                 {/* <div className='PagesHeaderAnchor'><Link to='/BookASession'>BOOK A SESSION</Link></div> */}
-                <div className='PagesHeaderAnchor'><Link to='/RequestASession'>BOOK A SESSION</Link></div>
+                <div className='PagesHeaderAnchor'><Link to='/RequestASession'>REQUEST A BOOKING</Link></div>
             </div>
         </div>}
         </>

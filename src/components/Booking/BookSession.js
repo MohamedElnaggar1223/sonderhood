@@ -73,7 +73,7 @@ export default function BookSession()
             <PagesHeader />
             <div className='BookSession'>
                 <div className='BookSessionTitle'>
-                    BOOK A SESSION
+                    REQUEST A BOOKING
                 </div>
                 <div className='BookSessionLocation'>
                     <div className='BookSessionLocationTitle'>
@@ -89,7 +89,7 @@ export default function BookSession()
                 :   <AtTheCenter />
                 }
                 <div className='BookSessionButton'>
-                    <button>BOOK A SESSION</button>
+                    <button>REQUEST A BOOKING</button>
                 </div>
             </div>
         </div>

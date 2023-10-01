@@ -50,7 +50,7 @@ export default function MeetTheTeam()
                 {therapistsDisplay}
             </motion.div>
             <div className='MeetTheTeamItemsButtons'>
-                    <button onClick={() => navigate('/RequestASession')} className='MeetTheTeamItemBookButton'>BOOK A SESSION</button>
+                    <button onClick={() => navigate('/RequestASession')} className='MeetTheTeamItemBookButton'>REQUEST A BOOKING</button>
                     <button onClick={() => navigate('/ContactUs')} className='MeetTheTeamItemContactButton'>CONTACT US</button>
             </div>
         </div>

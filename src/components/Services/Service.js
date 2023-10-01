@@ -92,7 +92,7 @@ export default function Service()
                             </ul>
                         </div>
                         <div className='SingleServicePageBook'>
-                            <button onClick={() => navigate('/RequestASession')} className='SingleServicePageBookButton'>BOOK A SESSION</button>
+                            <button onClick={() => navigate('/RequestASession')} className='SingleServicePageBookButton'>REQUEST A BOOKING</button>
                         </div>
                     </div>
                     <div className='SingleServicePageShapes'>
