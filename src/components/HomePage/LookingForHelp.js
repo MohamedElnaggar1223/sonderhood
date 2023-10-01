@@ -65,7 +65,7 @@ export default function LookingForHelp()
                 </div>
                 <div className='LookingForHelpItemsButtons'>
                     <button onClick={handleSearch} className='LookingForHelpItemsFindButton'>FIND A THERAPIST</button>
-                    <button onClick={() => navigate('/About')} className='LookingForHelpItemsAboutButton'>ABOUT US</button>
+                    {/* <button onClick={() => navigate('/About')} className='LookingForHelpItemsAboutButton'>ABOUT US</button> */}
                 </div>
             </div>
         </div>

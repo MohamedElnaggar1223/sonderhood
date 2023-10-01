@@ -38,7 +38,7 @@ export default function TherapyImportance()
                 transition={{ duration: 0.5, delay: 0 }}
                 className='TherapyImportanceTitle'
             >
-                <div><span ref={titleRef}>WHY IS </span><span style={{ fontFamily: 'Raglika' }}>THERAPY</span></div><div> IMPORTANT?</div>
+                <div><span ref={titleRef}>WHAT IS </span><span style={{ fontFamily: 'Raglika' }}>THERAPY ?</span></div>
             </motion.div>
             <motion.div 
                 variants={{ 

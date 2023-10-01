@@ -70,9 +70,6 @@ export default function Footer()
                         <Link to='https://www.linkedin.com/company/94863370/admin/feed/posts/'>
                             {In}
                         </Link>
-                        <Link to=''>
-                            {yt}
-                        </Link>
                     </div>
                 </div>
             </footer>

@@ -133,8 +133,8 @@ export default function WhySonderHood()
                 
             </div>
             <div className='WhySonderItemsButtons'>
-                    <button onClick={() => navigate('/RequestASession')} className='WhySonderItemBookButton'>REQUEST A BOOKING</button>
-                    <button onClick={() => navigate('/ContactUs')} className='WhySonderItemContactButton'>CONTACT US</button>
+                    {/* <button onClick={() => navigate('/RequestASession')} className='WhySonderItemBookButton'>REQUEST A BOOKING</button> */}
+                    {/* <button onClick={() => navigate('/ContactUs')} className='WhySonderItemContactButton'>CONTACT US</button> */}
             </div>
         </div>
     )

@@ -64,7 +64,7 @@ export default function ClientsSay()
                             Anonymous
                         </div>
                         <div className='ClientsSayItemAuthorTherapy'>
-                            Individual therapy
+                            {/* Individual therapy */}
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ export default function ClientsSay()
                             Anonymous
                         </div>
                         <div className='ClientsSayItemAuthorTherapy'>
-                            Individual therapy
+                            {/* Individual therapy */}
                         </div>
                     </div>
                 </div>
@@ -186,7 +186,7 @@ export default function ClientsSay()
                             Anonymous
                         </div>
                         <div className='ClientsSayItemAuthorTherapy'>
-                            Individual therapy
+                            {/* Individual therapy */}
                         </div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@ export default function ClientsSay()
                             Anonymous
                         </div>
                         <div className='ClientsSayItemAuthorTherapy'>
-                            Individual therapy
+                            {/* Individual therapy */}
                         </div>
                     </div>
                 </div>
@@ -308,7 +308,7 @@ export default function ClientsSay()
                             Anonymous
                         </div>
                         <div className='ClientsSayItemAuthorTherapy'>
-                            Individual therapy
+                            {/* Individual therapy */}
                         </div>
                     </div>
                 </div>
@@ -369,7 +369,7 @@ export default function ClientsSay()
                             Anonymous
                         </div>
                         <div className='ClientsSayItemAuthorTherapy'>
-                            Individual therapy
+                            {/* Individual therapy */}
                         </div>
                     </div>
                 </div>
@@ -430,7 +430,7 @@ export default function ClientsSay()
                             Anonymous
                         </div>
                         <div className='ClientsSayItemAuthorTherapy'>
-                            Individual therapy
+                            {/* Individual therapy */}
                         </div>
                     </div>
                 </div>

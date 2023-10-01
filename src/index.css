@@ -1028,7 +1028,7 @@ textarea
 	text-wrap: nowrap;
 	width: auto;
 	border: 1px solid #000;
-	border-radius: 0.65in;
+	border-radius: 0.65rem;
 }
 
 .OurBlogItemsButtons
@@ -2365,7 +2365,7 @@ textarea
 	align-items: flex-start;
 }
 
-.ContactUsContactMessageCredentials input, select, textarea
+.ContactUsContactMessageCredentials input, .ContactUsContactMessageCredentials select, .ContactUsContactMessageCredentials textarea
 {
 	width: 95%;
 	height: 80%;
@@ -2382,6 +2382,79 @@ textarea
 	font-weight: 400;
 	line-height: 100%;
 	text-indent: 7%;
+}
+
+.ContactUsContactMessageNumber input
+{
+	height: 80%;
+}
+
+.react-tel-input
+{
+	height: 80% !important;
+} 
+
+.form-control
+{
+	width: 80% !important;
+}
+
+.flag-dropdown, .flag-dropdown.open 
+{
+	height: 100% !important;
+	background: transparent !important;
+	color: var(--Text, #90946B) !important;
+	font-family: Arial !important;
+	font-size: 1vw !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: 100% !important;
+	text-indent: 7% !important;
+	border: 1px solid #000 !important;
+	outline: none !important;
+	box-sizing: border-box !important;
+	box-shadow: none !important;
+	border-radius: 0% !important;
+	border-right: 0px !important;
+}
+
+.flag-dropdown:focus
+{
+	outline: none !important;
+}
+
+.react-tel-input .selected-flag, .react-tel-input .selected-flag.open
+{
+	width: 100% !important;
+	padding: 0 !important;
+}
+
+.flag-dropdown 
+{
+	width: 20% !important;
+}
+
+.country-list li
+{
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
+.flag
+{
+	margin-left: 10% !important;
+}
+
+.country-list .flag
+{
+	margin-left: 2.5% !important;
+}
+
+.react-tel-input .country-list .search
+{
+	padding-left: 0 !important;
+	margin-left: 2.5% !important;
+	display: flex;
 }
 
 .ContactUsContactMessageCredentials input::placeholder
@@ -2934,7 +3007,7 @@ textarea
 	width: 15%;
 	height: 60%;
 	border: 1px solid #000;
-	border-radius: 0.65in;
+	border-radius: 0.65rem;
 	padding: 0.5%;
 	margin-right: 3%;
 }
@@ -3108,7 +3181,7 @@ textarea
 	max-height: 100%;
 	padding: 1.5%;
 	margin-right: 5%;
-	border-radius: 0.2in;
+	border-radius: 0.2rem;
 	color: #FFFDF4;
 }
 
@@ -5048,7 +5121,7 @@ textarea
 
 	.BlogsMainInfoTitle
 	{
-		height: 20%;
+		height: auto;
 		font-size: 2.8vh;
 	}
 
@@ -5231,6 +5304,11 @@ textarea
 	.ContactUsContactMessageCredentials input, .ContactUsContactMessageCredentials select
 	{
 		width: 100%;
+		font-size: 1.8vh;
+	}
+
+	.form-control
+	{
 		font-size: 1.8vh;
 	}
 

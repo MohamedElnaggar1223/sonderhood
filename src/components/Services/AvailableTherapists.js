@@ -16,7 +16,7 @@ export default function AvailableTherapists({ availableTherapists, selectedServi
                         <h1>AVAILABLE <span>TEHERAPISTS</span></h1>
                     </div>
                     <div className='MeetTheTeamHeaderDesc'>
-                        Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel.
+                        {/* Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel. */}
                     </div>
                 </div>
             </div>

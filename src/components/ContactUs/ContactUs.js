@@ -9,6 +9,8 @@ import mid from '../../imgs/mid.png'
 import { Link, useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
 import useTitle from '../../hooks/useTitle'
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/bootstrap.css";
 
 const NAME_REGEX = /^[A-z]{2,24}\s[A-z]{2,24}/
 const NUMBER_REGEX = /^[0][1][0125][0-9]{8}/
@@ -24,6 +26,7 @@ export default function ContactUs()
     const [message, setMessage] = useState('')
     const [number, setNumber] = useState('')
     const [verifyNumber, setVerifyNumber] = useState(false)
+    const [subject, setSubject] = useState('')
 
     useEffect(() => 
     {
@@ -35,7 +38,7 @@ export default function ContactUs()
         setVerifyNumber(NUMBER_REGEX.test(number))
     }, [number])
 
-    const canSend = [verifyName, verifyNumber, message.length].every(Boolean)
+    const canSend = [verifyName, verifyNumber, message.length, subject.length].every(Boolean)
 
     const form = useRef();
 
@@ -64,10 +67,10 @@ export default function ContactUs()
                     </div>
                     <div className='ContactUsPageOurStoryDesc'>
                         <div className='ContactUsPageDescFirstPart'>
-                            Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel.
+                            {/* Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel. */}
                         </div>
                         <div className='ContactUsPageDescSecPart'>
-                            Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel.
+                            {/* Lorem ipsum dolor sit amet consectetur. Sed urna diam lacus cum. Facilisi quis fames suscipit malesuada. Tincidunt velit in dolor cursus cursus neque. Et turpis eget pellentesque vitae eu. Non nulla urna dictum pharetra pellentesque faucibus vel. */}
                         </div>
                     </div>
                 </div>
@@ -98,12 +101,37 @@ export default function ContactUs()
                                     <input onChange={(e) => setEmail(e.target.value)} value={email} name='email' placeholder='Email...' id='Email' type='email' />
                                 </div>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageNumber'>
-                                    <label htmlFor='Number'>Number</label>
-                                    <input onChange={(e) => setNumber(e.target.value)} placeholder='Number...' id='Number' type='tel' />
+                                    <label >Number</label>
+                                    <PhoneInput
+                                        country={"eg"}
+                                        enableSearch={true}
+                                        value={number}
+                                        onChange={(phone) => setNumber(phone)}
+                                        specialLabel='Number: '
+                                        inputStyle={{
+                                            width: "75%",
+                                            height: "100%",
+                                            padding: '0%',
+                                            background: "transparent",
+                                            border: "1px solid #000",
+                                            outline: "none",
+                                            boxSizing: "border-box",
+                                            boxShadow: "none",
+                                            color: "var(--Text, #90946B)",
+                                            fontFamily: "Arial",
+                                            fontStyle: "normal",
+                                            fontWeight: "400",
+                                            lineHeight: "100%",
+                                            textIndent: "7%",
+                                            borderRadius: '0',
+                                            marginLeft: '20%'
+                                        }}
+                                    />
+                                    {/* <input onChange={(e) => setNumber(e.target.value)} placeholder='Number...' id='Number' type='tel' /> */}
                                 </div>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageDOB'>
-                                    <label htmlFor='DOB'>DOB:</label>
-                                    <select></select>
+                                    <label htmlFor='Subject'>Subject:</label>
+                                    <input onChange={(e) => setSubject(e.target.value)} placeholder='Subject...' id='Subject' type='text' />
                                 </div>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageMessage'>
                                     <label htmlFor='Send us a message'>Send us a message:</label>

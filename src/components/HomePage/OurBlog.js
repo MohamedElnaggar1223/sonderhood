@@ -36,7 +36,7 @@ export default function OurBlog()
             </div>
             <div className='OurBlogItemsButtons'>
                 <button onClick={() => navigate('/Blogs')} className='OurBlogItemBookButton'>SEE ALL BLOGS</button>
-                <button onClick={() => navigate('/ContactUs')} className='OurBlogItemContactButton'>CONTACT US</button>
+                {/* <button onClick={() => navigate('/ContactUs')} className='OurBlogItemContactButton'>CONTACT US</button> */}
             </div>
         </div>
     )
