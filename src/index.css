@@ -3752,7 +3752,7 @@ textarea
 	left: 40%;
 }
 
-@media (max-width: 1280px)
+/* @media (max-width: 1280px)
 {
 	@media (min-width: 901px)
 	{
@@ -3881,7 +3881,7 @@ textarea
 			height: 6.5vh;
 		}
 	}
-}
+} */
 
 @media (max-width: 900px)
 {
