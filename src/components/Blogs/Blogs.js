@@ -85,7 +85,7 @@ export default function Blogs()
                             {firstBlog[0].description}
                         </div>
                         <div className='BlogsMainInfoButton'>
-                            <button>READ MORE</button>
+                            <button onClick={() => navigate(`/ArticlePage/${firstBlog[0].title.split(" ").join("")}`)}>READ MORE</button>
                         </div>
                     </div>
                 </div>

@@ -7,8 +7,7 @@ import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'
 import { selectedServices } from '../../app/services/servicesSlice'
 import { selectedTherapists } from '../../app/therapists/therapistsSlice'
-import { doc, getDoc } from 'firebase/firestore'
-import { db } from '../../Config/firebaseConfig'
+import useTitle from '../../hooks/useTitle'
 
 export default function Service() 
 {
@@ -16,12 +15,12 @@ export default function Service()
     const navigate = useNavigate()
     const services = useSelector(selectedServices)
     const therapists = useSelector(selectedTherapists)
-    const [ran, setRan] = useState(false)
     const [availableTherapists, setAvailableTherapists] = useState(therapists)
-    const effRan = useRef(false) 
 
     const selectedService = services?.find(serviceItem => serviceItem.title.replace(/\s/g, '') === service)
 
+    useTitle(`${selectedService.title}`)
+    
     //@ts-ignore
     useEffect(() => 
     {

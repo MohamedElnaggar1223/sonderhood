@@ -4,6 +4,7 @@ import HelpButton from './HelpButton'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { selectedTherapists } from '../../app/therapists/therapistsSlice'
+import MatchingTherapists from './MatchingTherapists'
 
 export default function LookingForHelp() 
 {
@@ -12,7 +13,8 @@ export default function LookingForHelp()
     const buttons = ['Depression', 'Eating Disorder', 'Anxiety', 'Marriage', 'Body Dysmorphia', 'Relationship', 'Personality Disorder', 'Addiction', 'Self esteem', 'Social anxiety', 'OCD', 'Trauma', 'Codependency', 'Abusive parents', 'Family problems']
     const buttonItems = buttons.map((button, index) => <HelpButton key={index} button={button} />)
 
-    const [search, setSearch] = useState([''])
+    const [searchValue, setSearchValue] = useState('')
+    const [search, setSearch] = useState([])
     const [showResults, setShowResults] = useState(false)
 
     useEffect(() => 
@@ -26,10 +28,21 @@ export default function LookingForHelp()
         setShowResults(true)
 
     }
+
+    function handleSearch()
+    {
+        const array = search
+        array.push(searchValue)
+        //@ts-ignore
+        setSearch(array)
+        console.log(search)
+        setShowResults(true)
+    }
     
     const navigate = useNavigate()
-    
+
     return (
+        <>
         <div className='LookingForHelpContainer'>
             <div className='LookingForHelpHeader'>
                 <h1>I AM LOOKING FOR A THERAPIST TO HELP ME WITH MY:</h1>
@@ -38,12 +51,8 @@ export default function LookingForHelp()
                 <input
                     type='text'
                     placeholder='How are you feeling...'
-                    value={search}
-                    onChange={(e) => setSearch(prev => {
-                        const array = prev
-                        array.push(e.target.value)
-                        return array
-                    })}
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
                 />
                 <img src={searchImage} alt='search'/>
             </form>
@@ -55,10 +64,12 @@ export default function LookingForHelp()
                     {buttonItems}
                 </div>
                 <div className='LookingForHelpItemsButtons'>
-                    <button className='LookingForHelpItemsFindButton'>FIND A THERAPIST</button>
+                    <button onClick={handleSearch} className='LookingForHelpItemsFindButton'>FIND A THERAPIST</button>
                     <button onClick={() => navigate('/About')} className='LookingForHelpItemsAboutButton'>ABOUT US</button>
                 </div>
             </div>
         </div>
+        { showResults && <MatchingTherapists search={therapists} /> }
+        </>
     )
 }
