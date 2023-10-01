@@ -9,7 +9,7 @@ const NUMBER_REGEX = /^[0][1][0125][0-9]{8}/
 
 export default function BookSession() 
 {   
-    useTitle('Request A Session')
+    useTitle('Request A Booking')
 
     const [name, setName] = useState('')
     const [verifyName, setVerifyName] = useState(false)

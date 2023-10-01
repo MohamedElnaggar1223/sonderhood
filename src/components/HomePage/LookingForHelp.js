@@ -10,36 +10,35 @@ export default function LookingForHelp()
 {
     const therapists = useSelector(selectedTherapists)
 
-    const buttons = ['Depression', 'Eating Disorder', 'Anxiety', 'Marriage', 'Body Dysmorphia', 'Relationship', 'Personality Disorder', 'Addiction', 'Self esteem', 'Social anxiety', 'OCD', 'Trauma', 'Codependency', 'Abusive parents', 'Family problems']
-    const buttonItems = buttons.map((button, index) => <HelpButton key={index} button={button} />)
-
-    const [searchValue, setSearchValue] = useState('')
     const [search, setSearch] = useState([])
     const [showResults, setShowResults] = useState(false)
+
+    const buttons = ['Depression', 'Eating Disorder', 'Anxiety', 'Marriage', 'Body Dysmorphia', 'Relationship', 'Personality Disorder', 'Addiction', 'Self esteem', 'Social anxiety', 'OCD', 'Trauma', 'Codependency', 'Abusive parents', 'Family problems']
+    const buttonItems = buttons.map((button, index) => <HelpButton handleClick={() => handleClick(button)} key={index} button={button} />)
+
+    function handleClick(button)
+    {
+        const array = search || []
+        if(array.find(elem => elem === button) !== undefined && array.find(elem => elem === button) !== null)
+        {
+            const filteredArray = array.filter(elem => elem !== button)
+            //@ts-ignore
+            setSearch(filteredArray)
+        }
+        else
+        {
+            array.push(button)
+            //@ts-ignore
+            setSearch(array)
+        }
+    }
 
     useEffect(() => 
     {
         if(!search) setShowResults(false)
     }, [search])
 
-    function handleSubmit(e)
-    {
-        e.preventDefault()
-        setShowResults(true)
-
-    }
-
-    function handleSearch()
-    {
-        const array = search
-        array.push(searchValue)
-        //@ts-ignore
-        setSearch(array)
-        console.log(search)
-        setShowResults(true)
-    }
-    
-    const navigate = useNavigate()
+    console.log(search)
 
     return (
         <>
@@ -47,7 +46,7 @@ export default function LookingForHelp()
             <div className='LookingForHelpHeader'>
                 <h1>I AM LOOKING FOR A THERAPIST TO HELP ME WITH MY:</h1>
             </div>
-            <form onSubmit={handleSubmit} className='LookingForHelpSearch'>
+            {/* <form onSubmit={handleSubmit} className='LookingForHelpSearch'>
                 <input
                     type='text'
                     placeholder='How are you feeling...'
@@ -55,7 +54,7 @@ export default function LookingForHelp()
                     onChange={(e) => setSearchValue(e.target.value)}
                 />
                 <img src={searchImage} alt='search'/>
-            </form>
+            </form> */}
             <div className='LookingForHelpItemsContainer'>
                 <div className='LookingForHelpItemsMostSearched'>
                     Most Searched:
@@ -64,8 +63,9 @@ export default function LookingForHelp()
                     {buttonItems}
                 </div>
                 <div className='LookingForHelpItemsButtons'>
-                    <button onClick={handleSearch} className='LookingForHelpItemsFindButton'>FIND A THERAPIST</button>
+                    <button onClick={() => setShowResults(true)} className='LookingForHelpItemsFindButton'>FIND A THERAPIST</button>
                     {/* <button onClick={() => navigate('/About')} className='LookingForHelpItemsAboutButton'>ABOUT US</button> */}
+                    {search.map(s => <p key={s}>{s}</p>)}
                 </div>
             </div>
         </div>
