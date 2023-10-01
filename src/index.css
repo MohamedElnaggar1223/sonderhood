@@ -3825,6 +3825,18 @@ textarea
 	left: 40%;
 }
 
+.NoTherapists
+{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 6vh;
+	grid-column: 1 / span 3;
+}
+
 /* @media (max-width: 1280px)
 {
 	@media (min-width: 901px)
@@ -5650,6 +5662,12 @@ textarea
 		align-self: flex-end;
 		font-size: 1.3vh;
 		width: 60%;
+	}
+
+	.NoTherapists
+	{
+		margin-top: 10%;
+		font-size: 3.5vh;
 	}
 }
 

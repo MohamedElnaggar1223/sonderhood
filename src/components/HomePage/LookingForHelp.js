@@ -13,9 +13,6 @@ export default function LookingForHelp()
     const [search, setSearch] = useState([])
     const [showResults, setShowResults] = useState(false)
 
-    const buttons = ['Depression', 'Eating Disorder', 'Anxiety', 'Marriage', 'Body Dysmorphia', 'Relationship', 'Personality Disorder', 'Addiction', 'Self esteem', 'Social anxiety', 'OCD', 'Trauma', 'Codependency', 'Abusive parents', 'Family problems']
-    const buttonItems = buttons.map((button, index) => <HelpButton handleClick={() => handleClick(button)} key={index} button={button} />)
-
     function handleClick(button)
     {
         const array = search || []
@@ -27,11 +24,14 @@ export default function LookingForHelp()
         }
         else
         {
-            array.push(button)
+            const finalArray = [...array, button]
             //@ts-ignore
-            setSearch(array)
+            setSearch(finalArray)
         }
     }
+
+    const buttons = ['Depression', 'Eating Disorder', 'Anxiety', 'Marriage', 'Body Dysmorphia', 'Relationship', 'Personality Disorder', 'Addiction', 'Self esteem', 'Social anxiety', 'OCD', 'Trauma', 'Codependency', 'Abusive parents', 'Family problems']
+    const buttonItems = buttons.map((button, index) => <HelpButton handleClick={() => handleClick(button)} key={index} button={button} />)
 
     useEffect(() => 
     {
@@ -65,11 +65,11 @@ export default function LookingForHelp()
                 <div className='LookingForHelpItemsButtons'>
                     <button onClick={() => setShowResults(true)} className='LookingForHelpItemsFindButton'>FIND A THERAPIST</button>
                     {/* <button onClick={() => navigate('/About')} className='LookingForHelpItemsAboutButton'>ABOUT US</button> */}
-                    {search.map(s => <p key={s}>{s}</p>)}
+                    
                 </div>
             </div>
         </div>
-        { showResults && <MatchingTherapists search={therapists} /> }
+        {/* { showResults && <MatchingTherapists search={therapists} /> } */}
         </>
     )
 }

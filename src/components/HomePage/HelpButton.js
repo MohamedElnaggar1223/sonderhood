@@ -7,8 +7,8 @@ export default function HelpButton({ button, handleClick })
         <button 
             style={clicked ? { background: '#D6DCA2', border: '0', fontWeight: '600', width: '105%' } : {}} 
             onClick={() => { 
-                setClicked(prev => !prev)
                 handleClick()
+                setClicked(prev => !prev)
             }}
         >
             {button}

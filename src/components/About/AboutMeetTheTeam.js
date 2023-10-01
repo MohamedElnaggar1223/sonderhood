@@ -48,8 +48,18 @@ export default function AboutMeetTheTeam({therapists})
 
     const navigate = useNavigate()
 
+    console.log(availableTherapists)
+
     //@ts-ignore
-    const therapistsDisplay = availableTherapists.map((therapist, index) => <Therapist key={index} therapist={therapist} />)
+    const therapistsDisplay = availableTherapists.length === 1 && availableTherapists[0] === undefined
+    ?
+    (
+        <div className='NoTherapists'>
+            No Therapists Available
+        </div>
+    )
+    : availableTherapists.map((therapist, index) => <Therapist key={index} therapist={therapist} />)
+    
 
     return (
         <div className='MeetTheTeamContainer'>
