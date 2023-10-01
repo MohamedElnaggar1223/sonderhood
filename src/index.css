@@ -3781,17 +3781,27 @@ textarea
 
 		.OurServicesContainer
 		{
-			height: 45%;
+			height: auto;
 		}
 
 		.LookingForHelpContainer
 		{
-			height: 45%;
+			height: auto;
+		}
+		
+		.LookingForHelpSearch
+		{
+			height: 8vh;
+		}
+
+		.LookingForHelpItems
+		{
+			margin-bottom: 5%;
 		}
 
 		.WhySonderContainer
 		{
-			height: 48%;
+			height: auto;
 		}
 
 		.OurBlogContainer
@@ -3830,19 +3840,25 @@ textarea
 			height: 100%;
 		}
 
+		.OurServicesItemNumber
+		{
+			font-size: 5vh;
+		}
+
 		.OurServicesItemContainer
 		{
-			height: 33vh !important;
+			height: auto !important;
 		}
 
 		.ContactUsPageContainer
 		{
-			height: 95%;
+			height: max-content;
+			margin-bottom: 5%;
 		}
 
 		.OurSpaceContainer
 		{
-			height: 90%;
+			height: auto;
 		}
 
 		.BookSessionInfoCenter
@@ -3852,7 +3868,7 @@ textarea
 
 		.BookSessionInfo
 		{
-			height: 18vh !important;
+			height: 60% !important;
 		}
 
 		.BookSessionInfoExtra
