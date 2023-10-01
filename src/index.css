@@ -3871,6 +3871,252 @@ textarea
 {
 	@media (min-width: 769px)
 	{
+
+		/* .HomePageBookSession
+		{
+			width: 35%;
+			height: 60%;
+		}
+
+		.IVectors
+		{
+			width: 35%;
+			height: 35%;
+		}
+
+		.HomePageBookSessionText h6
+		{
+			font-size: 8vh;
+		}
+
+		.HomePageBookSessionButton button
+		{
+			font-size: 1.8vh;
+		}
+
+		.TherapyImportanceContainer
+		{
+			flex-direction: column;
+		}
+
+		.TherapyImportanceTitle
+		{
+			width: 100%;
+			height: 40%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			margin-left: 0;
+		}
+
+		.TherapyImportanceTitle div
+		{
+			font-size: 5vh;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.TherapyImportanceDesc
+		{
+			height: 60%;
+			width: 50%;
+			align-self: center;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			text-align: center;
+			font-size: 1.5vh;
+			line-height: 2vh;
+			margin-right: 0;
+			margin-bottom: auto;
+		}
+
+		.OurServicesHeader h1
+		{
+			font-size: 4.5vh;
+		}
+
+		.OurServicesItemContainer
+		{
+			width: 40vw;
+			height: 48vh;
+		}
+
+		.OurServicesItemNumber
+		{
+			font-size: 4vh;
+		}
+
+		.OurServicesItemTitle
+		{
+			font-size: 3vh;
+		}
+
+		.OurServicesItemBody
+		{
+			font-size: 1.5vh;
+		}
+
+		.LookingForHelpHeader
+		{
+			height: auto;
+		}
+
+		.LookingForHelpHeader h1
+		{
+			font-size: 4.5vh;
+		}
+
+		.LookingForHelpSearch
+		{
+			height: 6vh;
+		}
+
+		.LookingForHelpSearch img
+		{
+			width: 5%;
+			height: 65%;
+			left: 94%;
+			top: 20%;
+		}
+
+		.LookingForHelpItemsContainer .LookingForHelpItemsButtons .LookingForHelpItemsFindButton
+		{
+			width: 30% !important;
+			font-size: 1.5vh;
+			height: 8vw !important;
+		}
+
+		.LookingForHelpItemsContainer .LookingForHelpItemsButtons .LookingForHelpItemsAboutButton
+		{
+			width: 25% !important;
+			height: 7vw !important;
+			font-size: 1.5vh;
+		}
+
+		.WhySonderItem
+		{
+			width: 70%;
+		}
+
+		.WhySonderItemBookButton
+		{
+			width: 30% !important;
+			font-size: 1.5vh !important;
+			height: 8vw !important;
+		}
+
+		.WhySonderItemContactButton
+		{
+			width: 25% !important;
+			font-size: 1.5vh !important;
+			height: 6vw !important;
+		}
+		
+		.MeetTheTeamItem
+		{
+			width: 80%;
+			justify-self: center;
+		}
+
+		.MeetTheTeamItemName
+		{
+			font-size: 1.3vh;
+		}
+
+		.MeetTheTeamItemDesc
+		{
+			font-size: 0.85vh;
+		}
+
+		.MeetTheTeamItemProfItem
+		{
+			font-size: 0.45vh;
+		}
+
+		.OurBlogItems
+		{
+			width: 90%;
+			height: 70%;
+		}
+
+		.OurBlogHeader h1
+		{
+			font-size: 4.5vh;
+		}
+
+		.OurBlogItemContainer
+		{
+			width: 40%;
+		}
+
+		.OurBlogItemTitle
+		{
+			font-size: 2vh;
+		}
+
+		.OurBlogItemBody
+		{
+			font-size: 1.5vh;
+		}
+
+		.MeetTheTeamItemBookButton
+		{
+			width: 30% !important;
+			font-size: 1.5vh !important;
+			height: 8vw !important;
+		}
+
+		.MeetTheTeamItemContactButton
+		{
+			width: 25% !important;
+			font-size: 1.5vh !important;
+			height: 6vw !important;
+		}
+
+		.OurBlogItemBookButton
+		{
+			width: 30% !important;
+			font-size: 1.5vh !important;
+			height: 8vw !important;
+		}
+
+		.OurBlogItemContactButton
+		{
+			width: 25% !important;
+			font-size: 1.5vh !important;
+			height: 6vw !important;
+		}
+
+		.ClientsSayItems
+		{
+			width: 70%;
+		}
+
+		.HomeFooter
+		{
+			height: 42vh;
+		}
+
+		.TopicContainer
+		{
+			width: 60%;
+			align-self: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.ServicesPageItems .ServicesPageItemsTopPart .OurServicesItemContainer
+		{
+			width: 65% !important;
+		}
+
+		.OurSpaceButton button
+		{
+			height: 7vh;
+		} */
 		.HomePageBookSession
 		{
 			width: 50%;
@@ -5696,44 +5942,44 @@ textarea
 }
 
 .MuiDrawer-paperAnchorLeft
-	{
-		text-decoration: none !important;
-	}
+{
+	text-decoration: none !important;
+}
 
-	.MuiDrawer-paperAnchorLeft
-	{
-		height: 100% !important;
-	}
+.MuiDrawer-paperAnchorLeft
+{
+	height: 100% !important;
+}
 
-	.MuiDrawer-paperAnchorLeft
-	{
-		width: 70% !important;
-	}
+.MuiDrawer-paperAnchorLeft
+{
+	width: 70% !important;
+}
 
-	.MuiDrawer-paperAnchorLeft
-	{
-		background: var(--Sonder-olive) !important;
-	}
+.MuiDrawer-paperAnchorLeft
+{
+	background: var(--Sonder-olive) !important;
+}
 
-	.MuiDrawer-paperAnchorLeft a, .MuiDrawer-paperAnchorLeft ul li, .MuiDrawer-paperAnchorLeft span
-	{
-		font-size: 2.5vh !important;
-		color: var(--Sonder-yellow) !important;
-		text-decoration: underline !important;
-		text-decoration-color: var(--Sonder-yellow) !important;
-		text-transform: uppercase !important;
-		letter-spacing: 0.25vw !important;
-		text-underline-offset: 1vw !important;
-		text-wrap: nowrap !important;
-	}
+.MuiDrawer-paperAnchorLeft a, .MuiDrawer-paperAnchorLeft ul li, .MuiDrawer-paperAnchorLeft span
+{
+	font-size: 2.5vh !important;
+	color: var(--Sonder-yellow) !important;
+	text-decoration: underline !important;
+	text-decoration-color: var(--Sonder-yellow) !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0.25vw !important;
+	text-underline-offset: 1vw !important;
+	text-wrap: nowrap !important;
+}
 
-	.MuiDrawer-paperAnchorLeft ul li
-	{
-		margin-bottom: 5% !important;
-	}
+.MuiDrawer-paperAnchorLeft ul li
+{
+	margin-bottom: 5% !important;
+}
 
-	.MuiDrawer-paperAnchorLeft ul
-	{
-		margin-left: 2.5vw !important;
-		margin-top: 2.5vw !important;
-	}	
+.MuiDrawer-paperAnchorLeft ul
+{
+	margin-left: 2.5vw !important;
+	margin-top: 2.5vw !important;
+}

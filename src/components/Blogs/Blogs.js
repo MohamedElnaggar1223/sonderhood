@@ -6,9 +6,12 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { selectedBlogs } from '../../app/blogs/blogsSlice'
+import useTitle from '../../hooks/useTitle'
 
 export default function Blogs()
 {
+    useTitle('Blogs')
+
     const blogs = useSelector(selectedBlogs)
 
     const navigate = useNavigate()

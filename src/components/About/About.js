@@ -4,9 +4,12 @@ import AboutMeetTheTeam from './AboutMeetTheTeam'
 import AboutTherapistsPledge from './AboutTherapistsPledge'
 import { useSelector } from 'react-redux'
 import { selectedTherapists } from '../../app/therapists/therapistsSlice'
+import useTitle from '../../hooks/useTitle'
 
 export default function About() 
 {
+    useTitle('About Us')
+
     const therapists = useSelector(selectedTherapists)
 
     return (

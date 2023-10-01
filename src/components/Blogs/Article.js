@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from 'react-redux'
 import { selectedBlogs } from '../../app/blogs/blogsSlice'
+import useTitle from '../../hooks/useTitle'
 
 export default function Article() 
 {
@@ -17,6 +18,8 @@ export default function Article()
 
     const selectedBlog = blogs.find(blog => blog.title.split(" ").join("") === title)
     const readMoreBlogs = blogs.filter(blog => blog.id !== selectedBlog.id)
+
+    useTitle(`${selectedBlog.title}`)
 
     const displayedSelectedBlog = (
         <div className='ArticlePageMain'> 

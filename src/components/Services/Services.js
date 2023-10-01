@@ -6,10 +6,12 @@ import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'
 import { selectedServices } from '../../app/services/servicesSlice'
 import WhySonderHoodSec from './WhySonderHoodSec'
+import useTitle from '../../hooks/useTitle'
 const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
 
 export default function Serives() 
 {
+    useTitle('Services')
     const navigate = useNavigate()
 
     const services = useSelector(selectedServices)

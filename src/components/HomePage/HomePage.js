@@ -8,10 +8,11 @@ import MeetTheTeam from './MeetTheTeam';
 import OurBlog from './OurBlog';
 import ClientsSay from './ClientsSay';
 import FAQ from './FAQ';
-import { useScroll } from 'framer-motion';
+import useTitle from '../../hooks/useTitle';
 
 export default function HomePage() 
 {
+    useTitle('Home')
     return (
         <>
             <Home />

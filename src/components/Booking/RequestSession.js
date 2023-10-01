@@ -2,12 +2,15 @@ import React, { useEffect, useState, useRef } from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import Rules from './Rules';
 import emailjs from '@emailjs/browser';
+import useTitle from '../../hooks/useTitle';
 
 const NAME_REGEX = /^[A-z]{2,24}\s[A-z]{2,24}/
 const NUMBER_REGEX = /^[0][1][0125][0-9]{8}/
 
 export default function BookSession() 
 {   
+    useTitle('Request A Session')
+
     const [name, setName] = useState('')
     const [verifyName, setVerifyName] = useState(false)
     const [email, setEmail] = useState('')

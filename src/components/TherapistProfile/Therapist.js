@@ -6,6 +6,7 @@ import Online from '../Booking/Online'
 import { useSelector } from 'react-redux'
 import { selectedTherapists } from '../../app/therapists/therapistsSlice'
 import { selectedBlogs } from '../../app/blogs/blogsSlice'
+import useTitle from '../../hooks/useTitle'
 const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const therapyTypes = ['Individual Therapy', 'Group Therapy', 'Child Therapy']
@@ -77,6 +78,8 @@ export default function Therapist()
     }, [month])
 
     const selectedTherapist = therapists.find(therapistProfile => therapistProfile.name.split(" ").join("") === therapist)
+
+    useTitle(`${selectedTherapist.name}`)
 
     const services = selectedTherapist?.clientele.map((service) => <div key={service} className='TherapistProfileService'>{service}</div>)
     

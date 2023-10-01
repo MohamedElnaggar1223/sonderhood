@@ -8,13 +8,16 @@ import botright from '../../imgs/botright.png'
 import mid from '../../imgs/mid.png'
 import { Link, useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
+import useTitle from '../../hooks/useTitle'
 
 const NAME_REGEX = /^[A-z]{2,24}\s[A-z]{2,24}/
 const NUMBER_REGEX = /^[0][1][0125][0-9]{8}/
 
 export default function ContactUs() 
 {
+    useTitle('Contact Us')
     const navigate = useNavigate()
+
     const [name, setName] = useState('')
     const [verifyName, setVerifyName] = useState(false)
     const [email, setEmail] = useState('')
