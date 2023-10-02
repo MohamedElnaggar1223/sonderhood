@@ -5605,6 +5605,7 @@ textarea
 	.SingleServicePagePoints li
 	{
 		font-size: 1.5vh;
+		line-height: 2vh;
 	}
 
 	.SingleServicePageBook button
