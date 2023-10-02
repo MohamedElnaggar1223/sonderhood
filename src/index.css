@@ -1197,6 +1197,23 @@ textarea
 	padding-top: 3%;
 }
 
+.OurBlogItemAuthor
+{
+	color: var(--Sonder-olive);
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: OptimaB;
+	font-size: 1.2vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
+	height: auto;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: 3%;
+}
+
 .OurBlogItemBody
 {
 	color: var(--Sonder-olive);
@@ -2530,7 +2547,7 @@ textarea
 
 .OurSpaceContainer
 {
-	height: 145%;
+	height: auto;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -2673,7 +2690,7 @@ textarea
 
 .TherapistProfileContainer
 {
-	height: 110%;
+	height: max-content;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -2794,7 +2811,7 @@ textarea
 
 .TherapistProfileButton
 {
-	height: 12%;
+	height: 8vh;
 	width: 42%;
 }
 
@@ -4775,6 +4792,13 @@ textarea
 	.OurBlogItemTitle
 	{
 		font-size: 2.5vh;
+		height: auto;
+		padding-top: 5%;
+	}
+
+	.OurBlogItemAuthor
+	{
+		font-size: 1.5vh;
 		height: auto;
 		padding-top: 5%;
 	}

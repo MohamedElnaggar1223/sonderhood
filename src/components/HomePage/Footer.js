@@ -48,7 +48,7 @@ export default function Footer()
                 <div className='HomeFooterSubscribe'>
                     <label htmlFor='newsletter'>Subscribe to our newsletter</label>
                     <input id='newsletter' type='email' placeholder='Email...' />
-                    <button className='HomeFooterSubscribeButton'>Default</button>
+                    <button className='HomeFooterSubscribeButton'>Send</button>
                 </div>
                 <div className='HomeFooterSocials'>
                     <div className='HomeFooterSocialsFollowUs'>

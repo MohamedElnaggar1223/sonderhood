@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../Config/firebaseConfig";
 
 const servicesCollection = collection(db, "services")
 
-const servicesData = await getDocs(servicesCollection)
+const servicesData = await getDocs(query(servicesCollection, orderBy('order')))
 
 const initialState = servicesData.docs.map(service => ({ ...service.data(), id: service.id }))
 

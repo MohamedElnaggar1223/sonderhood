@@ -83,7 +83,11 @@ export default function Therapist()
 
     const services = selectedTherapist?.clientele.map((service) => <div key={service} className='TherapistProfileService'>{service}</div>)
     
-    const certificates = selectedTherapist?.certificates.map((certificate, index) => 
+    const orderedCerts = [...selectedTherapist?.certificates]
+
+    orderedCerts.sort((a, b) => parseInt(a.year) === parseInt(b.year) ? 0 : parseInt(a.year) > parseInt(b.year) ? -1 : 1)
+    
+    const certificates = orderedCerts.map((certificate, index) => 
         (
             <div key={index} className='OurServicesItemContainer' style={{ background: colors[Math.floor(Math.random() * 3)] }}>
                 <div className='OurServicesItemNumber'>
@@ -99,6 +103,8 @@ export default function Therapist()
         ))
 
     const displayedBlogs = blogs.map(blog => 
+        blog.therapist === selectedTherapist.name
+        ?
         (
             <div key={blog.id} className='OurBlogItemContainer'>
                 <div className='OurBlogItemImage'>
@@ -111,7 +117,10 @@ export default function Therapist()
                     {blog.description}
                 </div>
             </div>
-        ))
+        )
+        :
+        <React.Fragment key={blog.id}></React.Fragment>
+    )
     
     return (
         <>
@@ -152,7 +161,7 @@ export default function Therapist()
         </div>}
         <div className='OurServicesContainer'>
             <div className='OurServicesHeader'>
-                <h1>CERTIFICATES</h1>
+                <h1>CREDENTIALS</h1>
             </div>
             <div className='OurServicesItems'>
                 {certificates}

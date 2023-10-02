@@ -19,6 +19,9 @@ export default function OurBlog()
                     <div className='OurBlogItemTitle'>
                         {blog.title}
                     </div>
+                    <div className='OurBlogItemAuthor'>
+                        Author: {blog.therapist}
+                    </div>
                     <div className='OurBlogItemBody'>
                         {blog.description}
                     </div>
