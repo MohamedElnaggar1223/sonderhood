@@ -13,7 +13,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 
 const NAME_REGEX = /^[A-z]{2,24}\s[A-z]{2,24}/
-const NUMBER_REGEX = /^[0][1][0125][0-9]{8}/
+const NUMBER_REGEX = /^[1-9]{1,3}[0][1][0125][0-9]{8}/
 
 export default function ContactUs() 
 {
@@ -31,11 +31,12 @@ export default function ContactUs()
     useEffect(() => 
     {
         setVerifyName(NAME_REGEX.test(name))
+        console.log(NAME_REGEX.test(name))
     }, [name])
 
     useEffect(() => 
     {
-        setVerifyNumber(NUMBER_REGEX.test(number))
+        setVerifyNumber(NUMBER_REGEX.test(number.replace(/\s/g,'')))
     }, [number])
 
     const canSend = [verifyName, verifyNumber, message.length, subject.length].every(Boolean)
@@ -92,8 +93,9 @@ export default function ContactUs()
                             </div>
                             {/*//@ts-ignore*/}
                             <form ref={form} className='ContactUsContactMessageInfo'>
+                                <input hidden={true} value={number} name='number' />
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageName'>
-                                    <label htmlFor='Name'>Name:</label>
+                                    <label htmlFor='Name'>Full Name:</label>
                                     <input onChange={(e) => setName(e.target.value)} value={name} placeholder='Name...' id='Name' type='text' name='name' />
                                 </div>
                                 <div className='ContactUsContactMessageCredentials ContactUsContactMessageEmail'>
