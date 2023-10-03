@@ -3001,7 +3001,7 @@ textarea
 {
 	margin-left: 7%;
 	margin-right: 7%;	
-	margin-top: 7%;
+	margin-top: 0%;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -3045,6 +3045,7 @@ textarea
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-wrap: nowrap;
 }
 
 .BlogsMainInfoTitle
@@ -3174,7 +3175,7 @@ textarea
 {
 	margin-left: 7%;
 	margin-right: 7%;	
-	margin-top: 7%;
+	margin-top: 3%;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -3232,6 +3233,20 @@ textarea
 	line-height: 120%; /* 48px */
 	margin-top: 3%;
 	margin-bottom: 3%;
+}
+
+.TopicMainInfoAuthor
+{
+	margin-left: 7%;
+	margin-right: 7%;
+	color: var(--Sonder-olive, #464834);
+	font-family: Arial;
+	font-size: 1.5vw;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 120%; /* 48px */
+	margin-top: 7%;
+	margin-bottom: 1%;
 }
 
 .TopicMainInfoDesc
@@ -3338,7 +3353,7 @@ textarea
 
 .ArticlePageMainInfoService
 {
-	margin-top: 3.5%;
+	margin-top: 0.5%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -3400,6 +3415,29 @@ textarea
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.ArticlePageMainInfoServiceAuthor
+{
+	height: auto;
+	font-size: 3.5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.BlogsMainInfoServiceAuthor
+{
+	height: auto;
+	font-size: 2.6vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: 7%;
 }
 
 .ReadMoreContainer
@@ -5237,13 +5275,13 @@ textarea
 
 	.TopicMain
 	{
-		height: 60vh;
+		height: 70vh;
 	}
 
 	.TopicMainInfoServiceName
 	{
 		font-size: 1.5vh;
-		width: 40%;
+		width: auto;
 	}
 
 	.TopicMainImage
@@ -5262,6 +5300,11 @@ textarea
 		font-size: 2.5vh;
 	}
 
+	.TopicMainInfoAuthor
+	{
+		font-size: 2vh;
+	}
+
 	.TopicMainInfoDesc
 	{
 		height: auto;
@@ -5271,6 +5314,7 @@ textarea
 	.TopicMainInfoButton button
 	{
 		font-size: 1.5vh;
+		width: auto;
 	}
 
 	.TopicMainInfoService
@@ -5625,7 +5669,9 @@ textarea
 
 	.ArticleMainInfoServiceName
 	{
-		width: 25%;
+		width: auto;
+		padding-left: 2%;
+		padding-right: 2%;
 		font-size: 1.2vh;
 	}
 
@@ -5719,6 +5765,8 @@ textarea
 	.TherapistProfileButton button
 	{
 		font-size: 2vh;
+		text-wrap: nowrap;
+		width: auto;
 	}
 
 	.TestimonialsContainer
@@ -5822,6 +5870,11 @@ textarea
 	.TherapistBookSession .BookSession .BookSessionButton
 	{
 		height: 10%;
+	}
+	
+	.ArticlePageMainInfoServiceAuthor
+	{
+		font-size: 3vh;
 	}
 }
 

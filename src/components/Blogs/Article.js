@@ -27,6 +27,9 @@ export default function Article()
                 <img src={selectedBlog.image} alt='mid' />
             </div>
             <div className='ArticlePageMainInfo'>
+                <div className='ArticlePageMainInfoServiceAuthor'>
+                    Author: {selectedBlog.therapist}
+                </div>
                 <div className='ArticlePageMainInfoService'>
                     <div className='ArticleMainInfoServiceName'>
                         {selectedBlog.topic}

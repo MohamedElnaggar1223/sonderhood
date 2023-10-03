@@ -26,12 +26,15 @@ export default function Blogs()
                     <img src={blog.image} alt='mid' />
                 </div>
                 <div className='TopicMainInfo'>
+                    <div className='TopicMainInfoAuthor'>
+                        Author: {blog.therapist}
+                    </div>
                     <div className='TopicMainInfoService'>
                         <div className='TopicMainInfoServiceName'>
-                            Therapy Topic
+                            {blog.topic}
                         </div>
                         <div className='TopicMainInfoServiceTime'>
-                            5 min read
+                            {blog.duration}
                         </div>
                     </div>
                     <div className='TopicMainInfoTitle'>
@@ -70,6 +73,9 @@ export default function Blogs()
                         <img src={firstBlog[0].image} alt='mid' />
                     </div>
                     <div className='BlogsMainInfo'>
+                        <div className='BlogsMainInfoServiceAuthor'>
+                            Author: {firstBlog[0].therapist}
+                        </div>
                         <div className='BlogsMainInfoService'>
                             <div className='BlogsMainInfoServiceName'>
                                 {firstBlog[0].topic}
