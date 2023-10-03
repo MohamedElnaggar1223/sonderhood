@@ -26,6 +26,8 @@ export default function MeetTheTeamTherapist({ index, therapist })
     const services = therapist.clientele.map((service) => <div key={service} className='MeetTheTeamItemProfItem'>{service}</div>
     )
 
+    if(therapist.name === 'Mirna Mostafa') return (<></>) 
+
     return (
         <motion.div 
             onClick={() => navigate(`/Therapists/${therapist.name.split(" ").join("")}`)} 
