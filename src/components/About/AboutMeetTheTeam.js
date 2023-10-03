@@ -48,8 +48,6 @@ export default function AboutMeetTheTeam({therapists})
 
     const navigate = useNavigate()
 
-    console.log(availableTherapists)
-
     //@ts-ignore
     const therapistsDisplay = availableTherapists.length === 1 && availableTherapists[0] === undefined
     ?

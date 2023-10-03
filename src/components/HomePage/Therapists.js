@@ -20,7 +20,8 @@ export default function Therapists({ therapist })
     )
 
     return (
-        <div onClick={() => navigate(`/Therapists/${therapist.name.split(" ").join("")}`)} className='MeetTheTeamItem'>
+        <>
+        { therapist ?<div onClick={() => navigate(`/Therapists/${therapist.name.split(" ").join("")}`)} className='MeetTheTeamItem'>
             <div className='MeetTheTeamItemImage'>
                 <img src={therapist.image} alt='t4' />
             </div>
@@ -36,5 +37,11 @@ export default function Therapists({ therapist })
                 {services}
             </div>
         </div>
+        : 
+        <div className='NoTherapists'>
+            No Therapists Available
+        </div>
+        }
+        </>
     )
 }

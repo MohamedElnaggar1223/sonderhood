@@ -38,8 +38,6 @@ export default function LookingForHelp()
         if(!search) setShowResults(false)
     }, [search])
 
-    console.log(search)
-
     return (
         <>
         <div className='LookingForHelpContainer'>

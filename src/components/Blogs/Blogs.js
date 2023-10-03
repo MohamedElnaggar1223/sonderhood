@@ -21,7 +21,7 @@ export default function Blogs()
 
     const displayedBlogs = restofBlogs.map(blog => 
         (
-            <div className='TopicMain'> 
+            <div key={blog.id} className='TopicMain'> 
                 <div className='TopicMainImage'>
                     <img src={blog.image} alt='mid' />
                 </div>

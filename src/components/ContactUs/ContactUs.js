@@ -31,7 +31,6 @@ export default function ContactUs()
     useEffect(() => 
     {
         setVerifyName(NAME_REGEX.test(name))
-        console.log(NAME_REGEX.test(name))
     }, [name])
 
     useEffect(() => 
