@@ -51,6 +51,9 @@ export default function Article()
                 <img src={blog.image} alt='mid' />
             </div>
             <div className='TopicMainInfo'>
+                <div className='TopicMainInfoAuthor'>
+                    Author: {blog.therapist}
+                </div>
                 <div className='TopicMainInfoService'>
                     <div className='TopicMainInfoServiceName'>
                         {blog.topic}

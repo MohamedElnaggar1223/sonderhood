@@ -16,11 +16,11 @@ export default function OurBlog()
                     <img src={blog.image} alt='c1' />
                 </div>
                 <div className='OurBlogItemInfo'>
-                    <div className='OurBlogItemTitle'>
-                        {blog.title}
-                    </div>
                     <div className='OurBlogItemAuthor'>
                         Author: {blog.therapist}
+                    </div>
+                    <div className='OurBlogItemTitle'>
+                        {blog.title}
                     </div>
                     <div className='OurBlogItemBody'>
                         {blog.description}
