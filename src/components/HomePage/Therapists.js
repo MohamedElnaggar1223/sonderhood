@@ -19,6 +19,8 @@ export default function Therapists({ therapist })
         }
     )
 
+    if(therapist.name === 'Mirna Mostafa' || therapist.name === 'Leena Abdelgawad') return (<></>)
+
     return (
         <>
         { therapist ?<div onClick={() => navigate(`/Therapists/${therapist.name.split(" ").join("")}`)} className='MeetTheTeamItem'>

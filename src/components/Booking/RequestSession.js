@@ -3,11 +3,12 @@ import PagesHeader from '../PagesHeader/PagesHeader'
 import Rules from './Rules';
 import emailjs from '@emailjs/browser';
 import useTitle from '../../hooks/useTitle';
+import PhoneInput from 'react-phone-input-2';
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
 const NAME_REGEX = /^[A-z]{2,24}\s[A-z]{2,24}/
-const NUMBER_REGEX = /^[0][1][0125][0-9]{8}/
+const NUMBER_REGEX = /^[1-9]{1,3}[0][1][0125][0-9]{8}/
 
 export default function BookSession() 
 {   
@@ -23,6 +24,8 @@ export default function BookSession()
 
     const [location, setLocation] = useState('At The Center')
 
+    const [err, setErr] = useState(false)
+
     const onNameChanged = (e) => setName(e.target.value)
     const onEmailChanged = (e) => setEmail(e.target.value)
     const onNumberChanged = (e) => setNumber(e.target.value)
@@ -33,16 +36,23 @@ export default function BookSession()
 
     const sendEmail = (e) => {
         e.preventDefault();
-        setName('')
-        setEmail('')
-        setNumber('')
-        //@ts-ignore
-        emailjs.sendForm(process.env.REACT_APP_service_id, process.env.REACT_APP_template_id, form.current, process.env.REACT_APP_public_key)
-            .then((result) => {
-
-            }, (error) => {
-
-            });
+        if(canRequest)
+        {
+            setName('')
+            setEmail('')
+            setNumber('')
+            //@ts-ignore
+            emailjs.sendForm(process.env.REACT_APP_service_id, process.env.REACT_APP_templateBook_id, form.current, process.env.REACT_APP_public_key)
+                .then((result) => {
+    
+                }, (error) => {
+    
+                });
+        }
+        else
+        {
+            setErr(true)
+        }
     };
 
     const daysOptions = days.map(day => <option value={day} key={day}>{day}</option>)
@@ -54,10 +64,21 @@ export default function BookSession()
 
     useEffect(() => 
     {
-        setVerifyNumber(NUMBER_REGEX.test(number))
+        setVerifyNumber(NUMBER_REGEX.test(number.replace(/\s/g,'')))
     }, [number])
 
+    useEffect(() => 
+    {
+        setErr(false)
+    }, [name, email, number, prefWay, day])
+
     const canRequest = [verifyName, verifyNumber].every(Boolean)
+
+    const error = (
+        <div className='BookError'>
+            <p> All Fields Must Be Filled!</p>
+        </div>
+    )
 
     return (
         <>
@@ -67,6 +88,7 @@ export default function BookSession()
                 <div className='BookSessionTitle'>
                     REQUEST TO BOOK A SESSION
                 </div>
+                {err && error}
                 <div className='BookSessionLocation'>
                     <div className='BookSessionLocationTitle'>
                         Location
@@ -78,6 +100,8 @@ export default function BookSession()
                 </div>
                 {/*//@ts-ignore*/}
                 <form ref={form} style={{ height: '40vh', gridTemplateRows: '1fr 1fr 1fr' }} className='BookSessionInfo'>
+                    <input hidden={true} value={number} name='number' />
+                    <input hidden={true} value={location} name='location' />
                     <div className='BookSessionInfoCredentials BookSessionInfoName'>
                         <label htmlFor='Name'>Name</label>
                         <input onChange={onNameChanged} value={name} placeholder='Name...' id='Name' type='text' name='name' />
@@ -86,9 +110,34 @@ export default function BookSession()
                         <label htmlFor='Email'>Email</label>
                         <input onChange={onEmailChanged} value={email} placeholder='Email...' id='Email' type='email' name='email' />
                     </div>
-                    <div style={{ gridColumn: '1 / span 2' }} className='BookSessionInfoCredentials BookSessionInfoTherapist'>
-                        <label htmlFor='MobileNumber'>Mobile Number</label>
-                        <input onChange={onNumberChanged} value={number} placeholder='Mobile Number...' id='MobileNumber' type='text' name='number' />
+                    <div className='ContactUsContactMessageCredentials ContactUsContactMessageNumber'>
+                        <label >Mobile Number</label>
+                        <PhoneInput
+                            country={"eg"}
+                            enableSearch={true}
+                            value={number}
+                            onChange={(phone) => setNumber(phone)}
+                            specialLabel='Number: '
+                            inputStyle={{
+                                width: "100%",
+                                height: "100%",
+                                padding: '0%',
+                                background: "transparent",
+                                border: "1px solid #90946B",
+                                outline: "none",
+                                boxSizing: "border-box",
+                                boxShadow: "none",
+                                color: "var(--Text, #90946B)",
+                                fontFamily: "Arial",
+                                fontStyle: "normal",
+                                fontWeight: "400",
+                                lineHeight: "100%",
+                                textIndent: "7%",
+                                borderRadius: '0',
+                                marginLeft: '15%'
+                            }}
+                        />
+                        {/* <input onChange={(e) => setNumber(e.target.value)} placeholder='Number...' id='Number' type='tel' /> */}
                     </div>
                     <div className='BookSessionInfoCredentials BookSessionInfoEmail'>
                         <label htmlFor='Day'>Day</label>
@@ -106,7 +155,7 @@ export default function BookSession()
                     </div>
                 </form>
                 <div className='BookSessionButton'>
-                    <button onClick={sendEmail} disabled={!canRequest}>REQUEST A BOOKING</button>
+                    <button onClick={sendEmail}>REQUEST A BOOKING</button>
                 </div>
             </div>
         </div>

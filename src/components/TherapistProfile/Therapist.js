@@ -7,6 +7,7 @@ import { selectedTherapists } from '../../app/therapists/therapistsSlice'
 import { selectedBlogs } from '../../app/blogs/blogsSlice'
 import useTitle from '../../hooks/useTitle'
 import emailjs from '@emailjs/browser';
+import PhoneInput from 'react-phone-input-2'
 const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
 // const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 // const therapyTypes = ['Individual Therapy', 'Group Therapy', 'Child Therapy']
@@ -14,7 +15,7 @@ const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
 const NAME_REGEX = /^[A-z]{2,24}\s[A-z]{2,24}/
-const NUMBER_REGEX = /^[0][1][0125][0-9]{8}/
+const NUMBER_REGEX = /^[1-9]{1,3}[0][1][0125][0-9]{8}/
 
 
 export default function Therapist() 
@@ -59,14 +60,14 @@ export default function Therapist()
         };
     const daysOptions = days.map(day => <option value={day} key={day}>{day}</option>)
     useEffect(() => 
-        {
-            setVerifyName(NAME_REGEX.test(name))
-        }, [name])
+    {
+        setVerifyName(NAME_REGEX.test(name))
+    }, [name])
 
-        useEffect(() => 
-        {
-            setVerifyNumber(NUMBER_REGEX.test(number))
-        }, [number])
+    useEffect(() => 
+    {
+        setVerifyNumber(NUMBER_REGEX.test(number.replace(/\s/g,'')))
+    }, [number])
 
     const canRequest = [verifyName, verifyNumber].every(Boolean)
 
@@ -191,6 +192,7 @@ export default function Therapist()
                 {/*//@ts-ignore*/}
                 <form ref={form} style={{ height: '40vh', gridTemplateRows: '1fr 1fr 1fr' }} className='BookSessionInfo'>
                     <input hidden={true} value={location} name='location' />
+                    <input hidden={true} value={number} name='number' />
                     <div className='BookSessionInfoCredentials BookSessionInfoName'>
                         <label htmlFor='Name'>Name</label>
                         <input onChange={onNameChanged} value={name} placeholder='Name...' id='Name' type='text' name='name' />
@@ -200,8 +202,33 @@ export default function Therapist()
                         <input onChange={onEmailChanged} value={email} placeholder='Email...' id='Email' type='email' name='email' />
                     </div>
                     <div style={{ gridColumn: '1 / span 2' }} className='BookSessionInfoCredentials BookSessionInfoTherapist'>
-                        <label htmlFor='MobileNumber'>Mobile Number</label>
-                        <input onChange={onNumberChanged} value={number} placeholder='Mobile Number...' id='MobileNumber' type='text' name='number' />
+                        <label >Mobile Number</label>
+                        <PhoneInput
+                            country={"eg"}
+                            enableSearch={true}
+                            value={number}
+                            onChange={(phone) => setNumber(phone)}
+                            specialLabel='Number: '
+                            inputStyle={{
+                                width: "100%",
+                                height: "100%",
+                                padding: '0%',
+                                background: "transparent",
+                                border: "1px solid #90946B",
+                                outline: "none",
+                                boxSizing: "border-box",
+                                boxShadow: "none",
+                                color: "var(--Text, #90946B)",
+                                fontFamily: "Arial",
+                                fontStyle: "normal",
+                                fontWeight: "400",
+                                lineHeight: "100%",
+                                textIndent: "7%",
+                                borderRadius: '0',
+                                marginLeft: '15%',
+                                marginTop: '0'
+                            }}
+                        />
                     </div>
                     <div className='BookSessionInfoCredentials BookSessionInfoEmail'>
                         <label htmlFor='Day'>Day</label>

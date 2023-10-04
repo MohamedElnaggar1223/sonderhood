@@ -28,6 +28,8 @@ export default function ContactUs()
     const [verifyNumber, setVerifyNumber] = useState(false)
     const [subject, setSubject] = useState('')
 
+    const [err, setErr] = useState(false)
+
     useEffect(() => 
     {
         setVerifyName(NAME_REGEX.test(name))
@@ -44,17 +46,35 @@ export default function ContactUs()
 
     const sendEmail = (e) => {
         e.preventDefault();
-        setName('')
-        setEmail('')
-        setMessage('')
-        //@ts-ignore
-        emailjs.sendForm(process.env.REACT_APP_service_id, process.env.REACT_APP_template_id, form.current, process.env.REACT_APP_public_key)
-            .then((result) => {
+        if(canSend)
+        {
+            setName('')
+            setEmail('')
+            setMessage('')
+            //@ts-ignore
+            emailjs.sendForm(process.env.REACT_APP_service_id, process.env.REACT_APP_template_id, form.current, process.env.REACT_APP_public_key)
+                .then((result) => {
 
-            }, (error) => {
+                }, (error) => {
 
-            });
-    };
+                });
+        }
+        else
+        {
+            setErr(true)
+        }
+    }
+
+    useEffect(() => 
+    {
+        setErr(false)
+    }, [name, email, message, number, subject])
+
+    const error = (
+        <div className='BookError'>
+            <p> All Fields Must Be Filled!</p>
+        </div>
+    )
     
     return (
         <>
@@ -90,6 +110,7 @@ export default function ContactUs()
                             <div className='ContactUsContactMessageTitle'>
                                 SEND US A MESSAGE
                             </div>
+                            {err && error}
                             {/*//@ts-ignore*/}
                             <form ref={form} className='ContactUsContactMessageInfo'>
                                 <input hidden={true} value={number} name='number' />
@@ -141,7 +162,7 @@ export default function ContactUs()
                             </form>
                             <div className='ContactUsContactMessageButton'>
                                 {/* <button onClick={() => navigate('/BookASession')}>BOOK A SESSION</button> */}
-                                <button disabled={!canSend} onClick={sendEmail}>SEND MESSAGE</button>
+                                <button onClick={sendEmail}>SEND MESSAGE</button>
                             </div>
                         </div>
                     </div>
