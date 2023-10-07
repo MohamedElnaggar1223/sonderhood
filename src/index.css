@@ -5803,6 +5803,7 @@ textarea
 		width: 60%;
 		column-gap: 4vw;
 		height: auto !important;
+		min-height: auto !important;
 	}
 
 	.TherapistProfileService
@@ -5810,6 +5811,7 @@ textarea
 		width: 100%;
 		font-size: 1.2vh;
 		height: auto !important;
+		min-height: auto !important;
 	}
 
 	.TherapistProfileButton
@@ -5925,9 +5927,9 @@ textarea
 		position: absolute;
 		z-index: 2;
 		background: var(--Sonder-white);
-		height: 85%;
+		height: 90%;
 		justify-content: space-around;
-		top: 10%;
+		top: 5%;
 		left: 10%;
 	}
 
