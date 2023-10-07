@@ -2821,7 +2821,7 @@ textarea
 	text-wrap: nowrap;
 	min-width: 100%;
 	border: 1px solid #000;
-	border-radius: 0.65in;
+	border-radius: 0.65rem;
 	min-height: 50%;
 	height: 100%;
 	padding: 2%;
@@ -5805,7 +5805,7 @@ textarea
 	{
 		width: 100%;
 		font-size: 1.2vh;
-		height: max-content;
+		height: auto;
 	}
 
 	.TherapistProfileButton

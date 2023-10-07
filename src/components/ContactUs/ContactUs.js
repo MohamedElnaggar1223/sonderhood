@@ -18,6 +18,7 @@ const NUMBER_REGEX = /^[1-9]{1,3}[0][1][0125][0-9]{8}/
 export default function ContactUs() 
 {
     useTitle('Contact Us')
+    
     const navigate = useNavigate()
 
     const [name, setName] = useState('')
@@ -51,6 +52,7 @@ export default function ContactUs()
             setName('')
             setEmail('')
             setMessage('')
+            setNumber('')
             //@ts-ignore
             emailjs.sendForm(process.env.REACT_APP_service_id, process.env.REACT_APP_template_id, form.current, process.env.REACT_APP_public_key)
                 .then((result) => {
@@ -100,7 +102,7 @@ export default function ContactUs()
                             <Link to='https://maps.app.goo.gl/qf4ZGCDJwEFf3dfK7'><img src={map} alt='map' /></Link>
                         </div>
                         <div className='ContactUsContactMapInfo'>
-                            201094292553 <br />
+                            201094292553<br />
                             inquiries@thesonderhood.net<br />
                             Trivium Square, New Cairo<br />
                         </div>
