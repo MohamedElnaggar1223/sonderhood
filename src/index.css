@@ -5804,6 +5804,7 @@ textarea
 		column-gap: 4vw;
 		height: auto !important;
 		min-height: auto !important;
+		max-height: auto !important;
 	}
 
 	.TherapistProfileService
@@ -5812,6 +5813,7 @@ textarea
 		font-size: 1.2vh;
 		height: auto !important;
 		min-height: auto !important;
+		max-height: auto !important;
 	}
 
 	.TherapistProfileButton
