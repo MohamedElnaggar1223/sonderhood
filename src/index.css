@@ -5776,36 +5776,40 @@ textarea
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		height: auto !important;
 	}
 
 	.TherapistProfileInfo
 	{
 		width: 100%;
+		height: auto !important;
 	}
 
 	.TherapistProfileName
 	{
 		font-size: 4vh;
+		height: auto !important;
 	}
 
 	.TherapistProfileDesc
 	{
 		width: 100%;
 		font-size: 2vh;
+		height: auto !important;
 	}
 
 	.TherapistProfileServices
 	{
 		width: 60%;
 		column-gap: 4vw;
-		height: auto;
+		height: auto !important;
 	}
 
 	.TherapistProfileService
 	{
 		width: 100%;
 		font-size: 1.2vh;
-		height: auto;
+		height: auto !important;
 	}
 
 	.TherapistProfileButton
