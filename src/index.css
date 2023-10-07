@@ -2789,8 +2789,6 @@ textarea
 
 .TherapistProfileServices
 {
-	min-height: 5%;
-	max-height: 12%;
 	height: auto;
 	display: grid;
 	grid-template-columns: auto auto ;
@@ -2818,7 +2816,7 @@ textarea
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
 	text-wrap: nowrap;
 	min-width: 100%;
 	border: 1px solid #000;
@@ -5774,8 +5772,8 @@ textarea
 	.TherapistProfile
 	{
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		/* justify-content: center;
+		align-items: center; */
 		height: auto !important;
 	}
 
