@@ -2709,7 +2709,7 @@ textarea
 
 .TherapistProfileContainer
 {
-	height: max-content;
+	height: auto;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -2720,7 +2720,7 @@ textarea
 .TherapistProfile
 {
 	margin: 5%;
-	height: 90%;
+	height: auto;
 	width: 90%;
 	display: flex;
 	flex-direction: row;
