@@ -5798,7 +5798,8 @@ textarea
 
 	.TherapistProfileServices
 	{
-		width: 60%;
+		min-width: 80%;
+		width: auto;
 		column-gap: 4vw;
 		height: auto !important;
 		min-height: auto !important;
