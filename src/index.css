@@ -43,7 +43,7 @@ textarea
 .HomePageContainer
 {
 	display: flex;
-	background-image: url('./imgs/1440x810.png');
+	background-image: url('./imgs/main.jpeg');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	height: 100%;
@@ -4524,7 +4524,7 @@ textarea
 {
 	.HomePageContainer
 	{
-		background-image: url('./imgs/1440x810mobile.png');
+		background-image: url('./imgs/mainmob.jpeg');
 	}
 
 	.WhySonderContainer
