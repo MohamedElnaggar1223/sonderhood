@@ -43,7 +43,7 @@ textarea
 .HomePageContainer
 {
 	display: flex;
-	background-image: url('./imgs/homepagebg169.jpg');
+	background-image: url('./imgs/1440x810.png');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	height: 100%;
@@ -2634,6 +2634,7 @@ textarea
 	width: 90%;
 	margin-top: 5%;
 	margin-bottom: 5%;
+	border-radius: 1rem;
 }
 
 .OurSpaceImagesMid
@@ -2652,6 +2653,7 @@ textarea
 	width: 95%;
 	margin-top: 5%;
 	margin-bottom: 5%;
+	border-radius: 1rem;
 }
 
 .OurSpaceImagesRight
@@ -2669,6 +2671,7 @@ textarea
 	width: 90%;
 	margin-top: 5%;
 	margin-bottom: 5%;
+	border-radius: 1rem;
 }
 
 .OurSpaceButton
@@ -4519,6 +4522,10 @@ textarea
 
 @media (max-width: 768px)
 {
+	.HomePageContainer
+	{
+		background-image: url('./imgs/1440x810mobile.png');
+	}
 
 	.WhySonderContainer
 	{
