@@ -2,7 +2,6 @@ import React from 'react'
 import { twitter } from '../../imgs/twitterIcon'
 import { instagram } from '../../imgs/InstagramIcon'
 import { In } from '../../imgs/inIcon'
-import { yt } from '../../imgs/YoutubeIcon'
 import { Link } from 'react-router-dom'
 
 export default function Footer()

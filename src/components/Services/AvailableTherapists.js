@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Therapists from '../HomePage/Therapists'
 import { useNavigate } from 'react-router-dom'
 

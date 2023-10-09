@@ -6,10 +6,8 @@ export default function ClientsSay()
 {
     const testimonials = useSelector(selectedTestimonials)
 
-    console.log(testimonials)
-
-    const displayedTestimonials = testimonials.map(testimonial => (
-        <div className='ClientsSayItem'>
+    const displayedTestimonials = testimonials.map((testimonial, index) => (
+        <div key={index} className='ClientsSayItem'>
             <div className='ClientsSayItemRating'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 35 33" fill="none">
                     <g clipPath="url(#clip0_75_816)">

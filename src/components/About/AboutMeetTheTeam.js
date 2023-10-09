@@ -1,14 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 import Therapist from '../HomePage/Therapists'
 import { useNavigate } from 'react-router-dom'
 import { selectedServices } from '../../app/services/servicesSlice'
 import { useSelector } from 'react-redux'
-import { doc, getDoc } from 'firebase/firestore'
-import { db } from '../../Config/firebaseConfig'
 import { selectedTherapists } from '../../app/therapists/therapistsSlice'
 
 export default function AboutMeetTheTeam({therapists}) 
 {
+    //eslint-disable-next-line
     const [selectedService, setSelectedService] = useState('All Services')
 
     const services = useSelector(selectedServices)
@@ -27,6 +26,7 @@ export default function AboutMeetTheTeam({therapists})
         if(service)
         {
             let therapistsArray = []
+            //eslint-disable-next-line
             service.therapists.map(therapist => 
                 {
                     const foundTherapist = therapistsData.find(data => data.id === therapist.id)

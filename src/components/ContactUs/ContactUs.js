@@ -6,7 +6,7 @@ import botleft from '../../imgs/botl.jpeg'
 import topright from '../../imgs/topr.jpeg'
 import botright from '../../imgs/botr.jpeg'
 import mid from '../../imgs/midpics.jpeg'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
 import useTitle from '../../hooks/useTitle'
 import PhoneInput from "react-phone-input-2";
@@ -18,8 +18,6 @@ const NUMBER_REGEX = /^[1-9]{1,3}[0][1][0125][0-9]{8}/
 export default function ContactUs() 
 {
     useTitle('Contact Us')
-    
-    const navigate = useNavigate()
 
     const [name, setName] = useState('')
     const [verifyName, setVerifyName] = useState(false)

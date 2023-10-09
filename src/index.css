@@ -3967,7 +3967,7 @@ textarea
 	position: absolute;
 	z-index: 2;
 	background: var(--Sonder-white);
-	height: 65%;
+	height: 50%;
 	justify-content: space-around;
 	top: 20%;
 	left: 45%;

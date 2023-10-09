@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import searchImage from '../../imgs/Search.png'
 import HelpButton from './HelpButton'
-import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { selectedTherapists } from '../../app/therapists/therapistsSlice'
 import MatchingTherapists from './MatchingTherapists'

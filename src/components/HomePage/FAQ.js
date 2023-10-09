@@ -18,6 +18,7 @@ export default function FAQ({ faqs })
         }
 
         getFaqs()
+        //eslint-disable-next-line
     }, [])
 
     //@ts-ignore

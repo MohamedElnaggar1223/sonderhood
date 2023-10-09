@@ -1,6 +1,5 @@
 import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
-import WhySonderHood from '../HomePage/WhySonderHood'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'

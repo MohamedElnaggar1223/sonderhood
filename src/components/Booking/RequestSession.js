@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
-import Rules from './Rules';
 import emailjs from '@emailjs/browser';
 import useTitle from '../../hooks/useTitle';
 import PhoneInput from 'react-phone-input-2';
@@ -28,7 +27,6 @@ export default function BookSession()
 
     const onNameChanged = (e) => setName(e.target.value)
     const onEmailChanged = (e) => setEmail(e.target.value)
-    const onNumberChanged = (e) => setNumber(e.target.value)
     const onDayChanged = (e) => setDay(e.target.value)
     const onPrefWayChanged = (e) => setPrefWay(e.target.value)
 

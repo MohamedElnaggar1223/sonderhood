@@ -1,6 +1,5 @@
 import React from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
-import blogmain from '../../imgs/blogmain.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'

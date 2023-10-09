@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import AvailableTherapists from './AvailableTherapists'
 import FAQ from '../HomePage/FAQ'
@@ -48,6 +48,7 @@ export default function Service()
         if(selectedService)
         {
             let therapistsArray = []
+            //eslint-disable-next-line
             selectedService.therapists.map(therapist => 
                 {
                     const foundTherapist = therapists.find(data => data.id === therapist.id)

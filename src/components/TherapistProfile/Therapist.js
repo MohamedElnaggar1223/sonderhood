@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import PagesHeader from '../PagesHeader/PagesHeader'
-import book from '../../imgs/book.png'
+import book from '../../imgs/mainmob.jpeg'
 import { useSelector } from 'react-redux'
 import { selectedTherapists } from '../../app/therapists/therapistsSlice'
 import { selectedBlogs } from '../../app/blogs/blogsSlice'
@@ -41,7 +41,6 @@ export default function Therapist()
 
     const onNameChanged = (e) => setName(e.target.value)
     const onEmailChanged = (e) => setEmail(e.target.value)
-    const onNumberChanged = (e) => setNumber(e.target.value)
     const onDayChanged = (e) => setDay(e.target.value)
     const onPrefWayChanged = (e) => setPrefWay(e.target.value)
     const form = useRef();
