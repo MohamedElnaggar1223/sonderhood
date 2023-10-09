@@ -95,6 +95,8 @@ export default function Therapist()
                 </div>
             </div>
         ))
+    
+    const haveBlogs = blogs.filter(blog => blog.therapist === selectedTherapist.name).length
 
     const displayedBlogs = blogs.map(blog => 
         blog.therapist === selectedTherapist.name
@@ -150,7 +152,7 @@ export default function Therapist()
                 {selectedTherapist.quote}
             </div>
             <div className='TestimonialsDesc'>
-                Lorem ipsum dolor sit amet consectetur. Ut ullamcorper id pellentesque aenean libero. Lorem ipsum dolor sit amet consectetur. Ut ullamcorper id pellentesque aenean libero. 
+                {/* Lorem ipsum dolor sit amet consectetur. Ut ullamcorper id pellentesque aenean libero. Lorem ipsum dolor sit amet consectetur. Ut ullamcorper id pellentesque aenean libero.  */}
             </div>
         </div>}
         <div className='OurServicesContainer'>
@@ -166,7 +168,11 @@ export default function Therapist()
                 <h1>BLOGS</h1>
             </div>
             <div className='OurBlogItems'>
-                {displayedBlogs}
+                {haveBlogs ? displayedBlogs : (
+                    <div style={{ marginRight: '7.5%' }} className='NoTherapists'>
+                        No Blogs Available
+                    </div>
+                )}
             </div>
             <div className='OurBlogItemsButtons'>
                 <button onClick={() => navigate('/Blogs')} className='OurBlogItemBookButton'>SEE ALL BLOGS</button>

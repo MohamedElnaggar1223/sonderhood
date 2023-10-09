@@ -13,6 +13,11 @@ export default function LookingForHelp()
     const [search, setSearch] = useState([])
     const [showResults, setShowResults] = useState(false)
 
+    useEffect(() => 
+    {
+        if(!search.length) setShowResults(false)
+    }, [search])
+
     function handleClick(button)
     {
         const array = search || []
@@ -30,7 +35,7 @@ export default function LookingForHelp()
         }
     }
 
-    const buttons = ['Depression', 'Eating Disorder', 'Anxiety', 'Marriage', 'Body Dysmorphia', 'Relationship', 'Personality Disorder', 'Addiction', 'Self esteem', 'Social anxiety', 'OCD', 'Trauma', 'Codependency', 'Abusive parents', 'Family problems']
+    const buttons = ['Depression', 'Eating Disorder', 'Anxiety', 'Marriage', 'Body Dysmorphia', 'Relationship', 'Personality Disorder', 'Addiction', 'Self Esteem', 'Social Anxiety', 'OCD', 'Trauma', 'Codependency', 'Abusive parents', 'Family Problems']
     const buttonItems = buttons.map((button, index) => <HelpButton handleClick={() => handleClick(button)} key={index} button={button} />)
 
     useEffect(() => 
@@ -67,7 +72,7 @@ export default function LookingForHelp()
                 </div>
             </div>
         </div>
-        {/* { showResults && <MatchingTherapists search={therapists} /> } */}
+        { showResults && <MatchingTherapists therapists={therapists} search={search} /> }
         </>
     )
 }

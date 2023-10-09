@@ -2732,16 +2732,24 @@ textarea
 .TherapistProfileImage
 {
 	width: 50%;
+	max-width: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
+	border-radius: 16in 16in 0 0;
+	max-height: 70vh;
 }
 
 .TherapistProfileImage img
 {
-	width: fit-content;
+	/* width: 100%; */
 	height: 100%;
+	width: auto;
 	object-fit: fill;
+	aspect-ratio: 389/566;
+	border-radius: 16in 16in 0 0;
+	/* height: 30%; */
 }
 
 .TherapistProfileInfo
@@ -2890,7 +2898,8 @@ textarea
 
 .TestimonialsContainer
 {
-	height: 60%;
+	height: auto;
+	min-height: 35%;
 	width: 90%;
 	display: flex;
 	flex-direction: row;
@@ -3922,6 +3931,11 @@ textarea
 	font-size: 1.2vw;
 }
 
+.BookSession .BookSessionInfo .BookSessionInfoCredentials .react-tel-input .form-control
+{
+	font-size: 1.2vw;
+}
+
 .NoTherapists
 {
 	height: 100%;
@@ -4764,7 +4778,7 @@ textarea
 	.OurServicesItemTitle
 	{
 		font-size: 2vh;
-		height: 25%;
+		height: auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -5768,12 +5782,16 @@ textarea
 	{
 		width: 100%;
 		overflow: hidden;
+		align-self: center;
+		max-width: max-content;
 	}
 
 	.TherapistProfileImage img
 	{
-		width: 100%;
+		width: auto;
 		object-fit: fill;
+		height: 100%;
+		max-width: 100%;
 	}
 
 	.TherapistProfile
@@ -5922,6 +5940,11 @@ textarea
 	}
 
 	.BookSession .BookSessionInfo .ContactUsContactMessageCredentials .react-tel-input .form-control
+	{
+		font-size: 2vh;
+	}
+
+	.BookSession .BookSessionInfo .BookSessionInfoCredentials .react-tel-input .form-control
 	{
 		font-size: 2vh;
 	}

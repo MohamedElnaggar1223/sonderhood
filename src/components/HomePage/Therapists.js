@@ -19,7 +19,7 @@ export default function Therapists({ therapist })
         }
     )
 
-    if(therapist.name === 'Mirna Mostafa' || therapist.name === 'Leena Abdelgawad') return (<></>)
+    // if(therapist.name === 'Mirna Mostafa' || therapist.name === 'Leena Abdelgawad') return (<></>)
 
     return (
         <>
