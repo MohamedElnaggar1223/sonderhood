@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { twitter } from '../../imgs/twitterIcon'
 import { instagram } from '../../imgs/InstagramIcon'
 import { In } from '../../imgs/inIcon'
 import { Link } from 'react-router-dom'
+import { collection, addDoc } from 'firebase/firestore'
+import { db } from '../../Config/firebaseConfig'
 
 export default function Footer()
 {   
+    const [email , setEmail] = useState('')
+    const newsLetterCollection = collection(db, 'newsletter')
+
     async function handleSubmit(e)
     {
         e.preventDefault()
-        
+        await addDoc(newsLetterCollection, { email })
+        setEmail('')
     }
     
     return (
@@ -52,7 +58,7 @@ export default function Footer()
                 </div>
                 <form onSubmit={handleSubmit} className='HomeFooterSubscribe'>
                     <label htmlFor='newsletter'>Subscribe to our newsletter</label>
-                    <input id='newsletter' type='email' placeholder='Email...' />
+                    <input value={email} onChange={(e) => setEmail(e.target.value)} id='newsletter' type='email' placeholder='Email...' />
                     <button className='HomeFooterSubscribeButton'>Send</button>
                 </form>
                 <div className='HomeFooterSocials'>

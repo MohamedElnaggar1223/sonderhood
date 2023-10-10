@@ -28,6 +28,7 @@ export default function ContactUs()
     const [subject, setSubject] = useState('')
 
     const [err, setErr] = useState(false)
+    const [succ, setSucc] = useState(false)
 
     useEffect(() => 
     {
@@ -47,6 +48,7 @@ export default function ContactUs()
         e.preventDefault();
         if(canSend)
         {
+            setSucc(true)
             setName('')
             setEmail('')
             setMessage('')
@@ -75,6 +77,12 @@ export default function ContactUs()
             <p> All Fields Must Be Filled!</p>
         </div>
     )
+
+    const success = (
+        <div className='BookError'>
+            <p style={{ color: 'green' }}> Request Sent Successfully!</p>
+        </div>
+    )
     
     return (
         <>
@@ -101,7 +109,7 @@ export default function ContactUs()
                         </div>
                         <div className='ContactUsContactMapInfo'>
                             201094292553<br />
-                            inquiries@thesonderhood.net<br />
+                            inquiries@the-sonderhood.com<br />
                             Trivium Square, New Cairo<br />
                         </div>
                     </div>
@@ -111,6 +119,7 @@ export default function ContactUs()
                                 SEND US A MESSAGE
                             </div>
                             {err && error}
+                            {succ && success}
                             {/*//@ts-ignore*/}
                             <form ref={form} className='ContactUsContactMessageInfo'>
                                 <input hidden={true} value={number} name='number' />

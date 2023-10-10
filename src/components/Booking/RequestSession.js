@@ -6,15 +6,17 @@ import PhoneInput from 'react-phone-input-2';
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-const NAME_REGEX = /^[A-z]{2,24}\s[A-z]{2,24}/
+const NAME_REGEX = /^[A-z]{2,36}/
 const NUMBER_REGEX = /^[1-9]{1,3}[0][1][0125][0-9]{8}/
 
 export default function BookSession() 
 {   
     useTitle('Request A Booking')
 
-    const [name, setName] = useState('')
-    const [verifyName, setVerifyName] = useState(false)
+    const [firstName, setFirstName] = useState('')
+    const [verifyFirstName, setVerifyFirstName] = useState(false)
+    const [lastName, setLastName] = useState('')
+    const [verifyLastName, setVerifyLastName] = useState(false)
     const [email, setEmail] = useState('')
     const [day, setDay] = useState('Day')
     const [prefWay, setPrefWay] = useState('')
@@ -24,8 +26,10 @@ export default function BookSession()
     const [location, setLocation] = useState('At The Center')
 
     const [err, setErr] = useState(false)
+    const [succ, setSucc] = useState(false)
 
-    const onNameChanged = (e) => setName(e.target.value)
+    const onFirstNameChanged = (e) => setFirstName(e.target.value)
+    const onLastNameChanged = (e) => setLastName(e.target.value)
     const onEmailChanged = (e) => setEmail(e.target.value)
     const onDayChanged = (e) => setDay(e.target.value)
     const onPrefWayChanged = (e) => setPrefWay(e.target.value)
@@ -33,10 +37,13 @@ export default function BookSession()
     const form = useRef();
 
     const sendEmail = (e) => {
+        console.log(verifyFirstName, verifyLastName, verifyNumber)
         e.preventDefault();
         if(canRequest)
         {
-            setName('')
+            setSucc(true)
+            setFirstName('')
+            setLastName('')
             setEmail('')
             setNumber('')
             //@ts-ignore
@@ -57,8 +64,13 @@ export default function BookSession()
 
     useEffect(() => 
     {
-        setVerifyName(NAME_REGEX.test(name))
-    }, [name])
+        setVerifyFirstName(NAME_REGEX.test(firstName))
+    }, [firstName])
+
+    useEffect(() => 
+    {
+        setVerifyLastName(NAME_REGEX.test(lastName))
+    }, [lastName])
 
     useEffect(() => 
     {
@@ -68,13 +80,19 @@ export default function BookSession()
     useEffect(() => 
     {
         setErr(false)
-    }, [name, email, number, prefWay, day])
+    }, [firstName, lastName, email, number, prefWay, day])
 
-    const canRequest = [verifyName, verifyNumber].every(Boolean)
+    const canRequest = [verifyFirstName, verifyLastName, verifyNumber].every(Boolean)
 
     const error = (
         <div className='BookError'>
             <p> All Fields Must Be Filled!</p>
+        </div>
+    )
+
+    const success = (
+        <div className='BookError'>
+            <p style={{ color: 'green' }}> Request Sent Successfully!</p>
         </div>
     )
 
@@ -87,6 +105,7 @@ export default function BookSession()
                     REQUEST TO BOOK A SESSION
                 </div>
                 {err && error}
+                {succ && success}
                 <div className='BookSessionLocation'>
                     <div className='BookSessionLocationTitle'>
                         Location
@@ -100,9 +119,13 @@ export default function BookSession()
                 <form ref={form} style={{ height: '40vh', gridTemplateRows: '1fr 1fr 1fr' }} className='BookSessionInfo'>
                     <input hidden={true} value={number} name='number' />
                     <input hidden={true} value={location} name='location' />
-                    <div className='BookSessionInfoCredentials BookSessionInfoName'>
-                        <label htmlFor='Name'>Name</label>
-                        <input onChange={onNameChanged} value={name} placeholder='Name...' id='Name' type='text' name='name' />
+                    <div className='BookSessionInfoCredentials BookSessionInfoFirstName'>
+                        <label htmlFor='FirstName'>First Name</label>
+                        <input onChange={onFirstNameChanged} value={firstName} placeholder='First Name...' id='FirstName' type='text' name='firstname' />
+                    </div>
+                    <div className='BookSessionInfoCredentials BookSessionInfoLastName'>
+                        <label htmlFor='LastName'>Last Name</label>
+                        <input onChange={onLastNameChanged} value={lastName} placeholder='Last Name...' id='LastName' type='text' name='lastname' />
                     </div>
                     <div className='BookSessionInfoCredentials BookSessionInfoEmail'>
                         <label htmlFor='Email'>Email</label>
@@ -143,7 +166,7 @@ export default function BookSession()
                             {daysOptions}
                         </select>
                     </div>
-                    <div style={{ gridColumn: '1 / span 2' }} className='BookSessionInfoCredentials BookSessionInfoEmail'>
+                    <div className='BookSessionInfoCredentials BookSessionInfoReach'>
                         <label htmlFor='Reach'>How Do We Reach You?</label>
                         <select onChange={onPrefWayChanged} value={prefWay} id='Reach' name='Reach'>
                             <option value='WhatsApp'>WhatsApp</option>

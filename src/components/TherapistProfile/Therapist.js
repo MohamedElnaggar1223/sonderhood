@@ -14,7 +14,7 @@ const colors = ['#F9F3D0', '#FFDEB5', '#D6DCA2']
 // const slots = ['7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM', '7:00AM-8:00AM']
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-const NAME_REGEX = /^[A-z]{2,24}\s[A-z]{2,24}/
+const NAME_REGEX = /^[A-z]{2,24}/
 const NUMBER_REGEX = /^[1-9]{1,3}[0][1][0125][0-9]{8}/
 
 
@@ -31,44 +31,73 @@ export default function Therapist()
     //eslint-disable-next-line
     // const [width, setWidth] = useState(window.innerWidth <= 900)
 
-    const [name, setName] = useState('')
-    const [verifyName, setVerifyName] = useState(false)
+    const [firstName, setFirstName] = useState('')
+    const [verifyFirstName, setVerifyFirstName] = useState(false)
+    const [lastName, setLastName] = useState('')
+    const [verifyLastName, setVerifyLastName] = useState(false)
     const [email, setEmail] = useState('')
     const [day, setDay] = useState('Day')
     const [prefWay, setPrefWay] = useState('')
     const [number, setNumber] = useState('')
     const [verifyNumber, setVerifyNumber] = useState(false)
 
-    const onNameChanged = (e) => setName(e.target.value)
+    const [err, setErr] = useState(false)
+    const [succ, setSucc] = useState(false)
+
+    const onFirstNameChanged = (e) => setFirstName(e.target.value)
+    const onLastNameChanged = (e) => setLastName(e.target.value)
     const onEmailChanged = (e) => setEmail(e.target.value)
     const onDayChanged = (e) => setDay(e.target.value)
     const onPrefWayChanged = (e) => setPrefWay(e.target.value)
+
     const form = useRef();
+
     const sendEmail = (e) => {
-            e.preventDefault();
-            setName('')
+        console.log(verifyFirstName, verifyLastName, verifyNumber)
+        e.preventDefault();
+        if(canRequest)
+        {
+            setSucc(true)
+            setFirstName('')
+            setLastName('')
             setEmail('')
             setNumber('')
             //@ts-ignore
             emailjs.sendForm(process.env.REACT_APP_service_id, process.env.REACT_APP_templateBook_id, form.current, process.env.REACT_APP_public_key)
                 .then((result) => {
-
+    
                 }, (error) => {
-
+    
                 });
-        };
+        }
+        else
+        {
+            setErr(true)
+        }
+    };
     const daysOptions = days.map(day => <option value={day} key={day}>{day}</option>)
+    
     useEffect(() => 
     {
-        setVerifyName(NAME_REGEX.test(name))
-    }, [name])
+        setVerifyFirstName(NAME_REGEX.test(firstName))
+    }, [firstName])
+
+    useEffect(() => 
+    {
+        setVerifyLastName(NAME_REGEX.test(lastName))
+    }, [lastName])
 
     useEffect(() => 
     {
         setVerifyNumber(NUMBER_REGEX.test(number.replace(/\s/g,'')))
     }, [number])
 
-    const canRequest = [verifyName, verifyNumber].every(Boolean)
+    useEffect(() => 
+    {
+        setErr(false)
+    }, [firstName, lastName, email, number, prefWay, day])
+
+    const canRequest = [verifyFirstName, verifyLastName, verifyNumber].every(Boolean)
 
     const selectedTherapist = therapists.find(therapistProfile => therapistProfile.name.split(" ").join("") === therapist)
 
@@ -115,6 +144,18 @@ export default function Therapist()
         )
         :
         <React.Fragment key={blog.id}></React.Fragment>
+    )
+
+    const error = (
+        <div className='BookError'>
+            <p> All Fields Must Be Filled!</p>
+        </div>
+    )
+
+    const success = (
+        <div className='BookError'>
+            <p style={{ color: 'green' }}> Request Sent Successfully!</p>
+        </div>
     )
     
     return (
@@ -185,6 +226,8 @@ export default function Therapist()
                 <div className='BookSessionTitle'>
                     REQUEST TO BOOK A SESSION
                 </div>
+                {err && error}
+                {succ && success}
                 <div className='BookSessionLocation'>
                     <div className='BookSessionLocationTitle'>
                         Location
@@ -198,9 +241,13 @@ export default function Therapist()
                 <form ref={form} style={{ height: '40vh', gridTemplateRows: '1fr 1fr 1fr' }} className='BookSessionInfo'>
                     <input hidden={true} value={location} name='location' />
                     <input hidden={true} value={number} name='number' />
-                    <div className='BookSessionInfoCredentials BookSessionInfoName'>
-                        <label htmlFor='Name'>Name</label>
-                        <input onChange={onNameChanged} value={name} placeholder='Name...' id='Name' type='text' name='name' />
+                    <div className='BookSessionInfoCredentials BookSessionInfoFirstName'>
+                        <label htmlFor='FirstName'>First Name</label>
+                        <input onChange={onFirstNameChanged} value={firstName} placeholder='First Name...' id='FirstName' type='text' name='firstname' />
+                    </div>
+                    <div className='BookSessionInfoCredentials BookSessionInfoLastName'>
+                        <label htmlFor='LastName'>Last Name</label>
+                        <input onChange={onLastNameChanged} value={lastName} placeholder='Last Name...' id='LastName' type='text' name='lastname' />
                     </div>
                     <div className='BookSessionInfoCredentials BookSessionInfoEmail'>
                         <label htmlFor='Email'>Email</label>
@@ -251,7 +298,7 @@ export default function Therapist()
                     </div>
                 </form>
                 <div className='BookSessionButton'>
-                    <button onClick={sendEmail} disabled={!canRequest}>REQUEST A BOOKING</button>
+                    <button onClick={sendEmail} >REQUEST A BOOKING</button>
                 </div>
             </div>
         </div>

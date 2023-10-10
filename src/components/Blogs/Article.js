@@ -50,9 +50,6 @@ export default function Article()
                 <img src={blog.image} alt='mid' />
             </div>
             <div className='TopicMainInfo'>
-                <div className='TopicMainInfoAuthor'>
-                    Author: {blog.therapist}
-                </div>
                 <div className='TopicMainInfoService'>
                     <div className='TopicMainInfoServiceName'>
                         {blog.topic}
@@ -63,6 +60,9 @@ export default function Article()
                 </div>
                 <div className='TopicMainInfoTitle'>
                     {blog.title}
+                </div>
+                <div className='TopicMainInfoAuthor'>
+                    By: {blog.therapist}
                 </div>
                 <div className='TopicMainInfoDesc'>
                     {blog.description}
@@ -80,8 +80,7 @@ export default function Article()
             <PagesHeader />
             {displayedSelectedBlog}
         </div>
-        <div className='ArticleText'>
-            {selectedBlog.body}
+        <div dangerouslySetInnerHTML={{ __html: selectedBlog.body }} className='ArticleText'>
         </div>
         <div className='ReadMoreContainer'>
             <div className='ReadMoreTitle'>
