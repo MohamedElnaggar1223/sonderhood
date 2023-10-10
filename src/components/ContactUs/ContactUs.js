@@ -80,7 +80,7 @@ export default function ContactUs()
 
     const success = (
         <div className='BookError'>
-            <p style={{ color: 'green' }}> Request Sent Successfully!</p>
+            <p style={{ color: 'green' }}> Message Sent Successfully!</p>
         </div>
     )
     
