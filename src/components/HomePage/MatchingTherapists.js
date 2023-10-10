@@ -19,17 +19,32 @@ export default function MatchingTherapists({ therapists, search })
     const therapistsDisplay = filteredTherapists.map((therapist, index) => <MeetTheTeamTherapist key={therapist.id} index={index} therapist={therapist} />)
 
     return (
-        <div className='MeetTheTeamContainer'>
-            <div className='MeetTheTeamHeader'>
-                <h1>SEARCH RESULTS:</h1>
+        <>
+        {   
+            therapistsDisplay.length 
+            ?
+            <div className='MeetTheTeamContainer'>
+                <div className='MeetTheTeamHeader'>
+                    <h1>SEARCH RESULTS:</h1>
+                </div>
+                <div className='MeetTheTeamItemsContainer'>
+                    { therapistsDisplay }
+                </div>
+                <div className='MeetTheTeamItemsButtons'>
+                        <button onClick={() => navigate('/RequestASession')} className='MeetTheTeamItemBookButton'>REQUEST A BOOKING</button>
+                        <button onClick={() => navigate('/ContactUs')} className='MeetTheTeamItemContactButton'>CONTACT US</button>
+                </div>
             </div>
-            <div className='MeetTheTeamItemsContainer'>
-                { therapistsDisplay }
+            :
+            <div className='MeetTheTeamContainer'>
+                <div className='MeetTheTeamHeader'>
+                        <h1>SEARCH RESULTS:</h1>
+                    </div>
+                <div style={{ height: 'auto', marginBottom: '5%' }} className='NoTherapists'>
+                    No Therapists Available
+                </div>
             </div>
-            <div className='MeetTheTeamItemsButtons'>
-                    <button onClick={() => navigate('/RequestASession')} className='MeetTheTeamItemBookButton'>REQUEST A BOOKING</button>
-                    <button onClick={() => navigate('/ContactUs')} className='MeetTheTeamItemContactButton'>CONTACT US</button>
-            </div>
-        </div>
+        }
+        </>
     )
 }

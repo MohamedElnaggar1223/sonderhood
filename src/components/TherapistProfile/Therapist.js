@@ -203,21 +203,24 @@ export default function Therapist()
                 {certificates}
             </div>
         </div>
-        <div className='OurBlogContainer'>
-            <div className='OurBlogHeader'>
-                <h1>BLOGS</h1>
+        {
+            selectedTherapist.name !== 'Leena Abdelgawad' &&
+            <div className='OurBlogContainer'>
+                <div className='OurBlogHeader'>
+                    <h1>BLOGS</h1>
+                </div>
+                <div className='OurBlogItems'>
+                    {haveBlogs ? displayedBlogs : (
+                        <div style={{ marginRight: '7.5%' }} className='NoTherapists'>
+                            No Blogs Available
+                        </div>
+                    )}
+                </div>
+                <div className='OurBlogItemsButtons'>
+                    <button onClick={() => navigate('/Blogs')} className='OurBlogItemBookButton'>SEE ALL BLOGS</button>
+                </div>
             </div>
-            <div className='OurBlogItems'>
-                {haveBlogs ? displayedBlogs : (
-                    <div style={{ marginRight: '7.5%' }} className='NoTherapists'>
-                        No Blogs Available
-                    </div>
-                )}
-            </div>
-            <div className='OurBlogItemsButtons'>
-                <button onClick={() => navigate('/Blogs')} className='OurBlogItemBookButton'>SEE ALL BLOGS</button>
-            </div>
-        </div>
+        }
         <div className='TherapistBookSession'>
             <div className='TherapistBookSessionImage'>
                 <img src={book} alt='book' />
@@ -253,7 +256,7 @@ export default function Therapist()
                         <label htmlFor='Email'>Email</label>
                         <input onChange={onEmailChanged} value={email} placeholder='Email...' id='Email' type='email' name='email' />
                     </div>
-                    <div style={{ gridColumn: '1 / span 2' }} className='BookSessionInfoCredentials BookSessionInfoTherapist'>
+                    <div style={{ gridColumn: '3 / span 2' }} className='BookSessionInfoCredentials BookSessionInfoTherapist'>
                         <label >Mobile Number</label>
                         <PhoneInput
                             country={"eg"}
@@ -288,7 +291,7 @@ export default function Therapist()
                             {daysOptions}
                         </select>
                     </div>
-                    <div style={{ gridColumn: '1 / span 2' }} className='BookSessionInfoCredentials BookSessionInfoEmail'>
+                    <div style={{ gridColumn: '3 / span 2' }} className='BookSessionInfoCredentials BookSessionInfoEmail'>
                         <label htmlFor='Reach'>How Do We Reach You?</label>
                         <select onChange={onPrefWayChanged} value={prefWay} id='Reach' name='reach'>
                             <option value='WhatsApp'>WhatsApp</option>

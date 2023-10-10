@@ -33,7 +33,7 @@ export default function LookingForHelp()
         }
     }
 
-    const buttons = ['Depression', 'Eating Disorder', 'Anxiety', 'Marriage', 'Body Dysmorphia', 'Relationship', 'Personality Disorder', 'Addiction', 'Self Esteem', 'Social Anxiety', 'OCD', 'Trauma', 'Codependency', 'Abusive parents', 'Family Problems']
+    const buttons = ['Depression', 'Eating Disorder', 'Anxiety', 'Marriage', 'Body Dysmorphia', 'Relationship', 'Personality Disorder', 'Addiction', 'Self Esteem', 'Social Anxiety', 'OCD', 'Trauma', 'Codependency', 'Abusive parents', 'Family Problems', 'Psychosis', 'Delusional Disorders']
     const buttonItems = buttons.map((button, index) => <HelpButton handleClick={() => handleClick(button)} key={index} button={button} />)
 
     useEffect(() => 
@@ -58,7 +58,7 @@ export default function LookingForHelp()
             </form> */}
             <div className='LookingForHelpItemsContainer'>
                 <div className='LookingForHelpItemsMostSearched'>
-                    Most Searched:
+                    {/* Most Searched: */}
                 </div>
                 <div className='LookingForHelpItems'>
                     {buttonItems}

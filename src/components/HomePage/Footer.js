@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { twitter } from '../../imgs/twitterIcon'
 import { instagram } from '../../imgs/InstagramIcon'
 import { In } from '../../imgs/inIcon'
@@ -9,6 +9,7 @@ import { db } from '../../Config/firebaseConfig'
 export default function Footer()
 {   
     const [email , setEmail] = useState('')
+    const [subscribed , setSubscribed] = useState(false)
     const newsLetterCollection = collection(db, 'newsletter')
 
     async function handleSubmit(e)
@@ -16,7 +17,13 @@ export default function Footer()
         e.preventDefault()
         await addDoc(newsLetterCollection, { email })
         setEmail('')
+        setSubscribed(true)
     }
+
+    useEffect(() => 
+    {
+        if(subscribed) setTimeout(() => setSubscribed(false) , 2500)
+    }, [subscribed])
     
     return (
         <footer className='HomeFooter'>
@@ -57,7 +64,7 @@ export default function Footer()
                     </div>
                 </div>
                 <form onSubmit={handleSubmit} className='HomeFooterSubscribe'>
-                    <label htmlFor='newsletter'>Subscribe to our newsletter</label>
+                    <label htmlFor='newsletter'>{subscribed ? 'Subscribed Successfully!' : 'Subscribe to our newsletter'}</label>
                     <input value={email} onChange={(e) => setEmail(e.target.value)} id='newsletter' type='email' placeholder='Email...' />
                     <button className='HomeFooterSubscribeButton'>Send</button>
                 </form>
