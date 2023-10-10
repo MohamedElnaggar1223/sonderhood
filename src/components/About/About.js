@@ -47,6 +47,7 @@ export default function About()
                         </svg>
                     </div> */}
                     <ReactPlayer
+                        playing={true}
                         playIcon=
                         {
                             <svg xmlns="http://www.w3.org/2000/svg" width="98" height="97" viewBox="0 0 98 97" fill="none">
