@@ -5,7 +5,13 @@ import { In } from '../../imgs/inIcon'
 import { Link } from 'react-router-dom'
 
 export default function Footer()
-{    
+{   
+    async function handleSubmit(e)
+    {
+        e.preventDefault()
+        
+    }
+    
     return (
         <footer className='HomeFooter'>
                 <div className='HomeFooterInfo'>
@@ -44,11 +50,11 @@ export default function Footer()
                         | All Rights Reserved 
                     </div>
                 </div>
-                <div className='HomeFooterSubscribe'>
+                <form onSubmit={handleSubmit} className='HomeFooterSubscribe'>
                     <label htmlFor='newsletter'>Subscribe to our newsletter</label>
                     <input id='newsletter' type='email' placeholder='Email...' />
                     <button className='HomeFooterSubscribeButton'>Send</button>
-                </div>
+                </form>
                 <div className='HomeFooterSocials'>
                     <div className='HomeFooterSocialsFollowUs'>
                         Follow us

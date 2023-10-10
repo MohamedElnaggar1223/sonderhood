@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PagesHeader from '../PagesHeader/PagesHeader'
 import AboutMeetTheTeam from './AboutMeetTheTeam'
 import AboutTherapistsPledge from './AboutTherapistsPledge'
@@ -12,6 +12,8 @@ import video from '../../video/vid.mp4'
 export default function About() 
 {
     useTitle('About Us')
+
+    const [playing, setPlaying] = useState(true)
 
     const therapists = useSelector(selectedTherapists)
 
@@ -37,7 +39,7 @@ export default function About()
                         </div>
                     </div>
                 </div>
-                <div className='AboutPageVideo'>
+                <div className='AboutPageVideo' onClick={() => setPlaying(prev => !prev)}>
                     {/*//@ts-ignore*/}
                     {/* <iframe src="https://www.youtube.com/embed/-MKapbz0GIo?si=kxc7xo9Z2RFjCMsV&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
                     {/* <div className='IFrameClone'>
@@ -47,7 +49,7 @@ export default function About()
                         </svg>
                     </div> */}
                     <ReactPlayer
-                        playing={true}
+                        playing={playing}
                         playIcon=
                         {
                             <svg xmlns="http://www.w3.org/2000/svg" width="98" height="97" viewBox="0 0 98 97" fill="none">
