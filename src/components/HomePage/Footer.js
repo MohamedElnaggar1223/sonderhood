@@ -64,7 +64,7 @@ export default function Footer()
                     </div>
                 </div>
                 <form onSubmit={handleSubmit} className='HomeFooterSubscribe'>
-                    <label htmlFor='newsletter'>{subscribed ? 'Subscribed Successfully!' : 'Subscribe to our newsletter'}</label>
+                    <label style={subscribed ? {color: 'green'} : {}} htmlFor='newsletter'>{subscribed ? 'Subscribed Successfully!' : 'Subscribe to our newsletter'}</label>
                     <input value={email} onChange={(e) => setEmail(e.target.value)} id='newsletter' type='email' placeholder='Email...' />
                     <button className='HomeFooterSubscribeButton'>Send</button>
                 </form>
