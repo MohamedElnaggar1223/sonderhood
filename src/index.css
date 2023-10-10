@@ -1185,7 +1185,7 @@ textarea
 	color: var(--Sonder-olive);
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: OptimaB;
-	font-size: 1.5vw;
+	font-size: 1.6vw;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 100%;
@@ -1201,10 +1201,10 @@ textarea
 {
 	color: var(--Sonder-olive);
 	font-feature-settings: 'clig' off, 'liga' off;
-	font-family: OptimaB;
-	font-size: 1.2vw;
+	font-family: Optima;
+	font-size: 1.05vw;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 550;
 	line-height: 100%;
 	height: auto;
 	width: 100%;
@@ -3032,7 +3032,7 @@ textarea
 {
 	margin-left: 7%;
 	margin-right: 7%;	
-	margin-top: 0%;
+	margin-top: 5%;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -3272,11 +3272,11 @@ textarea
 	margin-right: 7%;
 	color: var(--Sonder-olive, #464834);
 	font-family: Arial;
-	font-size: 1.5vw;
+	font-size: 1.1vw;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 120%; /* 48px */
-	margin-top: 7%;
+	margin-top: 0%;
 	margin-bottom: 1%;
 }
 
@@ -3384,7 +3384,7 @@ textarea
 
 .ArticlePageMainInfoService
 {
-	margin-top: 0.5%;
+	margin-top: 5%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -3451,11 +3451,11 @@ textarea
 .ArticlePageMainInfoServiceAuthor
 {
 	height: auto;
-	font-size: 3.5vh;
+	font-size: 2.55vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 2%;
+	margin-top: 0%;
 	margin-bottom: 2%;
 }
 
@@ -3466,9 +3466,10 @@ textarea
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin-top: 2%;
+	margin-top: 0%;
 	margin-bottom: 2%;
 	margin-left: 7%;
+	font-family: Optima;
 }
 
 .ReadMoreContainer
@@ -4959,7 +4960,7 @@ textarea
 
 	.OurBlogItemAuthor
 	{
-		font-size: 2vh;
+		font-size: 1.75vh;
 		height: auto;
 		padding-top: 5%;
 	}
@@ -5320,6 +5321,11 @@ textarea
 	{
 		height: auto;
 		font-size: 2.8vh;
+	}
+
+	.BlogsMainInfoServiceAuthor
+	{
+		font-size: 1.7vh;
 	}
 
 	.BlogsMainInfoDesc

@@ -25,9 +25,6 @@ export default function Blogs()
                     <img src={blog.image} alt='mid' />
                 </div>
                 <div className='TopicMainInfo'>
-                    <div className='TopicMainInfoAuthor'>
-                        Author: {blog.therapist}
-                    </div>
                     <div className='TopicMainInfoService'>
                         <div className='TopicMainInfoServiceName'>
                             {blog.topic}
@@ -38,6 +35,9 @@ export default function Blogs()
                     </div>
                     <div className='TopicMainInfoTitle'>
                         {blog.title}
+                    </div>
+                    <div className='TopicMainInfoAuthor'>
+                        By: {blog.therapist}
                     </div>
                     <div className='TopicMainInfoDesc'>
                         {blog.description}
@@ -72,9 +72,6 @@ export default function Blogs()
                         <img src={firstBlog[0].image} alt='mid' />
                     </div>
                     <div className='BlogsMainInfo'>
-                        <div className='BlogsMainInfoServiceAuthor'>
-                            Author: {firstBlog[0].therapist}
-                        </div>
                         <div className='BlogsMainInfoService'>
                             <div className='BlogsMainInfoServiceName'>
                                 {firstBlog[0].topic}
@@ -85,6 +82,9 @@ export default function Blogs()
                         </div>
                         <div className='BlogsMainInfoTitle'>
                             {firstBlog[0].title}
+                        </div>
+                        <div className='BlogsMainInfoServiceAuthor'>
+                            By: {firstBlog[0].therapist}
                         </div>
                         <div className='BlogsMainInfoDesc'>
                             {firstBlog[0].description}

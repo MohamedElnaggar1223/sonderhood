@@ -23,8 +23,7 @@ export default function MeetTheTeamTherapist({ index, therapist })
         //eslint-disable-next-line
     }, [refInView])
 
-    const services = therapist.clientele.map((service) => <div key={service} className='MeetTheTeamItemProfItem'>{service}</div>
-    )
+    const services = therapist.clientele.map((service) => <div key={service} className='MeetTheTeamItemProfItem'>{service}</div>)
 
     // if(therapist.name === 'Mirna Mostafa' || therapist.name === 'Leena Abdelgawad') return (<></>)
 
