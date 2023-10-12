@@ -170,7 +170,7 @@ textarea
 
 .HomeHeaderAnchor a
 {
-	color: var(--Sonder-yellow);
+	color: var(--Sonder-olive);
 	text-align: center;
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: Arial;
@@ -181,7 +181,7 @@ textarea
 	letter-spacing: 0.25vw;
 	text-transform: uppercase;
 	text-decoration: underline;
-	text-decoration-color: var(--Sonder-yellow);
+	text-decoration-color: var(--Sonder-olive);
 	text-decoration-thickness: 0.15vw;
 	text-underline-offset: 0.2vw;
 }
@@ -3509,7 +3509,7 @@ textarea
 .ArticleText
 {
 	color: var(--Sonder-olive, #464834);
-	text-align: center;
+	text-align: left;
 	font-family: 'DM Sans';
 	font-size: 1.3vw;
 	font-style: normal;

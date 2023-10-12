@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { twitter } from '../../imgs/twitterIcon'
 import { instagram } from '../../imgs/InstagramIcon'
 import { In } from '../../imgs/inIcon'
 import { Link } from 'react-router-dom'
